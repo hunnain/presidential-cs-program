@@ -66,16 +66,16 @@ From https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY
 
 
 
-**Step 9: checkout branch**
+**Step 9: checkout to branch 'dev'**
 
-$ git checkout master
+$ git checkout dev
 
-Switched to branch 'master'
+Switched to branch 'dev'
 
 
 **Step 10: finally download new updates from master repo to local**
 
-$ git merge main/master
+$ git merge dev/master
 
 Updating a422352..5fdff0f
 
