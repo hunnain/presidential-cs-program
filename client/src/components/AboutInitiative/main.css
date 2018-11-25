@@ -1,0 +1,13 @@
+.gradient {
+  /*  background: linear-gradient(to right,#55ff55 0%, #119955 100% );*/
+    height: 100%;
+    padding: 100px;
+}
+  .cardwidth{
+      width: 18rem;
+  }
+
+  .container{
+      width: 100%;
+      height: 100vh;
+  }
