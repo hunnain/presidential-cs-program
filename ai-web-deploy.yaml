@@ -1,0 +1,82 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: client-deploy
+  name: client-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: client-deploy
+  strategy: 
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        run: client-deploy
+    spec:
+      containers:
+      - image: panacloud/presidential-cs-program-client
+        name: client-deploy
+        imagePullPolicy: IfNotPresent
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: client-deploy
+  name: ai-client-svc
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 80
+  selector:
+    run: client-deploy
+  type: LoadBalancer
+
+---
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: server-deploy
+  name: server-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: server-deploy
+  strategy: 
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        run: server-deploy
+    spec:
+      containers:
+      - image: panacloud/presidential-cs-program-server
+        name: server-deploy
+        imagePullPolicy: IfNotPresent
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: server-deploy
+  name: ai-server-svc
+spec:
+  ports:
+  - port: 8400
+    protocol: TCP
+    targetPort: 3001
+  selector:
+    run: server-deploy
+  type: LoadBalancer
+
