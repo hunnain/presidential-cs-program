@@ -3,20 +3,3 @@
 #dependencies: @material-ui/core
 
     <MainPage/>
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>This is a title</title>
-  </head>
-  <body>
-<p>e.g import MainPage from './components/AboutInitiative/MainPage';</p>
-
-<br/>
-<br/>
-<MainPage/>
-  </body>
-</html>
-```
-
