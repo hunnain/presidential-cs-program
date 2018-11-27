@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Router } from 'react-router-dom';
 import Home from './components/Home/home';
-import About from './components/About/about';
+import About from './components/About/About';
 import Form from './components/Form/form';
 import CloudNative from './components/CloudNative/cloudNative';
 import Ai from './components/Ai/ai';
