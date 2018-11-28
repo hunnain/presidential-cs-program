@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import AboutPresident from './About_President/index';
 
 class About extends Component {
     render() {
@@ -13,9 +14,8 @@ class About extends Component {
                     <li><Link to='/ai'>Ai</Link></li>
                     <li><Link to='/cloudnative'>cloudNative</Link></li>
                 </ul>
-
-                <h1>This is About page</h1>
-
+                <AboutPresident />
+                 
             </div>
         );
     }
