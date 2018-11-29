@@ -14,17 +14,18 @@ class MyInput extends Component {
                         className={`form-control ${errors.elem === name && "errorElem"}`}
                         name={name}
                         ref={(el) => { parentThis[name] = el }}
-                        onChange={(ev) => changeData(ev)} value={value}
+                        onChange={(ev) => changeData(ev)}
+                        value={value}
                         id={id}
-                        placeholder={placeholder} />
+                        placeholder={placeholder}
+                        accept={type === "file" ? "image/jpg,image/png,image/jpeg" : undefined}
+                    />
                 </label>
                 {
-                    errors.errorsArr.map((item, index) => {
-                        if (item.elem === name) {
-                            return <p className="error" key={index} >{item.message}</p>
-                        }
-                    })
+                    errors.errorsObj[name] && <p className="error"  >{errors.errorsObj[name].message}</p>
                 }
+
+
             </div>
         )
     }
@@ -44,11 +45,7 @@ class MySelect extends Component {
 
                 </select>
                 {
-                    errors.errorsArr.map((item, index) => {
-                        if (item.elem === id) {
-                            return <p className="error" key={index}>{item.message}</p>
-                        }
-                    })
+                    errors.errorsObj[id] && <p className="error"  >{errors.errorsObj[id].message}</p>
                 }
 
             </div>
@@ -63,12 +60,9 @@ class MyRadio extends Component {
             <div className="form-group">
                 <h5>{DisplayName}</h5>
                 {
-                    errors.errorsArr.map((item, index) => {
-                        if (item.elem === name) {
-                            return <p className="error" key={index}>{item.message}</p>
-                        }
-                    })
+                    errors.errorsObj[name] && <p className="error"  >{errors.errorsObj[name].message}</p>
                 }
+
 
                 {
                     options.map((item, index) => {

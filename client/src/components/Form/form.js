@@ -17,6 +17,7 @@ class Form extends Component {
                 phoneNumber: "",
                 lastQualification: "",
                 studentCnic: "",
+                fatherCnic: "",
                 fatherName: "",
                 homeAddress: "",
                 image: "",
@@ -25,7 +26,7 @@ class Form extends Component {
             },
             errors: {
                 hasError: false,
-                errorsArr: []
+                errorsObj: {}
             }
         }
     }
@@ -34,17 +35,17 @@ class Form extends Component {
         let { data } = this.state;
         switch (ev.target.name) {
             case "imagePicker":
-                // console.log(this.imagePicker.files[0]);
                 data["image"] = this.imagePicker.files[0];
-                console.log(this.state.data.image);
-                this.setState({ data }, (x => {
+                console.log(this.imagePicker.files[0])
+                this.setState({ data, errors: validateForm("each", data, "image") }, (x => {
                     console.log(this.state)
                 }))
                 break;
             default:
                 data[ev.target.name] = ev.target.value
                 this.setState({
-                    data
+                    data,
+                    errors: validateForm("each", data, ev.target.name)
                 })
                 break;
         }
@@ -66,10 +67,11 @@ class Form extends Component {
             gender,
             homeAddress,
             lastQualification,
-            studentCnic
+            studentCnic,
+            fatherCnic
         } = this.state.data;
 
-        var validate = validateForm(data);
+        var validate = validateForm("all", data);
         if (validate.hasError) {
             this.setState({ errors: validate });
             return
@@ -87,7 +89,8 @@ class Form extends Component {
         formData.append("homeAddress", homeAddress);
         formData.append("lastQualification", lastQualification);
         formData.append("studentCnic", studentCnic);
-        console.log(formData.image)
+        formData.append("fatherCnic", fatherCnic);
+        var myForm = new FormData(this.refs.myForm);
         //Nothing To Do Just Fetch And Post Data All Set
         fetch('http://localhost:3001/form', {
             method: 'POST',
@@ -105,7 +108,7 @@ class Form extends Component {
 
     render() {
         const {
-            fullName, DOB, email, phoneNumber, studentCnic, fatherName, homeAddress
+            fullName, DOB, email, phoneNumber, studentCnic, fatherName, homeAddress, fatherCnic
         } = this.state.data;
         const { errors } = this.state;
 
@@ -113,7 +116,7 @@ class Form extends Component {
 
         return (
             <div>
-                <form action="JavaScript:void(0)" ref="myForm" onSubmit={(ev) => this.submitForm(ev)} >
+                <form action="JavaScript:void(0)" ref="myForm" onSubmit={(ev) => this.submitForm(ev)}  >
                     <MySelect
                         info={{
                             DisplayName: "Select Course",
@@ -152,6 +155,17 @@ class Form extends Component {
                         id: "studentCnic",
                         value: studentCnic,
                         placeholder: "Enter Your Full CNIC Number",
+                        changeData: this.changeData,
+                        parentThis: this,
+                        errors
+                    }} />
+                    <MyInput info={{
+                        type: "number",
+                        DisplayName: "Father CNIC",
+                        name: "fatherCnic",
+                        id: "fatherCnic",
+                        value: fatherCnic,
+                        placeholder: "Enter Your Father CNIC Number",
                         changeData: this.changeData,
                         parentThis: this,
                         errors
