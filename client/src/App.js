@@ -10,7 +10,7 @@ class App extends Component {
         <br />
         <br />
 
-        Presidential CS Program
+        Presidential CS Program Hello
       </div>
     );
   }
