@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import AboutPresident from './About_President/index';
 
-class About extends Component {
+class Form extends Component {
     render() {
         return (
             <div>
@@ -14,11 +13,13 @@ class About extends Component {
                     <li><Link to='/ai'>Ai</Link></li>
                     <li><Link to='/cloudnative'>cloudNative</Link></li>
                 </ul>
-                <AboutPresident />
-                 
+
+                <h1>
+                    This is form page
+          </h1>
             </div>
         );
     }
 }
 
-export default About;
+export default Form;
