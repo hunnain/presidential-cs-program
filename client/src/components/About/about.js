@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import NewsBox from '../NewBox/NewsBox';
 
 class About extends Component {
     render() {
@@ -15,7 +16,7 @@ class About extends Component {
                 </ul>
 
                 <h1>This is About page</h1>
-
+                <NewsBox />
             </div>
         );
     }
