@@ -10,6 +10,7 @@ import Navbar from './components/Navbar/Navbar';
 
 import history from './History';
 
+
 class Routers extends Component {
     render() {
         return (
@@ -19,10 +20,10 @@ class Routers extends Component {
                 
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />
-                    <Route exact path="/form" component={Form} />
+                    <Route exact path="/apply" component={Form} />
                     <Route exact path="/ai" component={CloudNative} />
                     <Route exact path="/cloudnative" component={Ai} />
-                    
+                  
                     
                 </div>
             </Router>

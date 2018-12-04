@@ -1,6 +1,253 @@
+.Rectangle-58 {
+    width:100%;
+    background-image: linear-gradient(to bottom, #dfedf0, #e6dada);
+    display: flex;
+    justify-content: center;
+  }
+  #myForm{
+      padding:5% 0;
+  }
+  select:focus,input:focus{
+     box-shadow: none !important;
+  }
+  button:focus{
+      outline: none;
+  }
+
+  
+  .APPLICATION-FORM {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom:10%; 
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    text-align: center;
+    color: #017969;
+  }
+ 
+  .label {
+    font-size: 18px;
+    margin:3% 0;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+    text-align: left;
+    color: #017969;
+  }
+
+  .Rectangle-59 {
+    width: 553.8px;
+    height: 55px;
+    font-size: 15px !important;
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+  .radio-label{
+      display: inline-block;
+  }
+  .radioLabel{
+    color: #017969;
+    cursor: pointer;
+  }
+  .radio-group{
+      display: inline-block;
+      margin-left:10%;
+  }
+  .Ellipse-13 {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 3px;
+    left: 5px;
+  }
+  .Rectangle-60 {
+    width: 553.8px;
+    height: 60px;
+    margin: 4% 0px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    background-color: #00ce9f;
+  }
+  .Rectangle-62 {
+    width: 400px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius:0px;
+    color: white;
+    background-color: #00ce9f;
+  }
+  .Rectangle-63 {
+    width: 400px;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius:0;
+    background-color: #ffffff;
+    display: inline-block;
+  }
+  .-File-type-jpg-jpeg-png {
+    margin:0 auto;
+   padding: 5px 50px;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.31;
+    letter-spacing: normal;
+    color: #00ce9f;
+  }
+
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+  }
+  select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background:#fff url(./down.png)  97% 50% no-repeat ;
+    cursor: pointer;
+  }
+  
+  [type="date"] {
+    background:#fff url(./down.png)  97% 50% no-repeat ;
+    cursor: pointer;
+  }
+  [type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+
+  .placeholder-headshot {
+    width: 158px;
+  }
+  .img-container{
+    display: inline-block;
+    float: left;
+    height:150px;
+    width:150px;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #F0F0F0;
+    border: 1px solid #F0F0F0;
+    border-top-left-radius:4px;
+    border-bottom-left-radius: 4px; 
+  }
+   
+  
+    input[type="radio"] {
+      display:none;
+  }
+
+  input[type="radio"] + span {
+      display:inline-block;
+      width:15px;
+      height:15px;
+      margin:-1px 4px 0 4px;
+      vertical-align:middle;
+      cursor:pointer;
+      -moz-border-radius:  50%;
+      border-radius:  50%;
+  }
+  
+  input[type="radio"] +  span {
+       border: 1px solid #017969;
+  }
+  
+  input[type="radio"]:checked +  span{
+       background-color:#039e89;
+  }
+  
+  input[type="radio"] +  span,
+  input[type="radio"]:checked +  span {
+    -webkit-transition:background-color 0.4s linear;
+    -o-transition:background-color 0.4s linear;
+    -moz-transition:background-color 0.4s linear;
+    transition:background-color 0.4s linear;
+  } 
+
+
+
+
+
+
 .error{
-    color: red;
+    color: rgb(172, 15, 15);
+    position: relative;
+    font-size: 15px;
+    margin:10px 0;
+    width: 552px;
+    padding: 5px;
+    transition: all ease-in-out 2s;
 }
+
+
 .errorElem{
-    border: 2px solid red !important;
+    border: 1px solid rgba(172, 15, 15, 0.589) !important;
+}
+
+
+
+@media (max-width:585px){
+    .error{
+        font-size: 16px;
+        width: 85%;
+        margin: auto;
+    }
+    .Rectangle-58{
+        display: block;
+        justify-content: unset;
+        width:100%;
+        background: linear-gradient(to bottom, #dfedf0, #e6dada);
+    }
+    .label{
+        display:block; 
+        width: 90%;
+        margin:3% auto;
+        font-size: 16px;
+    }
+    .Rectangle-59{
+        width: 90%;
+        margin: auto;
+        height:50px;
+    }
+    .Rectangle-78{
+        width: 90%;
+        margin: auto;        
+    }
+    .Rectangle-63{
+        width: 100%;
+        border-radius:5px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0; 
+        margin: auto; 
+    }
+    .Rectangle-62{
+        width: 100%;
+        border-bottom-left-radius: 5px;
+
+    }
+    .img-container{
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px; 
+    }
+    .-File-type-jpg-jpeg-png {
+        font-size: 12px;
+    }
+    .Rectangle-60{
+        width: 90%;
+        display: block;
+        margin: 20px auto;
+    }
 }
