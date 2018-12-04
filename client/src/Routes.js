@@ -5,6 +5,7 @@ import About from './components/About/about';
 import Form from './components/Form/form';
 import CloudNative from './components/CloudNative/cloudNative';
 import Ai from './components/Ai/ai';
+import Navbar from './components/Navbar/Navbar';
 
 
 import history from './History';
@@ -14,7 +15,8 @@ class Routers extends Component {
         return (
             <Router history={history}>
                 <div>
-                   
+                     <Navbar />
+                
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/form" component={Form} />
