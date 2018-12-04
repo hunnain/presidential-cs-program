@@ -1,14 +1,15 @@
 
-function validateForm(check, data, field) {
+function validateForm(check, data, field, err) {
     const {
         fullName, DOB, gender, email, phoneNumber, lastQualification, studentCnic, fatherName,
-        homeAddress, batch, course, image,fatherCnic
+        homeAddress, batch, course, image, fatherCnic
     } = data;
 
-    var errors = {
+    var errors = err ? err : {
         hasError: false,
         errorsObj: {}
     }
+
 
     let Validation = {
         fullName: {
@@ -33,7 +34,11 @@ function validateForm(check, data, field) {
                     condition: !image,
                     message: "Please Select Your Picture",
                 },
-                
+                {
+                    condition: image.size > 1000000,
+                    message: "Image Size Must Be Less Than 1 MB",
+                },
+
             ],
             elem: "imagePicker"
         },
@@ -56,7 +61,7 @@ function validateForm(check, data, field) {
             ],
             elem: "studentCnic"
         },
-       fatherCnic: {
+        fatherCnic: {
             Validate: [
                 {
                     condition: fatherCnic.length !== 13,
@@ -79,7 +84,7 @@ function validateForm(check, data, field) {
             Validate: [
                 {
                     condition: !gender,
-                    message: "Please Select Atleast Gender",
+                    message: "Please Select Your Gender",
                 }
             ],
             elem: "gender"
@@ -110,14 +115,14 @@ function validateForm(check, data, field) {
 
                 }, {
                     condition: phoneNumber.length !== 11,
-                    message: "Number Length Is Less Than 11"
+                    message: "Length Is Less Than 11"
                 }
 
             ],
             elem: "phoneNumber"
         },
         batch: {
-            Validate:[
+            Validate: [
                 {
                     condition: !batch.length || batch === "Select",
                     message: "Please Select Batch Number",
@@ -126,7 +131,7 @@ function validateForm(check, data, field) {
             elem: "batch"
         },
         course: {
-            Validate:[
+            Validate: [
                 {
                     condition: !course.length || course === "Select",
                     message: "Please Select Any Course",
@@ -136,31 +141,28 @@ function validateForm(check, data, field) {
         }
     }
     if (check === "all") {
-        for (var item in Validation) {
-            Validation[item].Validate.map((conArray, index) => {
-                if (conArray.condition) {
-                    errors.hasError = true;
-                    errors.errorsObj[item] ?
-                        errors.errorsObj[item].message += conArray.message
-                        : errors.errorsObj[item] = {message:""}
-                    errors.errorsObj[item].message += ` ${conArray.message} . `
+        for (var i in data) {
+            var conArray = Validation[i].Validate;
+            errors.errorsObj[Validation[i].elem] = { message: [] }
+            for (var j = 0; j < conArray.length; j++) {
+                if (conArray[j].condition) {
+                    errors.hasError = true
+                    errors.errorsObj[Validation[i].elem].message.push(conArray[j].message)
                 }
-            })
+            }
         }
-        return errors;
+        return errors
     }
     if (check === "each") {
-        Validation[field].Validate.map((conArray, index) => {
-            if (conArray.condition) {
-                errors.errorsObj[field] ?
-                    errors.errorsObj[field].message += conArray.message
-                    : errors.errorsObj[field] = {message:""}
-                errors.errorsObj[field].message += ` ${conArray.message} . `
-
-
+        var conArray = Validation[field].Validate;
+        errors.errorsObj[Validation[field].elem] = { message: [] }
+        for (var j = 0; j < conArray.length; j++) {
+            if (conArray[j].condition) {
+                errors.hasError = true
+                errors.errorsObj[Validation[field].elem].message.push(conArray[j].message)
             }
-        })
-        return errors;
+        }
+        return errors
     }
 
 
