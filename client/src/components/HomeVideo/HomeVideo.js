@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -8,8 +8,8 @@ class HomeVideo extends Component {
     render() { 
         return ( 
             <div className="sliderImg">
-            <div class="container">
-              <div class="slider-doc">
+            <div className="container">
+              <div className="slider-doc">
                 <div className="slider-doc-f1">
                 <div className="slider-doc-txt">
       
@@ -19,7 +19,7 @@ class HomeVideo extends Component {
                 </div>
                 <div className="slider-doc-f2">
                     <div className="video-cont">
-                    <iframe className="video"  src="https://www.youtube.com/embed/GMNJAruCO5I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe className="video"  src="https://www.youtube.com/embed/GMNJAruCO5I"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
                     </div>
                 </div>
               </div>

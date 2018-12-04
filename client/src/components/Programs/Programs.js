@@ -17,16 +17,16 @@ class Programs extends Component {
                 <div className="box1-cont-flex">
                 <div className="box1-cont-flex-box" style={{backgroundColor: "rgb(25, 42, 86)"}}>
                 
-                <p class="align-middle boxTxt">Artificial Intelligence</p>
+                <p className="align-middle boxTxt">Artificial Intelligence</p>
                 </div>
                 </div>
                 <div className="box1-cont-flex">
                 <div className="box1-cont-flex-box" style={{backgroundColor: "rgb(225, 0, 106)"}}>
-                <p class="align-middle boxTxt">Cloud Native Computing</p></div>
+                <p className="align-middle boxTxt">Cloud Native Computing</p></div>
                 </div>
                 <div className="box1-cont-flex">
                 <div className="box1-cont-flex-box" style={{backgroundColor: "rgb(117, 123, 126)"}}>
-                <p class="align-middle boxTxt">Coming Soon</p></div>
+                <p className="align-middle boxTxt">Coming Soon</p></div>
                 </div>
               </div>
             </div>
