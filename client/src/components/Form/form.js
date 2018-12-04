@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.min.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./loginStyle.css"
 import validateForm from "./helpers/validate";
 import { MyInput, MySelect, MyRadio } from "./Input/MyInput";
@@ -15,7 +15,7 @@ class Form extends Component {
                 gender: "",
                 email: "",
                 phoneNumber: "",
-                lastQualification: "",
+                lastQualification: "",  
                 studentCnic: "",
                 fatherCnic: "",
                 fatherName: "",

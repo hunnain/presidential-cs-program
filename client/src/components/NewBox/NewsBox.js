@@ -3,6 +3,11 @@ import arrow from '../../assets/assets/icons/arrow.svg';
 import news1 from '../../assets/assets/images/Rectangle 46.jpg';
 import news2 from '../../assets/assets/images/Rectangle 47.jpg';
 import news3 from '../../assets/assets/images/Rectangle 49.jpg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/js/bootstrap.min.js';
+// import 'bootstrap/js/dist/carousel.js';
+// import 'bootstrap/js/dist/carousel.js.map';
+import Carousel from 'react-bootstrap';
 
 
 
@@ -25,9 +30,9 @@ class News extends Component {
           <h1>In The News</h1>
           </div>
 
-          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
+          <div id="carouselExampleFade" className="carousel slide carousel-fade" data-ride="carousel">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
       
 
 
@@ -92,7 +97,7 @@ class News extends Component {
 
 </div>
           
-<div class="carousel-item ">
+<div className="carousel-item ">
       
 
 
@@ -161,13 +166,13 @@ class News extends Component {
 
           
           
-          <a class="carousel-control-prev noVisible" href="#carouselExampleFade" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    {/* <span class="sr-only">Previous</span> */}
+          <a className="carousel-control-prev noVisible" href="#carouselExampleFade" role="button" data-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    {/* <span className="sr-only">Previous</span> */}
   </a>
-  <a class="carousel-control-next noVisible" href="#carouselExampleFade" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    {/* <span class="sr-only">Next</span> */}
+  <a className="carousel-control-next noVisible" href="#carouselExampleFade" role="button" data-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    {/* <span className="sr-only">Next</span> */}
   </a>
 </div>
 
