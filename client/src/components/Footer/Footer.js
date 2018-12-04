@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo2 from '../../assets/assets/logo/pics-logo.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import './Footer.css';
 
 
 class Footer extends Component {

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './home.css';
-import News from '../News/News';
-import Programs from '../Programs/Programs';
+import News from './News/News';
+import Programs from './Programs/Programs';
 import Footer from '../Footer/Footer';
-import Copyright from '../Copyright/Copyright';
-import HomeVideo from '../HomeVideo/HomeVideo';
+import HomeVideo from './HomeVideo/HomeVideo';
 
 
 class Home extends Component {
@@ -15,7 +14,6 @@ class Home extends Component {
         <Programs />
         <News />
         <Footer />
-        <Copyright />
       </div >
     );
   }
