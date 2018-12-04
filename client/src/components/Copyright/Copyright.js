@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import logo2 from '../../assets/assets/logo/pics-logo.svg';
-import panacloudlogo from '../../assets/assets/logo/panacloud-logo.svg';
+import logo2 from '../../../assets/assets/logo/pics-logo.svg';
+import panacloudlogo from '../../../assets/assets/logo/panacloud-logo.svg';
+// import panacloudlogo from '../../../assets';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import '../Footer.css';
 
 
 

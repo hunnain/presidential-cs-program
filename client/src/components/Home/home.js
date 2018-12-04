@@ -15,7 +15,6 @@ class Home extends Component {
         <Programs />
         <News />
         <Footer />
-        <Copyright />
       </div >
     );
   }
