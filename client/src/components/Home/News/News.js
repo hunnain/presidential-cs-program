@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import arrow from '../../assets/assets/icons/arrow.svg';
-import news1 from '../../assets/assets/images/Rectangle 46.jpg';
-import news2 from '../../assets/assets/images/Rectangle 47.jpg';
-import news3 from '../../assets/assets/images/Rectangle 49.jpg';
+import arrow from '../../../assets/assets/icons/arrow.svg';
+// import arrow from '../../../';
+import news1 from '../../../assets/assets/images/Rectangle 46.jpg';
+import news2 from '../../../assets/assets/images/Rectangle 47.jpg';
+import news3 from '../../../assets/assets/images/Rectangle 49.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/js/dist/carousel.js';

@@ -6,8 +6,8 @@ import Form from './components/Form/form';
 import CloudNative from './components/CloudNative/cloudNative';
 import Ai from './components/Ai/ai';
 import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
-import Copyright from './components/Footer/Copyright/Copyright';
+// import Footer from './components/Footer/Footer';
+import Copyright from './components/Copyright/Copyright';
 
 
 import history from './History';
