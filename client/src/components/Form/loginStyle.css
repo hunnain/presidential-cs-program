@@ -186,6 +186,7 @@
     position: relative;
     font-size: 15px;
     margin:10px 0;
+    text-align: justify;
     width: 552px;
     padding: 5px;
     transition: all ease-in-out 2s;
