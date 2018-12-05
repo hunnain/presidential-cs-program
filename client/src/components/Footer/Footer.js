@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo2 from '../../assets/assets/logo/pics-logo.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Footer.css';
+import { withRouter } from "react-router";
+// import './Footer.css';
 
 
 class Footer extends Component {
@@ -12,7 +13,10 @@ class Footer extends Component {
           <div className="foot1">
           <div className="container footBox">
           <div className="myDiv">
-          <h1><img src={logo2} /><span className="foot-pics">PIAIC</span></h1>
+          <h1 onClick={() => {
+            this.props.history.push("/");
+            console.log(this.props);
+            }}><img src={logo2} /><span className="foot-pics">PIAIC</span></h1>
           
             <div className="row" style={{marginTop: 50}}>
             
@@ -54,4 +58,4 @@ class Footer extends Component {
     }
 }
  
-export default Footer;
+export default withRouter(Footer);
