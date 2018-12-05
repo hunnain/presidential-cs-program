@@ -44,6 +44,12 @@ exports = module.exports = function (app, mongoose) {
             minlength: 13,
             maxlength: 13
         },
+        fatherCnic: {
+            type: String,
+            require: true,
+            minlength: 13,
+            maxlength: 13
+        },
         fatherName: {
             type: String,
             require: true,
@@ -56,11 +62,6 @@ exports = module.exports = function (app, mongoose) {
         },
         imageUrl: {
             type: String,
-            require: true
-        },
-        batch: {
-            type: String,
-            minlength: 1,
             require: true
         },
         course: {

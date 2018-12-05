@@ -11,8 +11,10 @@ exports = module.exports = function (app, mongoose) {
     });
     var imageFilter = function (req, file, cb) {
         // accept image files only
-        if (!file.originalname.match(/\.(jpg|jpeg|png|gif)$/i)) {
-            return cb(new Error("Only image files are allowed!"), false);
+        if (!file.originalname.match(/\.(jpg|jpeg|png)$/i)) {
+
+            req.imgError = true;
+            // return cb(new Error("Only image files are allowed!"), true);
         }
         cb(null, true);
     };
@@ -27,8 +29,13 @@ exports = module.exports = function (app, mongoose) {
     var router = express.Router();
 
     /* POST users listing. */
-    router.post('/', upload.single("image"), function (req, res, next) {
+    router.post('/', upload.single("image"), function (req, res) {
+
+        if(req.imgError){
+            return res.status(400).send({message:"Please Provide A Valid Image"})
+        }
         const body = req.body;
+
 
         // console.log(app.db.models.Student);
         console.log(req.file.path);
@@ -63,9 +70,6 @@ exports = module.exports = function (app, mongoose) {
         }
         if (!body.studentCnic) {
             return res.status(400).send({ message: "Please Provide Your Cnic" });
-        }
-        if (!body.batch) {
-            return res.status(400).send({ message: "Please Provide Your Selected Batch" });
         }
         if (!body.dob) {
             return res.status(400).send({ message: "Please Provide Your Date of Birth" });
