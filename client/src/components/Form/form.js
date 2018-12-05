@@ -21,7 +21,6 @@ class Form extends Component {
                 fatherName: "",
                 homeAddress: "",
                 image: "",
-                batch: "",
                 course: ""
             },
             errors: {
@@ -61,7 +60,6 @@ class Form extends Component {
         const {
             image,
             DOB,
-            batch,
             course,
             email,
             fatherName,
@@ -86,7 +84,6 @@ class Form extends Component {
         var formData = new FormData();
         formData.append("image", image);
         formData.append("dob", DOB);
-        formData.append("batch", batch);
         formData.append("course", course);
         formData.append("email", email);
         formData.append("fatherName", fatherName);

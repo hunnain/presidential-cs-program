@@ -1,30 +1,43 @@
-
+/*eslint-disabled */
 function validateForm(check, data, field, err) {
     const {
         fullName, DOB, gender, email, phoneNumber, lastQualification, studentCnic, fatherName,
-        homeAddress, batch, course, image, fatherCnic
+        homeAddress, course, image, fatherCnic
     } = data;
 
     var errors = err ? err : {
         hasError: false,
         errorsObj: {}
     }
+    function hasNumber(myString) {
+        return ;
+      }
+      
 
 
     let Validation = {
         fullName: {
             Validate: [{
                 condition: fullName.length < 3,
-                message: "Please Specify Your FullName",
-            }],
+                message: " Please Specify Your Full Name . ",
+            }, {
+                condition:/\d/.test(fullName) || /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(fullName),
+                message: " Name Can Not Contain Numbers Or Any Special Character . ",
+            }
+        ],
             elem: "fullName"
         },
         fatherName: {
             Validate: [
                 {
                     condition: fatherName.length < 3,
-                    message: "Please Specify You Full Father Name",
+                    message: " Please Specify You Full Father Name . ",
+                },
+                {
+                    condition:/\d/.test(fatherName) || /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(fatherName),
+                    message: " Name Can Not Contain Numbers Or Any Special Character . ",
                 }
+
             ],
             elem: "fatherName"
         },
@@ -35,7 +48,7 @@ function validateForm(check, data, field, err) {
                     message: "Please Select Your Picture",
                 },
                 {
-                    condition: image.size > 1000000,
+                    condition: image && image.size > 1000000,
                     message: "Image Size Must Be Less Than 1 MB",
                 },
 
@@ -56,7 +69,9 @@ function validateForm(check, data, field, err) {
                 {
                     condition: studentCnic.length !== 13,
                     message: "Please Specify Your Full CNIC",
-
+                },{
+                    condition: !/\d/.test(studentCnic) || /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(studentCnic),
+                    message: " Please Specify CNIC Number Without Hyphens ('-') Or Any Special Character . ",
                 }
             ],
             elem: "studentCnic"
@@ -67,6 +82,9 @@ function validateForm(check, data, field, err) {
                     condition: fatherCnic.length !== 13,
                     message: "Please Specify Your Full Father CNIC",
 
+                },{
+                    condition: !/\d/.test(fatherCnic) || /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(fatherCnic),
+                    message: " Please Specify CNIC Number Without Hyphens ('-') Or Any Special Character . ",
                 }
             ],
             elem: "fatherCnic"
@@ -92,7 +110,7 @@ function validateForm(check, data, field, err) {
         lastQualification: {
             Validate: [
                 {
-                    condition: !lastQualification,
+                    condition: !lastQualification || lastQualification === "Select",
                     message: "Please Select Your Qualification",
                 }
             ],
@@ -110,25 +128,20 @@ function validateForm(check, data, field, err) {
         phoneNumber: {
             Validate: [
                 {
-                    condition: !/^((\+92)|(0092))-{0,1}\d{3}-{0,1}\d{7}$|^\d{11}$|^\d{4}-\d{7}$/.test(phoneNumber),
-                    message: "Please Provide A Valid Number",
+                    condition:phoneNumber.indexOf("03") !==0,
+                    message: " Please Provide A Valid Number . ",
 
                 }, {
                     condition: phoneNumber.length !== 11,
-                    message: "Length Is Less Than 11"
+                    message: " Length Must Be Equal To 11 . "
+                },
+                {
+                    condition:!/\d/.test(phoneNumber) || /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(phoneNumber),
+                    message:" Please Specify Contact Number Without Hyphen ('-') Or Any Special Charachter . "
                 }
 
             ],
             elem: "phoneNumber"
-        },
-        batch: {
-            Validate: [
-                {
-                    condition: !batch.length || batch === "Select",
-                    message: "Please Select Batch Number",
-                }
-            ],
-            elem: "batch"
         },
         course: {
             Validate: [
@@ -141,7 +154,7 @@ function validateForm(check, data, field, err) {
         }
     }
     if (check === "all") {
-        for (var i in data) {
+        for (var i in Validation) {
             var conArray = Validation[i].Validate;
             errors.errorsObj[Validation[i].elem] = { message: [] }
             for (var j = 0; j < conArray.length; j++) {
@@ -149,6 +162,9 @@ function validateForm(check, data, field, err) {
                     errors.hasError = true
                     errors.errorsObj[Validation[i].elem].message.push(conArray[j].message)
                 }
+            }
+            if (!errors.errorsObj[Validation[i].elem].message.length) {
+                errors.errorsObj[Validation[i].elem] = undefined
             }
         }
         return errors
@@ -161,6 +177,9 @@ function validateForm(check, data, field, err) {
                 errors.hasError = true
                 errors.errorsObj[Validation[field].elem].message.push(conArray[j].message)
             }
+        }
+        if (!errors.errorsObj[Validation[field].elem].message.length) {
+            errors.errorsObj[Validation[field].elem] = undefined
         }
         return errors
     }
