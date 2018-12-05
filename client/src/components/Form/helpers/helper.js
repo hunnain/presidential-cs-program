@@ -1,4 +1,6 @@
 /*eslint-disabled */
+import React, { Component } from "react";
+
 function validateForm(check, data, field, err) {
     const {
         fullName, DOB, gender, email, phoneNumber, lastQualification, studentCnic, fatherName,
@@ -10,9 +12,9 @@ function validateForm(check, data, field, err) {
         errorsObj: {}
     }
     function hasNumber(myString) {
-        return ;
-      }
-      
+        return;
+    }
+
 
 
     let Validation = {
@@ -21,10 +23,10 @@ function validateForm(check, data, field, err) {
                 condition: fullName.length < 3,
                 message: " Please Specify Your Full Name . ",
             }, {
-                condition:/\d/.test(fullName) || /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(fullName),
+                condition: /\d/.test(fullName) || /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(fullName),
                 message: " Name Can Not Contain Numbers Or Any Special Character . ",
             }
-        ],
+            ],
             elem: "fullName"
         },
         fatherName: {
@@ -34,7 +36,7 @@ function validateForm(check, data, field, err) {
                     message: " Please Specify You Full Father Name . ",
                 },
                 {
-                    condition:/\d/.test(fatherName) || /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(fatherName),
+                    condition: /\d/.test(fatherName) || /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(fatherName),
                     message: " Name Can Not Contain Numbers Or Any Special Character . ",
                 }
 
@@ -51,7 +53,10 @@ function validateForm(check, data, field, err) {
                     condition: image && image.size > 1000000,
                     message: "Image Size Must Be Less Than 1 MB",
                 },
-
+                {
+                    condition: image && !image.type.toLowerCase().match(/\/(jpg|jpeg|png)$/i),
+                    message: " Please Select A Valid Image . "
+                }
             ],
             elem: "imagePicker"
         },
@@ -68,10 +73,13 @@ function validateForm(check, data, field, err) {
             Validate: [
                 {
                     condition: studentCnic.length !== 13,
-                    message: "Please Specify Your Full CNIC",
-                },{
-                    condition: !/\d/.test(studentCnic) || /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(studentCnic),
-                    message: " Please Specify CNIC Number Without Hyphens ('-') Or Any Special Character . ",
+                    message: " Please Specify Your Full CNIC .",
+                }, {
+                    condition: !/\d/.test(studentCnic) || /^(?!\d+$)(?:[a-zA-Z0-9][a-zA-Z0-9 @&$]*)?$/.test(studentCnic),
+                    message: " CNIC Should Have Numbers Only . ",
+                }, {
+                    condition: /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(studentCnic),
+                    message: " No Space Hyphens '-' Or Any Special Character . ",
                 }
             ],
             elem: "studentCnic"
@@ -80,12 +88,16 @@ function validateForm(check, data, field, err) {
             Validate: [
                 {
                     condition: fatherCnic.length !== 13,
-                    message: "Please Specify Your Full Father CNIC",
+                    message: " Please Specify Your Full Father CNIC . ",
 
-                },{
-                    condition: !/\d/.test(fatherCnic) || /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(fatherCnic),
-                    message: " Please Specify CNIC Number Without Hyphens ('-') Or Any Special Character . ",
+                }, {
+                    condition: !/\d/.test(fatherCnic) || /^(?!\d+$)(?:[a-zA-Z0-9][a-zA-Z0-9 @&$]*)?$/.test(fatherCnic),
+                    message: " CNIC Should Have Numbers Only . ",
+                }, {
+                    condition: /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(fatherCnic),
+                    message: " No Space Hyphens '-' Or Any Special Character . ",
                 }
+
             ],
             elem: "fatherCnic"
         },
@@ -128,7 +140,7 @@ function validateForm(check, data, field, err) {
         phoneNumber: {
             Validate: [
                 {
-                    condition:phoneNumber.indexOf("03") !==0,
+                    condition: phoneNumber.indexOf("03") !== 0,
                     message: " Please Provide A Valid Number . ",
 
                 }, {
@@ -136,8 +148,11 @@ function validateForm(check, data, field, err) {
                     message: " Length Must Be Equal To 11 . "
                 },
                 {
-                    condition:!/\d/.test(phoneNumber) || /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(phoneNumber),
-                    message:" Please Specify Contact Number Without Hyphen ('-') Or Any Special Charachter . "
+                    condition: !/\d/.test(phoneNumber) || /^(?!\d+$)(?:[a-zA-Z0-9][a-zA-Z0-9 @&$]*)?$/.test(phoneNumber),
+                    message: " Should Have Numbers Only . ",
+                }, {
+                    condition: /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(phoneNumber),
+                    message: " No Space Hyphens '-' Or Any Special Character . ",
                 }
 
             ],
@@ -192,4 +207,20 @@ function validateForm(check, data, field, err) {
     }
 }
 
-export default validateForm;
+
+const Loader = () => {
+    return (
+        <div className="LoaderContainer">
+            <div className="loader">
+                <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+            </div>
+        </div>
+    )
+}
+
+
+
+export { validateForm, Loader };
+
+
+
