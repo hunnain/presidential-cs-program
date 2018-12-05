@@ -1,11 +1,11 @@
 export default class path {
 
-    static baseUrl = "";
+    static BASE_URL = "http://localhost:3001";
 
-    static LOGIN = path.baseUrl + "/authenticate";
+    static SEND_VERIFICATION_CODE = path.BASE_URL + "/auth/sendverificationcode";
 
-    static APPLY = path.baseUrl + "/api/rest/apply/";
+    static VERIFY_CODE = path.BASE_URL + "/auth/verifycode";
 
-    static TEST = path.baseUrl + "/api/rest/test";
+    static TEST = path.BASE_URL + "/api/rest/test";
 
 }
