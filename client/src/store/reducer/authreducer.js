@@ -7,6 +7,7 @@ function authReducer(state = {
     errorMessage: false,
     phoneNo: null,
     token: null,
+    successMessage: null
 }, action) {
 
     switch (action.type) {
@@ -23,7 +24,8 @@ function authReducer(state = {
             return {
                 ...state,
                 isError:false,
-                isLoading : false
+                isLoading : false,
+                successMessage: action.data.successMessage
             };
             break;
 
