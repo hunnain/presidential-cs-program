@@ -8,7 +8,8 @@ import Ai from './components/Ai/ai';
 import Navbar from './components/Navbar/Navbar';
 // import Footer from './components/Footer/Footer';
 import Copyright from './components/Copyright/Copyright';
-
+import PhoneNumber from "./components/auth/PhoneNumber";
+import VerificationCode from "./components/auth/VerificationCode";
 
 import history from './History';
 
@@ -20,11 +21,13 @@ class Routers extends Component {
                 <div>
                      <Navbar />
                 
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/about" component={About} />
-                    <Route exact path="/apply" component={Form} />
-                    <Route exact path="/ai" component={CloudNative} />
-                    <Route exact path="/cloudnative" component={Ai} />
+                     <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/verification" component={VerificationCode} />
+          <Route exact path="/form" component={Form} />
+          <Route exact path="/apply" component={PhoneNumber} />
+          <Route exact path="/ai" component={CloudNative} />
+          <Route exact path="/cloudnative" component={Ai} />
                    
         <Copyright />
                     
