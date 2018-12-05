@@ -12,6 +12,7 @@ a{
 }
 .navbar_cont{
     display: flex;
+    /* flex-direction: row !important; */
     align-items: center;
     width: 100%;
     padding-top: 10px;
@@ -170,6 +171,7 @@ a{
 }
 .nav-flex-1 p{
     position: absolute;
+    margin-top: -5px;
 }
 .hamb-btn{
     float: right;
@@ -185,8 +187,14 @@ a{
 
 }
 @media screen and (min-width: 980px){
+    /* .navbar_cont{
+        flex-direction: row !important;
+    } */
     .nav-flex-3 ul li{
-        float: left;
+        float: left !important;
+    }
+    .nav-flex-3 ul {
+        display: block !important;
     }
     .navbar{
         height: 65px;
