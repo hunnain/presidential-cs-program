@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+import AuthMiddleware from '../../store/middleware/authMiddleware';
+import { connect } from 'react-redux';
 import "./auth.css";
 
-export default class PhoneNumber extends Component {
+
+class PhoneNumber extends Component {
   state = {
     number: ""
   };
@@ -9,6 +12,7 @@ export default class PhoneNumber extends Component {
   onSubmit = (ev) => {
     const { number } = this.state;
     console.log("number", number,ev);
+    this.props.sendPhoneNo(number);
     this.props.history.push("/verification")
   };
 
@@ -30,7 +34,7 @@ export default class PhoneNumber extends Component {
               className="form-control Rectangle-59"
               type="number"
               value={number}
-              placeholder="03XX-XXX-XXXX"
+              placeholder="3XX-XXX-XXXX"
               onChange={e => {
                 this.setState({ number: e.target.value });
               }}
@@ -44,3 +48,20 @@ export default class PhoneNumber extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+      isLoading: state.authReducer.isLoading,
+      isError : state.authReducer.isError,
+      errorMessage: state.authReducer.errorMessage,
+      phoneNo: state.authReducer.phoneNo
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+      sendPhoneNo : (phoneNo) => { dispatch(AuthMiddleware.sendPhoneNo(phoneNo))}
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PhoneNumber);
