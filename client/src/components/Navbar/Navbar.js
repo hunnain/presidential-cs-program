@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 // import withRouter from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import {BrowserRouter} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Navbar extends Component {
     state = { 
@@ -26,7 +27,7 @@ class Navbar extends Component {
         return ( 
             <div className="navbar">
             
-                <div class="container color">
+                <div className="container">
                 <div className="navbar_cont">
                     <div className="navbar-flex nav-flex-1"><Link to='/'><p><img src={logo} />PIAIC</p></Link>
                   
@@ -51,10 +52,7 @@ class Navbar extends Component {
                     
                     
                     </div>
-                    {/* <div className="navbar-flex nav-flex-4"><p>CloudNative</p></div>
-                    <div className="navbar-flex nav-flex-5"><p>About</p></div>
-                    <div className="navbar-flex nav-flex-6"><p>Apply</p></div>
-                    <div className="navbar-flex nav-flex-7"><p>Contact</p></div> */}
+                    
                 </div>
                 </div>
             </div>
@@ -64,32 +62,3 @@ class Navbar extends Component {
  
 // export default withRouter(Navbar);
 export default Navbar;
-
-
-// class Home extends Component {
-//   render() {
-//     return (
-//       <div>
-
-
-//         <ul>
-//           <li><Link to='/'>Home</Link></li>
-//           <li><Link to='/about'>About</Link></li>
-//           <li><Link to='/form'>Forms</Link></li>
-//           <li><Link to='/ai'>Ai</Link></li>
-//           <li><Link to='/cloudnative'>cloudNative</Link></li>
-//         </ul>
-
-
-//         <h1>This is home page</h1>
-//       </div>
-//     );
-//   }
-// }
-
-
-
-// // export default withStyles(styles)(DenseAppBar);
-
-// export default Home;
-

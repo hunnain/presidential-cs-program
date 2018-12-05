@@ -6,9 +6,12 @@ import Form from './components/Form/form';
 import CloudNative from './components/CloudNative/cloudNative';
 import Ai from './components/Ai/ai';
 import Navbar from './components/Navbar/Navbar';
+// import Footer from './components/Footer/Footer';
+import Copyright from './components/Copyright/Copyright';
 
 
 import history from './History';
+
 
 class Routers extends Component {
     render() {
@@ -19,10 +22,11 @@ class Routers extends Component {
                 
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />
-                    <Route exact path="/form" component={Form} />
+                    <Route exact path="/apply" component={Form} />
                     <Route exact path="/ai" component={CloudNative} />
                     <Route exact path="/cloudnative" component={Ai} />
-                    
+                   
+        <Copyright />
                     
                 </div>
             </Router>
