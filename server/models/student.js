@@ -32,7 +32,8 @@ exports = module.exports = function (app, mongoose) {
         phoneNumber: {
             type: String,
             require: true,
-            minlength: 10
+            minlength: 10,
+            unique:true
         },
         lastQualification: {
             type: String,
