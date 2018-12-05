@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.min.css"
-import "./loginStyle.css"
-import validateForm from "./helpers/validate";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./FormStyle.css"
+import { validateForm, Loader } from "./helpers/helper.js";
 import { MyInput, MySelect, MyRadio } from "./Input/MyInput";
 
 
@@ -9,6 +9,7 @@ class Form extends Component {
     constructor() {
         super();
         this.state = {
+            submited: false,
             data: {
                 fullName: "",
                 DOB: "",
@@ -51,8 +52,6 @@ class Form extends Component {
                 })
                 break;
         }
-
-
     }
 
     submitForm(ev) {
@@ -74,12 +73,14 @@ class Form extends Component {
 
         var validate = validateForm("all", data);
         if (validate.hasError) {
-            this.setState({ errors: validate },(x)=>{
+            this.setState({ errors: validate }, (x) => {
                 console.log(this.state);
-                
+
             });
             return
         }
+
+        this.setState({ submited: true })
 
         var formData = new FormData();
         formData.append("image", image);
@@ -104,8 +105,9 @@ class Form extends Component {
             return x.json();
         }).then(x => {
             console.log(x);
-        }).catch((err)=>{
-            console.log(err);  
+            this.setState({ submited: false })
+        }).catch((err) => {
+            console.log(err);
         });
 
     }
@@ -116,12 +118,14 @@ class Form extends Component {
         const {
             fullName, DOB, email, phoneNumber, studentCnic, fatherName, homeAddress, fatherCnic,
         } = this.state.data;
-        const { errors, file } = this.state;
+        const { errors, file, submited } = this.state;
 
 
 
         return (
+
             <div className="container-fluid p-0">
+                {submited && <Loader />}
                 <div className="Rectangle-58">
                     <form action="JavaScript:void(0)" id="myForm" ref="myForm" onSubmit={(ev) => this.submitForm(ev)}  >
                         <h1 className="APPLICATION-FORM ">APPLICATION FORM</h1>
@@ -148,7 +152,7 @@ class Form extends Component {
                             errors
                         }} />
                         <MyInput info={{
-                            type: "number",
+                            type: "text",
                             DisplayName: "Student’s CNIC or B-Form #",
                             name: "studentCnic",
                             id: "studentCnic",
@@ -168,7 +172,7 @@ class Form extends Component {
                             errors
                         }} />
                         <MyInput info={{
-                            type: "number",
+                            type: "text",
                             DisplayName: "Father’s CNIC #",
                             name: "fatherCnic",
                             id: "fatherCnic",
@@ -191,7 +195,7 @@ class Form extends Component {
 
 
                         <MyInput info={{
-                            type: "number",
+                            type: "text",
                             DisplayName: "Contact Number",
                             name: "phoneNumber",
                             id: "phoneNumber",
@@ -255,7 +259,7 @@ class Form extends Component {
                                 name: "lastQualification",
                                 id: "lastQualification",
                                 changeData: this.changeData,
-                                options: ["Matric", "Intermediate"],
+                                options: ["Matric", "Intermediate", "Graduated", "Master"],
                                 errors
                             }}
                         />

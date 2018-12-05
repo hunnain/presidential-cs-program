@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-button:hover,.myDiv h1:hover{
+p:hover,h1:hover,p:hover{
   cursor: pointer;
 }
 
@@ -111,7 +111,6 @@ padding-top: 50px;
     padding-bottom: 50px;
 }
 .box1-cont{
-  width: 85% !important;
   max-width: 1400px;
   position: relative;
   z-index: 5;
@@ -125,8 +124,8 @@ padding-top: 50px;
   /* line-height: 0.67; */
   letter-spacing: normal;
   text-align: left;
-  /* padding-top: 67px;
-  padding-bottom: 77px; */
+  padding-top: 67px;
+  padding-bottom: 77px;
   color: rgb(4, 86, 84);
   padding-left: 40px;
 }
@@ -142,11 +141,8 @@ padding-top: 50px;
 }
 
 .box1-cont-flex-box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   max-width:  398px;
-  width: 100%;
+  width: 90%;
   height: 217px;
   border-radius: 5px;
 
@@ -300,7 +296,7 @@ width: 100%;
 
 .boxTxt{
       /* width: 248px; */
-      /* height: 100%; */
+      height: 100%;
       font-family: Montserrat;
       font-size: 24px;
       font-weight: normal;
@@ -313,7 +309,7 @@ width: 100%;
       /* margin: 0 auto; */
       /* justify-self: center; */
       /* padding: 20%; */
-      /* padding-top: 22%; */
+      padding-top: 22%;
 }
 
 .footBox{
@@ -511,7 +507,7 @@ height: 82px;
 }
 @media screen and (max-width: 1050px) {
   .box1-cont h1{
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .slider-doc-txt h1{
     font-size: 30px;
@@ -567,11 +563,11 @@ height: 82px;
   .box1-cont h1{
     text-align: center;
     padding-left: 0px;
-    /* padding-top: 50px;
-    padding-bottom: 50px; */
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .box1-cont-flexbox{
-    /* flex-direction: column; */
+    flex-direction: column;
   }
   /* .slider-doc{
     flex-direction: column;
@@ -725,9 +721,7 @@ font-size: 15px;
   }
 }
 @media screen and (max-width: 500px){
-  .box1-cont h1{
-    font-size: 1.5em;
-  }
+  
   .foot-f3 p{
     height: auto;
   }
@@ -750,7 +744,7 @@ font-size: 15px;
   }
   .boxTxt{
     font-size: 20px;
-    /* padding-top: 90px; */
+    padding-top: 90px;
   }
   .news-box{
     height: 700px;
