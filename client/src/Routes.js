@@ -4,7 +4,7 @@ import Home from './components/Home/home';
 import About from './components/About/about';
 import Form from './components/Form/form';
 import CloudNative from './components/CloudNative/cloudNative';
-import Ai from './components/Ai/ai';
+import AI from './components/Ai/ai';
 import Navbar from './components/Navbar/Navbar';
 // import Footer from './components/Footer/Footer';
 import Copyright from './components/Copyright/Copyright';
@@ -23,8 +23,8 @@ class Routers extends Component {
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/apply" component={Form} />
-                    <Route exact path="/ai" component={CloudNative} />
-                    <Route exact path="/cloudnative" component={Ai} />
+                    <Route exact path="/cloudnative" component={CloudNative} />
+                    <Route exact path="/artificial-inteligence" component={AI} />
                    
         <Copyright />
                     
