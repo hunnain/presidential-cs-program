@@ -38,8 +38,14 @@ exports = module.exports = function(app, mongoose) {
         if(req.body.phone && req.body.token && req.body.phone.length==11 && req.body.token.length>=4) {
             authy.verifyPhone({ countryCode: '92', phone: req.body.phone, token: req.body.token })
                 .then(function (response) {
-                    app.log("response ",response);
-                    res.send(responseToClient(true,response.message));
+                    app.log("response ", response);
+                    var resToClient = {
+                        success: true,
+                        message: response.message,
+                        authToken: "xyz123"
+                    }
+                    res.send(resToClient);
+                    //res.send(responseToClient(true,response.message));
                 })
                 .catch(function (error){
                     app.logLevel1("error",error);
