@@ -4,6 +4,9 @@ import "./FormStyle.css"
 import { validateForm, Loader } from "./helpers/helper.js";
 import { MyInput, MySelect, MyRadio } from "./Input/MyInput";
 
+import RegistrationFormMiddleware from "../../store/middleware/registrationFormMiddleware";
+import { connect } from "react-redux";
+
 
 class Form extends Component {
     constructor() {
@@ -296,4 +299,20 @@ class Form extends Component {
     }
 }
 
-export default Form;
+function mapStateToProps(state) {
+    return {
+        isLoading: state.registrationFormReducer.isLoading,
+        isError : state.registrationFormReducer.isError,
+        errorMessage: state.registrationFormReducer.errorMessage,
+        successMessage: state.registrationFormReducer.successMessage,
+        authToken: state.authReducer.authToken,
+    };
+}
+  
+function mapDispatchToProps(dispatch) {
+    return {
+        submitRegistrationFrom : (registrationForm) => { dispatch(RegistrationFormMiddleware.submitRegistrationFrom(registrationForm))}
+    };
+}
+  
+export default connect(mapStateToProps, mapDispatchToProps)(Form);

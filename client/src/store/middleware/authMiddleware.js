@@ -39,7 +39,7 @@ class AuthMiddleware {
                     dispatch(AuthActions.verificationCodeSentError({errorMessage:response.data.message}));
                 }
                 else {
-                    dispatch(AuthActions.verificationCodeSentSuccessul({successMessage:response.data.message}));
+                    dispatch(AuthActions.verificationCodeSentSuccessul({successMessage:response.data.message,authToken:response.data.authToken}));
                 }
             })
             .catch((err) => {
