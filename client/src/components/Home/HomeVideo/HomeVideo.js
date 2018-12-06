@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Countdown from '../Countdown/Countdown';
 
 
 class HomeVideo extends Component {
@@ -19,7 +19,12 @@ class HomeVideo extends Component {
                 </div>
                 <div className="slider-doc-f2">
                     <div className="video-cont">
+                        <Countdown date={`2018-12-11T00:00:00`} /> 
+                    {
+                        /*
                     <iframe className="video"  src="https://www.youtube.com/embed/GMNJAruCO5I"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                    */
+                        }
                     </div>
                 </div>
               </div>

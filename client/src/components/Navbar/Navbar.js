@@ -45,7 +45,12 @@ class Navbar extends Component {
                         {/* <BrowserRouter></BrowserRouter> */}
                         <Link to='/cloud-native'>  <li>Cloud Native</li></Link>
                         <Link to='/about'>  <li>About</li></Link>
-                        <Link to='/apply'>  <li>Apply</li></Link>
+                        {
+                          /*
+                            <Link to='/apply'>  <li>Apply</li></Link>
+                          */      
+                        }
+                        
                         <Link to='/contact'>  <li>Contact</li></Link>
                     </ul>
                     
