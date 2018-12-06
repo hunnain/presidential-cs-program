@@ -872,3 +872,20 @@ font-size: 15px;
 .Countdown-col-element strong{
   font-size: 50px;
 }
+@media (max-width: 610px) {
+  .Countdown {
+    margin: 10px auto;
+    padding-bottom: 20px;
+    color: #FFFFFF;
+    background: radial-gradient(#14BF94, #0B333A);
+    border-radius: 90px;
+    margin-top: 10vw;
+    max-width: 550px;
+    width: 100%;
+    font-size: 2.5vw;
+    height: 18vw;
+}
+.Countdown-col-element strong {
+  font-size: 7vw;
+}
+}
