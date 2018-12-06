@@ -10,6 +10,8 @@ import Navbar from './components/Navbar/Navbar';
 import Copyright from './components/Copyright/Copyright';
 import PhoneNumber from "./components/auth/PhoneNumber";
 import VerificationCode from "./components/auth/VerificationCode";
+import Directors from '../src/components/Directors/Directors';
+import Contact from '../src/components/ContactUs/ContactUs';
 
 import history from './History';
 
@@ -19,18 +21,20 @@ class Routers extends Component {
         return (
             <Router history={history}>
                 <div>
-                     <Navbar />
-                
-                     <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/verification" component={VerificationCode} />
-          <Route exact path="/form" component={Form} />
-          <Route exact path="/apply" component={PhoneNumber} />
-          <Route exact path="/ai" component={CloudNative} />
-          <Route exact path="/cloudnative" component={Ai} />
-                   
-        <Copyright />
-                    
+                    <Navbar />
+
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/about" component={About} />
+                    <Route exact path="/verification" component={VerificationCode} />
+                    <Route exact path="/form" component={Form} />
+                    <Route exact path="/apply" component={PhoneNumber} />
+                    <Route exact path="/ai" component={CloudNative} />
+                    <Route exact path="/cloudnative" component={Ai} />
+                    <Route exact path="/directors" component={Directors} />
+                    <Route exact path="/contact" component={Contact} />
+
+                    <Copyright />
+
                 </div>
             </Router>
         )
