@@ -27,19 +27,19 @@ class AuthActions {
         }
     }
 
-    static  verficationCodeSent(data){
+    static  verificationCodeSent(data){
         return {
             type : this.VERIFICATION_CODE_SENT,
             data : data
         }
     }
-    static verficationCodeSentSuccessul(data){
+    static verificationCodeSentSuccessul(data){
         return {
             type : this.VERIFICATION_CODE_SENT_SUCCESSFUL,
             data: data
         }
     }
-    static verficationCodeSentError(data){
+    static verificationCodeSentError(data){
         return {
             type : this.VERIFICATION_CODE_SENT_ERROR,
             data: data

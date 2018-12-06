@@ -13,11 +13,11 @@ exports = module.exports = function(app, mongoose) {
             message: message
         };
     }
-    router.post('/sendverificationcode', function(req, res, next) {
+    router.post('/sendphoneno', function(req, res, next) {
         app.logLevel1("In sendverificationcode function ",req.body.phone);
         app.log("length ",req.body.phone.length);
 
-        if(req.body.phone && req.body.phone.length==10) {
+        if(req.body.phone && req.body.phone.length==11) {
             authy.startPhoneVerification({ countryCode: '92', locale: 'en', phone: req.body.phone, via: enums.verificationVia.SMS })
             .then(function (response) {
                 app.log("response ",response);
@@ -35,7 +35,7 @@ exports = module.exports = function(app, mongoose) {
 
     router.post('/verifycode', function(req, res, next) {
         app.logLevel1("In verifycode function ",req.body.token);
-        if(req.body.phone && req.body.token && req.body.phone.length==10 && req.body.token.length>=4) {
+        if(req.body.phone && req.body.token && req.body.phone.length==11 && req.body.token.length>=4) {
             authy.verifyPhone({ countryCode: '92', phone: req.body.phone, token: req.body.token })
                 .then(function (response) {
                     app.log("response ",response);
