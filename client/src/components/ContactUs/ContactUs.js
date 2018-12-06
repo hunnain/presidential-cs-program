@@ -52,32 +52,32 @@ class Copyright extends Component {
                         <div className="row" >
                             <div className="col-md-6 row2mail">
                                 <label className="label">First Name</label>
-                                <input type="text" value={firstName} onChange={this.handleChnage} name="firstName" className="form-control" placeholder="First name" />
+                                <input type="text" value={firstName} onChange={this.handleChnage} name="firstName" className="form-control input11" placeholder="First name" />
                             </div>
                             <div className="col-md-6 row2mail">
                                 <label className="label">Last Name</label>
-                                <input type="text" value={lastName} onChange={this.handleChnage} name="lastName" className="form-control errorElem" placeholder="Last name" />
-                                <p className="error">Error:(</p>
+                                <input type="text" value={lastName} onChange={this.handleChnage} name="lastName" className="form-control input11" placeholder="Last name" />
+                                {/* <p className="error">Error:(</p> */}
                             </div>
                         </div>
                         <div className="row" >
                             <div className="col-md-6 row2mail">
                                 <label className="label">Contact #</label>
-                                <input type="number" value={contactNumber} name="contactNumber" onChange={this.handleChnage} className="form-control" placeholder="03XX-XXXXXXX" />
+                                <input type="number" value={contactNumber} name="contactNumber" onChange={this.handleChnage} className="form-control input11" placeholder="03XX-XXXXXXX" />
                             </div>
                             <div className="col-md-6 row2mail">
-                                <label className="label">Email Address #</label>
-                                <input type="email" value={email} onChange={this.handleChnage} name="email" className="form-control" placeholder="example@abc.com" />
+                                <label className="label">Email Address</label>
+                                <input type="email" value={email} onChange={this.handleChnage} name="email" className="form-control input11" placeholder="example@abc.com" />
                             </div>
                         </div>
                         <div className="row" >
                             <div className="col-md-12 row2mail">
-                                <label className="label">Email Address #</label>
+                                <label className="label">Your Message</label>
                                 <textarea type="text" rows={8} onChange={this.handleChnage} className="form-control textArea" placeholder="Message here" value={message} name="message" />
                             </div>
                         </div>
                         <div className="row btnRow">
-                            <div className="col-md-4">
+                            <div className="col-md-3">
                                 <button onClick={this.onSubmit} className=" btn Rectangle-112 col-md-12" >
                                     Contact Us
                             </button>
