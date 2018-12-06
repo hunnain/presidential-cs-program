@@ -9,8 +9,8 @@ import { connect } from "react-redux";
 
 
 class Form extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             submited: false,
             data: {
@@ -31,6 +31,10 @@ class Form extends Component {
                 hasError: false,
                 errorsObj: {}
             }
+        }
+        console.log(this.props);
+        if(!this.props.authToken){
+            this.props.history.replace('/apply')
         }
     }
 
@@ -300,6 +304,7 @@ class Form extends Component {
 }
 
 function mapStateToProps(state) {
+    console.log(state)
     return {
         isLoading: state.registrationFormReducer.isLoading,
         isError : state.registrationFormReducer.isError,
