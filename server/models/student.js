@@ -3,6 +3,7 @@ exports = module.exports = function (app, mongoose) {
 
     'use strict';
     const validator = require('validator');
+    const mongooseAutoInc = require('mongoose-auto-increment');
     var Schema = mongoose.Schema;
 
     var Student = new Schema({
@@ -33,7 +34,7 @@ exports = module.exports = function (app, mongoose) {
             type: String,
             require: true,
             minlength: 10,
-            unique:true
+            unique: true
         },
         lastQualification: {
             type: String,
@@ -74,6 +75,8 @@ exports = module.exports = function (app, mongoose) {
             default: Date.now()
         }
     });
+    // mongooseAutoInc.initialize()
+    Student.plugin(mongooseAutoInc.plugin,'idNumber')
 
     app.db.model('Student', Student);
 
