@@ -1,20 +1,25 @@
 import React, { Component } from "react";
+import AuthMiddleware from '../../store/middleware/authMiddleware';
+import { connect } from 'react-redux';
 import "./auth.css";
 
-export default class ConfirmNumber extends Component {
+class ConfirmNumber extends Component {
   state = {
-    code: ""
+    code: "",
+    number: "",
   };
 
   onConfirm = ev => {
-    const { code } = this.state;
+    const { code, number } = this.state;
     console.log("number", code, ev);
-    this.props.history.push("/form");
+    //this.props.verifyCode(this.props.phoneNo,code);
+    this.props.verifyCode(number,code);
+    //this.props.history.push("/form");
   };
 
   render() {
     console.log(this.props);
-    const { number } = this.state;
+    const { number, code } = this.state;
     return (
       <div className="container-fluid p-0">
         <div className="Rectangle-58">
@@ -47,10 +52,10 @@ export default class ConfirmNumber extends Component {
             <input
               className="form-control Rectangle-59"
               type="number"
-              value={number}
+              value={code}
               placeholder="Enter verification code"
               onChange={e => {
-                this.setState({ number: e.target.value });
+                this.setState({ code: e.target.value });
               }}
             />
             <a href="#">
@@ -71,3 +76,22 @@ export default class ConfirmNumber extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+      isLoading: state.authReducer.isLoading,
+      isError : state.authReducer.isError,
+      errorMessage: state.authReducer.errorMessage,
+      phoneNo: state.authReducer.phoneNo,
+      token: state.authReducer.token,
+      successMessage: state.authReducer.successMessage
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+      verifyCode : (phoneNo,token) => { dispatch(AuthMiddleware.verifyCode({phoneNo:phoneNo,token:token}))}
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ConfirmNumber);

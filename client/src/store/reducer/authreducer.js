@@ -15,6 +15,8 @@ function authReducer(state = {
         case AuthActions.PHONE_NO_SENT:
             return {
                 ...state,
+                errorMessage:null,
+                successMessage:null,
                 phoneNo: action.data.phoneNo,
                 isLoading : true
             };
@@ -25,6 +27,7 @@ function authReducer(state = {
                 ...state,
                 isError:false,
                 isLoading : false,
+                errorMessage:null,
                 successMessage: action.data.successMessage
             };
             break;
@@ -33,6 +36,7 @@ function authReducer(state = {
             return {
                 ...state,
                 errorMessage: action.data.errorMessage,
+                successMessage:null,
                 isError: true,
                 isLoading : false
             };
@@ -41,6 +45,8 @@ function authReducer(state = {
         case AuthActions.VERIFICATION_CODE_SENT:
             return {
                 ...state,
+                errorMessage:null,
+                successMessage:null,
                 token: action.data.token,
                 isLoading : true
             };
@@ -50,7 +56,9 @@ function authReducer(state = {
             return {
                 ...state,
                 isError: false,
-                isLoading : false
+                isLoading : false,
+                errorMessage:null,
+                successMessage: action.data.successMessage
             };
             break;
 
@@ -58,6 +66,7 @@ function authReducer(state = {
             return {
                 ...state,
                 errorMessage: action.data.errorMessage,
+                successMessage: null,
                 isError: true,
                 isLoading : false
             };

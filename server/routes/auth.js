@@ -13,7 +13,7 @@ exports = module.exports = function(app, mongoose) {
             message: message
         };
     }
-    router.post('/sendverificationcode', function(req, res, next) {
+    router.post('/sendphoneno', function(req, res, next) {
         app.logLevel1("In sendverificationcode function ",req.body.phone);
         app.log("length ",req.body.phone.length);
 
