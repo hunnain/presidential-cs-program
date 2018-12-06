@@ -42,6 +42,7 @@ app.use(function (req, res, next) {
 });
 
 require('./config')(app);
+require('./logs')(app);
 require('./db/repository')(app,mongoose);
 require('./models')(app,mongoose);
 require('./routes')(app,mongoose);
