@@ -15,18 +15,21 @@ exports = module.exports = function (app, mongoose) {
             if (data) {
                 // console.log(data);
                 let id = data._id;
-                if (id < 10) {
-                    id = data.course + "0000" + id;
+                switch (true) {
+                    case (id < 0):
+                        id = data.course + "0000" + id;
+                        break;
+                    case (id < 10):
+                        id = data.course + "0000" + id;
+                        break;
+                    case (id < 1000):
+                        id = data.course + "0000" + id;
+                        break;
+                    case (id < 10000):
+                        id = data.course + "0000" + id;
+                        break;
                 }
-                else if (id < 100) {
-                    id = data.course + "000" + id;
-                }
-                else if (id < 1000) {
-                    id = data.course + "00" + id;
-                }
-                else if (id < 10000) {
-                    id = data.course + "0" + id;
-                }
+
                 let data1 = JSON.parse(JSON.stringify(data));
                 data1.roll = id;
                 return res.send({ student: data1 })
