@@ -4,19 +4,19 @@ import Path from '../../config/path';
 
 class AuthMiddleware {
 
-    static sendPhoneNo(phoneNo) {
+    static sendPhoneNo(data) {
         return dispatch => {
-            dispatch(AuthActions.phoneNoSent(phoneNo))
+            dispatch(AuthActions.phoneNoSent(data))
             axios.post(`${Path.SEND_VERIFICATION_CODE}`, {
-                phone: phoneNo
+                phone: data.phoneNo
             })
             .then((response) => {
                 console.log("response from server ",response);
-                if (response.data.error) {
-                    dispatch(AuthActions.phoneNoSentError());
+                if (!response.data.success) {
+                    dispatch(AuthActions.phoneNoSentError({errorMessage:response.data.message}));
                 }
                 else {
-                    dispatch(AuthActions.phoneNoSentSuccessul(phoneNo));
+                    dispatch(AuthActions.phoneNoSentSuccessul({successMessage:response.data.message}));
                 }
             })
             .catch((err) => {

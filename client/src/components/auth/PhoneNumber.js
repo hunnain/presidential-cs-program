@@ -13,7 +13,7 @@ class PhoneNumber extends Component {
     const { number } = this.state;
     console.log("number", number,ev);
     this.props.sendPhoneNo(number);
-    this.props.history.push("/verification")
+    //this.props.history.push("/verification")
   };
 
   render() {
@@ -42,6 +42,7 @@ class PhoneNumber extends Component {
             <button type="submit" className="Rectangle-60">
               SEND VERIFICATION CODE
             </button>
+            {this.props.isLoading?<span>Loading</span>:<span>Not Loading</span>}
           </form>
         </div>
       </div>
@@ -54,13 +55,14 @@ function mapStateToProps(state) {
       isLoading: state.authReducer.isLoading,
       isError : state.authReducer.isError,
       errorMessage: state.authReducer.errorMessage,
-      phoneNo: state.authReducer.phoneNo
+      phoneNo: state.authReducer.phoneNo,
+      successMessage: state.authReducer.successMessage
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-      sendPhoneNo : (phoneNo) => { dispatch(AuthMiddleware.sendPhoneNo(phoneNo))}
+      sendPhoneNo : (phoneNo) => { dispatch(AuthMiddleware.sendPhoneNo({phoneNo:phoneNo}))}
   };
 }
 
