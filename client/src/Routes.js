@@ -22,14 +22,13 @@ class Routers extends Component {
             <Router history={history}>
                 <div>
                     <Navbar />
-
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/verification" component={VerificationCode} />
                     <Route exact path="/form" component={Form} />
                     <Route exact path="/apply" component={PhoneNumber} />
-                    <Route exact path="/ai" component={CloudNative} />
-                    <Route exact path="/cloudnative" component={Ai} />
+                    <Route exact path="/artificial-inteligence" component={AI} />
+                    <Route exact path="/cloudnative" component={CloudNative} />
                     <Route exact path="/directors" component={Directors} />
                     <Route exact path="/contact" component={Contact} />
 
