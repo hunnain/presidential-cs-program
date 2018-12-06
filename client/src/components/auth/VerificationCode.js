@@ -107,6 +107,7 @@ function mapStateToProps(state) {
     errorMessage: state.authReducer.errorMessage,
     phoneNo: state.authReducer.phoneNo,
     token: state.authReducer.token,
+    // authToken: state.authReducer.authToken,
     successMessage: state.authReducer.successMessage
   };
 }
