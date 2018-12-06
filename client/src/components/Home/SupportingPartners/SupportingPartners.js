@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Countdown from '../Countdown/Countdown';
 import './SupportingPartners.css';
 import psxLogo from '../../../assets/psxLogo.png';
+import psx2Logo from '../../../assets/psx2.png';
 import panacloudLogo from '../../../assets/panacloudLogo.svg';
 import iqraLogo from '../../../assets/iqraLogo.png';
 import saylaniLogo from '../../../assets/saylaniLogo.png';
@@ -23,8 +24,8 @@ class SupportingPartners extends Component {
                 <ul>
                         <li><img src={saylaniLogo} className="SIimg1" /></li>
                         <li><img src={panacloudLogo} /></li>
-                        <li><img src={iqraLogo} /></li>
-                        <li><img src={psxLogo} /></li>
+                        <li><img src={iqraLogo} style={{marginTop: 8}} /></li>
+                        <li><img src={psx2Logo} /></li>
                     </ul>
                 </div>
                 </div>
