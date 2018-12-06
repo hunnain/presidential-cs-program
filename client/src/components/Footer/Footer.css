@@ -333,7 +333,7 @@ width: 100%;
   max-width: 130px;
   height: 32px;
   font-family: Montserrat;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
@@ -348,9 +348,9 @@ width: 100%;
 }
 .foot-f1 li{
   /* max-width: 124px; */
-  height: 35px;
+  height: 30px;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -364,7 +364,7 @@ width: 100%;
   max-width: 130px;
   height: 32px;
   font-family: Montserrat;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
@@ -377,10 +377,14 @@ width: 100%;
   list-style-type: none;
   padding-left: 0px;
 }
+.foot-f2 li:hover{
+  cursor: pointer;
+}
 .foot-f2 li{
-  height: 35px;
+  height: 30px;
+  min-width: 210px;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -394,7 +398,7 @@ width: 100%;
   max-width: 264px;
   height: 32px;
   font-family: Montserrat;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
@@ -467,10 +471,17 @@ width: 100%;
 .connnct-with-us{
   margin-top: 50px;
 }
+.footericons img{
+  width: 35px;
+  padding: 0px 5px;
+}
+.footericons {
+  float: left;
+}
 
 .copyright{
 width: 100%;
-height: 82px;
+height: 45px;
   background-color: rgb(85, 84, 84);
   padding-top: 10px;
   align-items: center;
@@ -478,28 +489,29 @@ height: 82px;
 
 .copyright p  {
   width: 100%;
-  height: 22px;
-  font-family: Montserrat;
-  font-size: 18px;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.22;
-  letter-spacing: normal;
-  text-align: center;
-  color: rgb(214, 214, 214);
-  padding: 0px;
-  margin-top: 20px;
-  position: absolute;
+    height: 22px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgb(214, 214, 214);
+    padding: 0px;
+    margin-top: 5px;
+    position: absolute;
+    margin-bottom: 0px;
 }
 .copyright img{
-      float: right;
-    height: 60px;
-    /* padding: 9px; */
-    /* position: relative; */
-    /* margin-right: 50px; */
-
-    padding-right: 30px;
+  float: right;
+  height: 35px;
+  /* padding: 9px; */
+  /* position: relative; */
+  /* margin-right: 50px; */
+  padding-right: 30px;
+  margin-top: -5px;
 }
 
 .copyright div{
@@ -622,7 +634,7 @@ height: 82px;
 }
 .slider-doc-txt p{
   max-height: 150px;
-  font-size: 12px;
+  font-size: 14px;
   overflow: hidden;
 }
 .slider-doc-txt h1{
