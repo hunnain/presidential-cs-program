@@ -19,7 +19,7 @@ class About extends Component {
 
 
 
-                {/* <div className="contianer" style={{ margin: "15%", marginTop: "10%" }}>
+                <div className="contianer" style={{ margin: "15%", marginTop: "10%" }}>
                     <div className="row">
                         <div className="col-md-4">
                             <img src={president} align="right" style={{ height: "250px" }} />
@@ -64,7 +64,7 @@ class About extends Component {
                         </div>
                     </div>
 
-                </div> */}
+                </div>
 
             </div>
         );
