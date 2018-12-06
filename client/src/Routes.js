@@ -14,6 +14,7 @@ import Directors from '../src/components/Directors/Directors';
 import Contact from '../src/components/ContactUs/ContactUs';
 
 import history from './History';
+import ManagementCommittee from './components/ManagementCommittee/ManagementCommittee';
 
 
 class Routers extends Component {
@@ -31,6 +32,7 @@ class Routers extends Component {
                     <Route exact path="/cloud-native" component={CloudNative} />
                     <Route exact path="/directors" component={Directors} />
                     <Route exact path="/contact" component={Contact} />
+          			<Route exact path="/managementcommittee" component={ManagementCommittee} />
 
                     <Copyright />
 

@@ -5,6 +5,9 @@ import Programs from './Programs/Programs';
 import Footer from '../Footer/Footer';
 import HomeVideo from './HomeVideo/HomeVideo';
 import Countdown from './Countdown/Countdown';
+import SupportingPartners from './SupportingPartners/SupportingPartners';
+
+
 class Home extends Component {
   render() {
     const currentDate = new Date();
@@ -12,6 +15,7 @@ class Home extends Component {
     return (
       <div className="App">
         <HomeVideo />
+        <SupportingPartners />
         <Programs />
         
         {
