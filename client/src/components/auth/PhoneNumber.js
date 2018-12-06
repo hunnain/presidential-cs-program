@@ -1,37 +1,48 @@
 import React, { Component } from "react";
-import AuthMiddleware from '../../store/middleware/authMiddleware';
-import { connect } from 'react-redux';
+import AuthMiddleware from "../../store/middleware/authMiddleware";
+import { connect } from "react-redux";
 import "./auth.css";
-
 
 class PhoneNumber extends Component {
   state = {
     number: ""
   };
-  
-  onSubmit = (ev) => {
+
+  onSubmit = () => {
     const { number } = this.state;
-    console.log("number", number,ev);
     this.props.sendPhoneNo(number);
-    //this.props.history.push("/verification")
   };
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.successMessage) {
+      this.props.history.push("/verification");
+    }
+  }
+
   render() {
-    console.log(this.props);
+    const { isLoading, isError, errorMessage } = this.props;
     const { number } = this.state;
-    return (
+    return isLoading ? (
+      <div className="LoaderContainer">
+        <div className="loader">
+          <div className="lds-ring">
+            <div />
+            <div />
+            <div />
+            <div />
+          </div>
+        </div>
+      </div>
+    ) : (
       <div className="container-fluid p-0">
         <div className="Rectangle-58">
-          <form
-            action="JavaScript:void(0)"
-            id="myForm"
-            ref="myForm"
-            onSubmit={ev => this.onSubmit(ev)}
-          >
+          <div id="myForm">
             <h1 className="APPLICATION-FORM ">APPLICATION FORM</h1>
             <label className="label">Enter phone number to verify</label>
             <input
-              className="form-control Rectangle-59"
+              className={`form-control Rectangle-59 ${
+                isError ? "errorElem" : ""
+              }`}
               type="number"
               value={number}
               placeholder="3XX-XXX-XXXX"
@@ -39,11 +50,11 @@ class PhoneNumber extends Component {
                 this.setState({ number: e.target.value });
               }}
             />
-            <button type="submit" className="Rectangle-60">
+            <p className="error">{isError ? errorMessage : ""}</p>
+            <button onClick={this.onSubmit} className="Rectangle-60">
               SEND VERIFICATION CODE
             </button>
-            {this.props.isLoading?<span>Loading</span>:<span>Not Loading</span>}
-          </form>
+          </div>
         </div>
       </div>
     );
@@ -52,18 +63,23 @@ class PhoneNumber extends Component {
 
 function mapStateToProps(state) {
   return {
-      isLoading: state.authReducer.isLoading,
-      isError : state.authReducer.isError,
-      errorMessage: state.authReducer.errorMessage,
-      phoneNo: state.authReducer.phoneNo,
-      successMessage: state.authReducer.successMessage
+    isLoading: state.authReducer.isLoading,
+    isError: state.authReducer.isError,
+    errorMessage: state.authReducer.errorMessage,
+    phoneNo: state.authReducer.phoneNo,
+    successMessage: state.authReducer.successMessage
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-      sendPhoneNo : (phoneNo) => { dispatch(AuthMiddleware.sendPhoneNo({phoneNo:phoneNo}))}
+    sendPhoneNo: phoneNo => {
+      dispatch(AuthMiddleware.sendPhoneNo({ phoneNo: phoneNo }));
+    }
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PhoneNumber);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PhoneNumber);
