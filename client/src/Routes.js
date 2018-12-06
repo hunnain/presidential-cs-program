@@ -12,6 +12,7 @@ import PhoneNumber from "./components/auth/PhoneNumber";
 import VerificationCode from "./components/auth/VerificationCode";
 
 import history from './History';
+import ManagementCommittee from './components/ManagementCommittee/ManagementCommittee';
 
 
 class Routers extends Component {
@@ -28,6 +29,7 @@ class Routers extends Component {
           <Route exact path="/apply" component={PhoneNumber} />
           <Route exact path="/ai" component={CloudNative} />
           <Route exact path="/cloudnative" component={Ai} />
+          <Route exact path="/managementcommittee" component={ManagementCommittee} />
                    
         <Copyright />
                     
