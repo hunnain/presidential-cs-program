@@ -851,8 +851,8 @@ font-size: 15px;
 .Countdown{
   margin: 10px auto;
   padding-bottom: 20px;
-  color:#00e092;
-  background-image: linear-gradient(to left, rgb(8, 56, 61), rgb(1, 100, 95));
+  color:#FFFFFF;
+  background: radial-gradient(#14BF94, #0B333A);
     border-radius: 90px;
     margin-top: 150px;
     width: 550px;
