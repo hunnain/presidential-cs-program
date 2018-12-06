@@ -1,0 +1,30 @@
+.mcCont{
+  width: 70%;
+}
+
+.greenCir{
+  position: absolute;
+  width: 186px;
+  height: 186px;
+  margin: 7px;
+  border-radius: 50%;
+  background-color: green;
+}
+.whiteCir{
+  width: 176px;
+  height: 176px;
+  margin: 12px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: purple;
+}
+.imgDiv{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: blue;
+}
+.imgHead{
+  width: 200px;
+  height: 200px;
+}

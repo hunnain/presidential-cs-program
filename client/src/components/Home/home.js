@@ -4,15 +4,26 @@ import News from './News/News';
 import Programs from './Programs/Programs';
 import Footer from '../Footer/Footer';
 import HomeVideo from './HomeVideo/HomeVideo';
+import Countdown from './Countdown/Countdown';
+import SupportingPartners from './SupportingPartners/SupportingPartners';
 
 
 class Home extends Component {
   render() {
+    const currentDate = new Date();
+    const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? currentDate.getFullYear() + 1 : currentDate.getFullYear();
     return (
       <div className="App">
         <HomeVideo />
+        <SupportingPartners />
         <Programs />
-        <News />
+        
+        {
+          /*
+          <News />
+          */
+        }
+        
         <Footer />
       </div >
     );
