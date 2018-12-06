@@ -847,3 +847,28 @@ font-size: 15px;
     width: 1170px;
   }
 } */
+
+.Countdown{
+  margin: 10px auto;
+  padding-bottom: 20px;
+  color:#FFFFFF;
+  background: radial-gradient(#14BF94, #0B333A);
+    border-radius: 90px;
+    margin-top: 150px;
+    width: 550px;
+}
+
+.Countdown-col{
+  display: inline-block;
+}
+
+.Countdown-col-element{
+  display: inline-block;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Countdown-col-element strong{
+  font-size: 50px;
+}

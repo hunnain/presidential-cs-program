@@ -38,14 +38,14 @@ exports = module.exports = function (app, mongoose) {
 
 
         // console.log(app.db.models.Student);
-        console.log(req.file.path);
+        
 
 
-        if (!body.fatherName) {
-            return res.status(400).send({ message: "Please Provide Your Father Name" });
-        }
         if (!req.file) {
             return res.status(400).send({ message: "Please Provide Your Image" });
+        }
+        if (!body.fatherName) {
+            return res.status(400).send({ message: "Please Provide Your Father Name" });
         }
         if (!body.fullName) {
             return res.status(400).send({ message: "Please Provide Your Full Name" });
