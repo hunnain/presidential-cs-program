@@ -7,25 +7,25 @@ import Quarters from "../Quarter/Quarter"
 import Blog from "../Blog/Blog"
 import Footer from "../Footer/Footer"
 
-import anaconda from "./images/Anaconda.png"
+  import anaconda from "./images/Anaconda.png"
 
-import pythonlogo from "./images/python-logo.png"
+  import pythonlogo from "./images/python-logo.png"
 
-import dataScience from "./images/data-science0-logo-1.png"
+  import dataScience from "./images/data-science0-logo-1.png"
 
-import keras from "./images/keras-logo-2018-large-1200.png"
+  import keras from "./images/keras-logo-2018-large-1200.png"
 
-import linux from "./images/linux-logo.png";
+  import linux from "./images/linux-logo.png";
 
-import docker from "./images/docker_facebook_share.png";
+  import docker from "./images/docker_facebook_share.png";
 
-import chart from "./images/chart.png";
+  import chart from "./images/chart.png";
 
-import ms from "./images/ms.png";
+  import ms from "./images/ms.png";
 
-import con from "./images/con.png";
+  import container from "./images/container.png";
 
-import ai from "./images/ai.png";
+  import ai from "./images/ai.png";
 
 
 
@@ -191,7 +191,7 @@ class AI extends Component {
                     left = {false}
                     data = {
                       {
-                        image:con,
+                        image:container,
                         number:"3D",
                         className:"grey1",
                         heading:"  Build  AI  Microservices  for  ContainerDeployments",
