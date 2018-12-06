@@ -6,6 +6,8 @@ export default class path {
 
     static VERIFY_CODE = path.BASE_URL + "/auth/verifycode";
 
+    static REGISTRATION_FORM = path.BASE_URL + "/form";
+
     static TEST = path.BASE_URL + "/api/rest/test";
 
 }

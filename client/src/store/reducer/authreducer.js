@@ -7,7 +7,8 @@ function authReducer(state = {
     errorMessage: false,
     phoneNo: null,
     token: null,
-    successMessage: null
+    successMessage: null,
+    authToken: null
 }, action) {
 
     switch (action.type) {
@@ -18,7 +19,8 @@ function authReducer(state = {
                 errorMessage:null,
                 successMessage:null,
                 phoneNo: action.data.phoneNo,
-                isLoading : true
+                isLoading : true,
+                authToken : null
             };
             break;
 
@@ -28,7 +30,7 @@ function authReducer(state = {
                 isError:false,
                 isLoading : false,
                 errorMessage:null,
-                successMessage: action.data.successMessage
+                successMessage: action.data.successMessage,
             };
             break;
 
@@ -48,7 +50,8 @@ function authReducer(state = {
                 errorMessage:null,
                 successMessage:null,
                 token: action.data.token,
-                isLoading : true
+                isLoading : true,
+                authToken : null
             };
             break;
 
@@ -58,7 +61,8 @@ function authReducer(state = {
                 isError: false,
                 isLoading : false,
                 errorMessage:null,
-                successMessage: action.data.successMessage
+                successMessage: action.data.successMessage,
+                authToken : action.data.authToken
             };
             break;
 
