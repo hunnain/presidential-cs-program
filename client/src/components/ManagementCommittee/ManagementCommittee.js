@@ -8,10 +8,10 @@ import Modal from "./Modal/Modal";
 import youtubeIcon from "../../assets/ytIconColor.svg";
 import facebookIcon from "../../assets/fbIconColor.svg";
 import twiterIcon from "../../assets/tIconColor.svg";
-import KaziRahatAli from "../../assets/members-committee/1.png";
-import HunaidLakhani from "../../assets/members-committee/2.jpg";
-import ZiaKhan from "../../assets/members-committee/4.jpg";
-import SulaimanMehdi from "../../assets/members-committee/5.jpeg";
+import KaziRahatAli from "../../assets/members-committee/KaziRahatAli.png";
+import HunaidLakhani from "../../assets/members-committee/HunaidLakhani.jpg";
+import ZiaKhan from "../../assets/members-committee/ZiaKhan.jpg";
+import SulaimanMehdi from "../../assets/members-committee/SulaimanMehdi.jpeg";
 
 class ManagementCommittee extends Component {
   state = {
