@@ -63,7 +63,7 @@ class Navbar extends Component {
                           */      
                         }
                         
-                        <Link to='/contact'>  <li>Contact</li></Link>
+                        <Link to='/subscribe'>  <li>Subscribe</li></Link>
                     </ul>
                     
                     

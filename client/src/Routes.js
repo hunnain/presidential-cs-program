@@ -32,7 +32,7 @@ class Routers extends Component {
                     <Route exact path="/artificial-inteligence" component={AI} />
                     <Route exact path="/cloud-native" component={CloudNative} />
                     <Route exact path="/directors" component={Directors} />
-                    <Route exact path="/contact" component={Contact} />
+                    <Route exact path="/subscribe" component={Contact} />
           			<Route exact path="/managementcommittee" component={ManagementCommittee} />
 
                     <Copyright />
