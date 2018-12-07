@@ -35,9 +35,9 @@ class Form extends Component {
             }
         }
         console.log(this.props);
-        if(!this.props.authToken){
-            this.props.history.replace('/apply')
-        }
+        // if (!this.props.authToken) {
+        //     this.props.history.replace('/apply')
+        // }
     }
 
     changeData = (ev) => {
@@ -84,7 +84,6 @@ class Form extends Component {
         if (validate.hasError) {
             this.setState({ errors: validate }, (x) => {
                 console.log(this.state);
-
             });
             return
         }
@@ -108,7 +107,7 @@ class Form extends Component {
         //Nothing To Do Just Fetch And Post Data All Set
         //fetch('http://localhost:3001/form', {
         fetch(Path.REGISTRATION_FORM, {
-            
+
             method: 'POST',
             body: formData,
         }).then(x => {
@@ -130,9 +129,6 @@ class Form extends Component {
             fullName, DOB, email, phoneNumber, studentCnic, fatherName, homeAddress, fatherCnic,
         } = this.state.data;
         const { errors, file, submited } = this.state;
-
-
-
         return (
 
             <div className="container-fluid p-0">
@@ -146,7 +142,18 @@ class Form extends Component {
                                 name: "course",
                                 id: "course",
                                 changeData: this.changeData,
-                                options: ["AI", "Cloud"],
+                                options: [
+                                    {
+                                        DisplayName: "AI",
+                                        value: "AI"
+                                    }, {
+                                        DisplayName: "Cloud Computing",
+                                        value: "CC"
+                                    }, {
+                                        DisplayName: "Block Chain",
+                                        value: "BC"
+                                    }
+                                ],
                                 errors
                             }}
                         />
@@ -270,7 +277,21 @@ class Form extends Component {
                                 name: "lastQualification",
                                 id: "lastQualification",
                                 changeData: this.changeData,
-                                options: ["Matric", "Intermediate", "Graduated", "Master"],
+                                options: [
+                                    {
+                                        DisplayName: "Matric",
+                                        value: "matric"
+                                    }, {
+                                        DisplayName: "Intermediate",
+                                        value: "intermediate"
+                                    }, {
+                                        DisplayName: "Graduated",
+                                        value: "graduated"
+                                    }, {
+                                        DisplayName: "Master",
+                                        value: "master"
+                                    }
+                                ],
                                 errors
                             }}
                         />
@@ -311,17 +332,17 @@ function mapStateToProps(state) {
     console.log(state)
     return {
         isLoading: state.registrationFormReducer.isLoading,
-        isError : state.registrationFormReducer.isError,
+        isError: state.registrationFormReducer.isError,
         errorMessage: state.registrationFormReducer.errorMessage,
         successMessage: state.registrationFormReducer.successMessage,
         authToken: state.authReducer.authToken,
     };
 }
-  
+
 function mapDispatchToProps(dispatch) {
     return {
-        submitRegistrationFrom : (registrationForm) => { dispatch(RegistrationFormMiddleware.submitRegistrationFrom(registrationForm))}
+        submitRegistrationFrom: (registrationForm) => { dispatch(RegistrationFormMiddleware.submitRegistrationFrom(registrationForm)) }
     };
 }
-  
+
 export default connect(mapStateToProps, mapDispatchToProps)(Form);
