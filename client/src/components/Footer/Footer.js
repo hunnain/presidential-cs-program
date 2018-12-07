@@ -43,7 +43,7 @@ class Footer extends Component {
                 <ul>
                   <li onClick={() => { this.props.history.push("artificial-inteligence") }} className="truncate">Artificial Intelligence</li>
                   <li onClick={() => { this.props.history.push("cloud-native") }}>Cloud Native</li>
-                  <li onClick={() => { this.props.history.push("about") }}>About</li>
+                  <li onClick={() => { this.props.history.push("about") }}>About the president</li>
                   {/* <li onClick={() => {this.props.history.push("apply")}}>Apply</li> */}
                   <li onClick={() => { this.props.history.push("subscribe") }}>Subscribe</li>
                 </ul>
