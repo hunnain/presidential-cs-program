@@ -41,12 +41,11 @@ class Footer extends Component {
               <div className="col-lg-3 col-sm-6 mt-md-5 mt-5 mt-lg-0 foot-f2">
                 <p>Navigation</p>
                 <ul>
-
                   <li onClick={() => {this.props.history.push("artificial-inteligence")}} className="truncate">Artificial Intelligence</li>
                   <li onClick={() => {this.props.history.push("cloud-native")}}>Cloud Native</li>
                   <li onClick={() => {this.props.history.push("about")}}>About</li>
                   <li onClick={() => {this.props.history.push("managementcommittee")}}>Management Committee</li>
-                  
+                  {/* <li onClick={() => {this.props.history.push("apply")}}>Apply</li> */}
                   <li onClick={() => { this.props.history.push("subscribe") }}>Subscribe</li>
 
                 </ul>
