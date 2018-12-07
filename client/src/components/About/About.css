@@ -13,15 +13,12 @@
   z-index: 10;
 }
 
-.modal-contents {
-  height: 90%;
-  width: 90%;
-  background-color: white;
+.aboutCont{
+  background-image: linear-gradient(to bottom, #dfedf0, #e6dada);
   text-align: center;
   padding: 20px;
   position: relative;
   border-radius: 10px;
-  overflow: scroll;
 }
 
 

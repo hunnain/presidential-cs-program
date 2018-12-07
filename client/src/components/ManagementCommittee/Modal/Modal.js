@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Modal.css';
+import youtubeIcon from '../../../assets/ytIconColor.svg';
+import facebookIcon from '../../../assets/fbIconColor.svg';
+import twiterIcon from '../../../assets/tIconColor.svg';
+// import twiterIcon from '../../../assets';
 
 class Modal extends Component {
     state = { 
@@ -52,9 +56,9 @@ class Modal extends Component {
                 <div className="spans d-flex justify-content-center align-items-center">
                 <div>
                 <ul>
-                  <li> <div className="span span1"></div></li>
-                  <li> <div className="span span2"></div></li>
-                  <li> <div className="span span3"></div></li>
+                <li> <img  className="span" src={facebookIcon} /></li>
+                  <li> <img  className="span" src={twiterIcon} /></li>
+                  <li> <img  className="span" src={youtubeIcon} /></li>
                 </ul>
                 </div>
               
@@ -77,7 +81,7 @@ It is a long established fact that a reader will be distracted by the readable c
                 
             </div><br />
                
-               <button className="modalBtn2" onClick={() => {console.log("close")}}>Close</button>
+               <button className="modalBtn2" onClick={() => {this.props.hideModal()}}>Close</button>
             </div>
           </div>}
             </div>

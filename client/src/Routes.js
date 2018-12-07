@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Router } from 'react-router-dom';
 import Home from './components/Home/home';
+// import About from './components/About/About';
 import About from './components/About/about';
 import Form from './components/Form/form';
 import CloudNative from './components/CloudNative/cloudNative';
@@ -31,7 +32,7 @@ class Routers extends Component {
                     <Route exact path="/artificial-inteligence" component={AI} />
                     <Route exact path="/cloud-native" component={CloudNative} />
                     <Route exact path="/directors" component={Directors} />
-                    <Route exact path="/contact" component={Contact} />
+                    <Route exact path="/subscribe" component={Contact} />
           			<Route exact path="/managementcommittee" component={ManagementCommittee} />
 
                     <Copyright />

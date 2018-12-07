@@ -5,6 +5,9 @@ import './ManagementCommittee.css';
 import StrategicPartners from './StrategicPartners/StrategicPartners';
 import Modal from './Modal/Modal';
 
+import youtubeIcon from '../../assets/ytIconColor.svg';
+import facebookIcon from '../../assets/fbIconColor.svg';
+import twiterIcon from '../../assets/tIconColor.svg';
 
 
 class ManagementCommittee extends Component {
@@ -15,7 +18,7 @@ class ManagementCommittee extends Component {
 
      hideModal = () => {
        const {condition} = this.state;
-       this.setState({condition: !condition})
+       this.setState({condition: false})
      }
     
 
@@ -44,9 +47,9 @@ class ManagementCommittee extends Component {
                 <div className="spans d-flex justify-content-center align-items-center">
                 <div>
                 <ul>
-                  <li> <div className="span span1"></div></li>
-                  <li> <div className="span span2"></div></li>
-                  <li> <div className="span span3"></div></li>
+                  <li> <img  className="span" src={facebookIcon} /></li>
+                  <li> <img  className="span" src={twiterIcon} /></li>
+                  <li> <img  className="span" src={youtubeIcon} /></li>
                 </ul>
                 </div>
               
@@ -73,9 +76,9 @@ class ManagementCommittee extends Component {
                 <div className="spans d-flex justify-content-center align-items-center">
                 <div>
                 <ul>
-                  <li> <div className="span span1"></div></li>
-                  <li> <div className="span span2"></div></li>
-                  <li> <div className="span span3"></div></li>
+                  <li> <img  className="span" src={facebookIcon} /></li>
+                  <li> <img  className="span" src={twiterIcon} /></li>
+                  <li> <img  className="span" src={youtubeIcon} /></li>
                 </ul>
                 </div>
               
@@ -102,9 +105,9 @@ class ManagementCommittee extends Component {
                 <div className="spans d-flex justify-content-center align-items-center">
                 <div>
                 <ul>
-                  <li> <div className="span span1"></div></li>
-                  <li> <div className="span span2"></div></li>
-                  <li> <div className="span span3"></div></li>
+                  <li> <img  className="span" src={facebookIcon} /></li>
+                  <li> <img  className="span" src={twiterIcon} /></li>
+                  <li> <img  className="span" src={youtubeIcon} /></li>
                 </ul>
                 </div>
               
@@ -131,9 +134,9 @@ class ManagementCommittee extends Component {
                 <div className="spans d-flex justify-content-center align-items-center">
                 <div>
                 <ul>
-                  <li> <div className="span span1"></div></li>
-                  <li> <div className="span span2"></div></li>
-                  <li> <div className="span span3"></div></li>
+                  <li> <img  className="span" src={facebookIcon} /></li>
+                  <li> <img  className="span" src={twiterIcon} /></li>
+                  <li> <img  className="span" src={youtubeIcon} /></li>
                 </ul>
                 </div>
               
@@ -160,9 +163,9 @@ class ManagementCommittee extends Component {
                 <div className="spans d-flex justify-content-center align-items-center">
                 <div>
                 <ul>
-                  <li> <div className="span span1"></div></li>
-                  <li> <div className="span span2"></div></li>
-                  <li> <div className="span span3"></div></li>
+                  <li> <img  className="span" src={facebookIcon} /></li>
+                  <li> <img  className="span" src={twiterIcon} /></li>
+                  <li> <img  className="span" src={youtubeIcon} /></li>
                 </ul>
                 </div>
               

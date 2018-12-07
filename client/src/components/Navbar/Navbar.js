@@ -6,11 +6,19 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import {BrowserRouter} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Modal from './Modal/Modal';
 
 class Navbar extends Component {
     state = { 
-       
-     }
+        condition:false
+       }
+  
+  
+       hideModal = () => {
+         const {condition} = this.state;
+         this.setState({condition: false})
+       }
+      
 
      catd() {
         var div = document.getElementById('nav-flex-ul');
@@ -24,8 +32,10 @@ class Navbar extends Component {
     }
 
     render() { 
+        const {condition} = this.state;
         return ( 
             <div className="navbar">
+            <Modal condition={condition} hideModal={this.hideModal}/>
             
                 <div className="container">
                 <div className="navbar_cont">
@@ -44,6 +54,7 @@ class Navbar extends Component {
                     <Link to='/artificial-inteligence'> <li onClick={() => {console.log("Route changed")}}>Aftificial Inteligence</li></Link>
                         {/* <BrowserRouter></BrowserRouter> */}
                         <Link to='/cloud-native'>  <li>Cloud Native</li></Link>
+                         {/* <li onClick={() => {this.setState({condition: true})}} className="about">About</li> */}
                         <Link to='/about'>  <li>About</li></Link>
                         <Link to='/managementcommittee'>  <li>Management Committee</li></Link>
                         {
@@ -52,7 +63,7 @@ class Navbar extends Component {
                           */      
                         }
                         
-                        <Link to='/contact'>  <li>Contact</li></Link>
+                        <Link to='/subscribe'>  <li>Subscribe</li></Link>
                     </ul>
                     
                     
