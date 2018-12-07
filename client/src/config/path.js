@@ -8,6 +8,8 @@ export default class path {
 
     static REGISTRATION_FORM = path.BASE_URL + "/form";
 
+    static CONTACT_US_FORM = path.BASE_URL + "/contactform"
+
     static TEST = path.BASE_URL + "/api/rest/test";
 
 }

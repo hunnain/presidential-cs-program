@@ -92,3 +92,20 @@
 .staric {
   font-size: 20px;
 }
+.calculate-heigth{
+  background-image: linear-gradient(to bottom, #dfedf0, #e6dada);
+  height : calc(100vh - 110px);
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.calculate-heigth h1{
+  color: #017969;
+  font-size: 3.4em;
+}
+.calculate-heigth h2{
+  color : #05a08b;
+  font-size : 1.8em;
+  text-align: center
+}

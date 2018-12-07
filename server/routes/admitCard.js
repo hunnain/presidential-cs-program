@@ -16,17 +16,17 @@ exports = module.exports = function (app, mongoose) {
                 // console.log(data);
                 let id = data._id;
                 switch (true) {
-                    case (id < 0):
-                        id = data.course + "0000" + id;
-                        break;
                     case (id < 10):
                         id = data.course + "0000" + id;
                         break;
+                    case (id < 100):
+                        id = data.course + "000" + id;
+                        break;
                     case (id < 1000):
-                        id = data.course + "0000" + id;
+                        id = data.course + "00" + id;
                         break;
                     case (id < 10000):
-                        id = data.course + "0000" + id;
+                        id = data.course + "0" + id;
                         break;
                 }
 

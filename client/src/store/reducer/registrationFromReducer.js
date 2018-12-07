@@ -16,8 +16,6 @@ function registrationFormReducer(state = {
                 successMessage:null,
                 isLoading : true
             };
-            break;
-
         case RegistrationFormActions.SUBMIT_REGISTRATION_FORM_SUCCESSFUL:
             return {
                 ...state,
@@ -26,8 +24,6 @@ function registrationFormReducer(state = {
                 errorMessage:null,
                 successMessage: action.data.successMessage,
             };
-            break;
-
         case RegistrationFormActions.SUBMIT_REGISTRATION_FORM_ERROR:
             return {
                 ...state,
@@ -36,7 +32,6 @@ function registrationFormReducer(state = {
                 isError: true,
                 isLoading : false
             };
-            break;
         default:
             return state;
     }
