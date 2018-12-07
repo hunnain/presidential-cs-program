@@ -54,10 +54,10 @@ class ConfirmNumber extends Component {
         )}
         <div className="container-fluid p-0">
           <div className="Rectangle-588">
-            <div id="myForm">
+            <div id="myForm1">
               <h1 className="APPLICATION-FORM ">APPLICATION FORM</h1>
               <label className="label">Your contact number</label>
-              <input className="form-control Rectangle-59" value={number} />
+              <input className="form-control Rectangle-599" value={number} />
               <a href="/apply">
                 <span className="Didnt-receive-code-Resend-now">
                   Not your number?
@@ -68,7 +68,7 @@ class ConfirmNumber extends Component {
               <br />
               <label className="label">Enter verification code</label>
               <input
-                className={`form-control Rectangle-59 ${
+                className={`form-control Rectangle-599 ${
                   isError ? "errorElem" : ""
                 }`}
                 type="number"
@@ -89,7 +89,7 @@ class ConfirmNumber extends Component {
               </a>
               <br />
               <p className="error">{isError ? errorMessage : ""}</p>
-              <button onClick={this.onConfirm} className="Rectangle-60">
+              <button onClick={this.onConfirm} className="Rectangle-606">
                 VERIFY NOW
               </button>
             </div>
