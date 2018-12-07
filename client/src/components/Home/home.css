@@ -301,21 +301,22 @@ width: 100%;
 }
 
 .boxTxt{
-      /* width: 248px; */
-      /* height: 100%; */
-      font-family: Montserrat;
-      font-size: 24px;
-      font-weight: normal;
-      font-style: normal;
-      font-stretch: normal;
-      /* line-height: 1.08; */
-      /* letter-spacing: normal; */
-      /* text-align: left; */
-      color: rgb(255, 255, 255);
-      /* margin: 0 auto; */
-      /* justify-self: center; */
-      /* padding: 20%; */
-      /* padding-top: 22%; */
+  margin: 0;
+  /* width: 248px; */
+  /* height: 100%; */
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  /* line-height: 1.08; */
+  /* letter-spacing: normal; */
+  /* text-align: left; */
+  color: rgb(255, 255, 255);
+  /* margin: 0 auto; */
+  /* justify-self: center; */
+  /* padding: 20%; */
+  /* padding-top: 22%; */
 }
 
 .footBox{
@@ -354,7 +355,7 @@ width: 100%;
 }
 .foot-f1 li{
   /* max-width: 124px; */
-  height: 35px;
+  /* height: 35px; */
   font-family: Montserrat;
   font-size: 20px;
   font-weight: normal;
@@ -538,6 +539,7 @@ height: 45px;
   }
   
 }
+
 @media screen and (max-width: 1400px) {
   .news-cont-flex-box p{
     font-size: 1em;
@@ -557,8 +559,20 @@ height: 45px;
   .news-box{
     height: 900px;
   }
-  
+  .boxTxt{
+    font-size: 1.7vw;
+  }
 
+}
+@media screen and (max-width: 990px) {
+  .boxTxt{
+    font-size: 2.5vw;
+  }
+}
+@media screen and (max-width: 7670px){
+.boxTxt {
+    font-size: 1.5em;
+}
 }
 
 @media screen and (max-width: 1300px) {
@@ -752,8 +766,11 @@ font-size: 15px;
     width: 100%;
   }
   .boxTxt{
-    font-size: 20px;
+    font-size: 4.5vw;
     /* padding-top: 90px; */
+  }
+  .box1-cont-flex-box{
+    height: 150px;
   }
   .news-box{
     height: 700px;
@@ -768,6 +785,9 @@ font-size: 15px;
   .news-btn1 img{
     height: 30px;
   }
+  .box1-cont h1 {
+    padding-bottom: 0px;
+}
 }
 
 @media screen and (max-width: 800px){
