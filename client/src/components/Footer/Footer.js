@@ -30,8 +30,8 @@ class Footer extends Component {
               <div className="col-lg-4 col-sm-6 mt-md-5 mt-5 mt-lg-0  foot-f1">
                 <p>Locations</p>
                 <ul>
-                  <li>Head office: Axiom karachi</li>
-                  <li>Islamabad: Iqra university Islamabad</li>
+                  <li className="text-truncate">Head office: <a  href="https://goo.gl/maps/y1G4vrtQPiL2">https://goo.gl/maps/y1G4vrtQPiL2</a></li>
+                  <li className="text-truncate">Islamabad: <a href="https://goo.gl/maps/rhhVXeVdc6q">https://goo.gl/maps/rhhVXeVdc6q</a></li>
                   {/* <li>Lahore: asdf asd</li>
                   <li>Peshawar: sdfsadf </li>
                   <li>Faisalabad: sdf sadf </li>
@@ -44,8 +44,9 @@ class Footer extends Component {
                   <li onClick={() => {this.props.history.push("artificial-inteligence")}} className="truncate">Artificial Intelligence</li>
                   <li onClick={() => {this.props.history.push("cloud-native")}}>Cloud Native</li>
                   <li onClick={() => {this.props.history.push("about")}}>About</li>
+                  <li onClick={() => {this.props.history.push("managementcommittee")}}>Management Committee</li>
                   {/* <li onClick={() => {this.props.history.push("apply")}}>Apply</li> */}
-                  <li onClick={() => {this.props.history.push("contact")}}>Contact</li>
+                  <li onClick={() => {this.props.history.push("contact")}}>Subscribe</li>
                 </ul>
               </div>
               <div className="col-lg-5 col-sm-12  mt-lg-0 foot-f3"> 
