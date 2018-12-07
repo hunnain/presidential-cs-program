@@ -11,8 +11,7 @@ class MyInput extends Component {
                 <label className="label" htmlFor={id}>{DisplayName}</label>
                 <input
                     type={type}
-                    className={`form-control Rectangle-59 ${
-                        errors.errorsObj[name] && errors.errorsObj[name].message.length && "errorElem"}`}
+                    className={`form-control Rectangle-59 ${errors.errorsObj[name] && errors.errorsObj[name].message.length && "errorElem"}`}
                     name={name}
                     onChange={(ev) => changeData(ev)}
                     value={value}
@@ -41,7 +40,7 @@ class MySelect extends Component {
 
                     <option className="myOptions" value="Select">Select</option>
                     {options.map((item, index) => {
-                        return <option className="myOptions" key={index} value={item}>{item}</option>
+                        return <option className="myOptions" key={index} value={item.value}>{item.DisplayName}</option>
                     })}
 
                 </select>
