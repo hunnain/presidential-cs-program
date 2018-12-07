@@ -20,7 +20,7 @@ class HomeVideo extends Component {
                 <div className="slider-doc-f2">
                     <div className="video-cont">
                         <Countdown date={`2018-12-11T00:00:00`} /> 
-                        <button onClick={() => {this.props.history.push("contact")}} className="subscribe mt-5">Subscribe</button>
+                        <button onClick={() => {this.props.history.push("subscribe")}} className="subscribe mt-5">Subscribe</button>
                     {
                         /*
                     <iframe className="video"  src="https://www.youtube.com/embed/GMNJAruCO5I"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
