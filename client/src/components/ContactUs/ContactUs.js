@@ -187,7 +187,7 @@ class ContactUS extends Component {
                   <textarea
                     type="text"
                     rows={8}
-                    maxlength="250"
+                    maxLength="250"
                     onChange={this.handleChnage}
                     className="form-control textArea"
                     placeholder="Message here"
