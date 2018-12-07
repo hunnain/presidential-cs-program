@@ -35,9 +35,9 @@ class Form extends Component {
             }
         }
         console.log(this.props);
-        // if (!this.props.authToken) {
-        //     this.props.history.replace('/apply')
-        // }
+        if (!this.props.authToken) {
+            this.props.history.replace('/apply')
+        }
     }
 
     changeData = (ev) => {
