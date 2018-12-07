@@ -39,7 +39,7 @@ class PhoneNumber extends Component {
           <div />
         )}
         <div className="container-fluid p-0">
-          <div className="Rectangle-58">
+          <div className="Rectangle-588">
             <div id="myForm">
               <h1 className="APPLICATION-FORM ">APPLICATION FORM</h1>
               <label className="label">Enter phone number to verify</label>
