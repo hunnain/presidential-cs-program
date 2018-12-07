@@ -1,29 +1,49 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './About.css';
-import youtubeIcon from '../../assets/ytIconColor.svg';
-import facebookIcon from '../../assets/fbIconColor.svg';
-import twiterIcon from '../../assets/tIconColor.svg';
-import president from '../../assets/president.png';
+import './Modal.css';
+import youtubeIcon from '../../../assets/ytIconColor.svg';
+import facebookIcon from '../../../assets/fbIconColor.svg';
+import twiterIcon from '../../../assets/tIconColor.svg';
+import president from '../../../assets/president.png'
+// import { url } from 'inspector';
+// import twiterIcon from '../../../assets';
 
-
-class About extends Component {
+class Modal extends Component {
     state = { 
-      
+        showNOt: this.props.condition,
 
      }
 
+    clickOn = () => {
+        var box = document.querySelector(".bg-modal");
+        const th = this;
+        // Detect all clicks on the document
+        document.addEventListener("click", function(event) {
+        
+        // If user clicks inside the element, do nothing
+        if (event.target.closest(".modal-contents")) return;
+        if (event.target.closest(".cardBody button")) return;
+        if (event.target.closest(".about")) return;
+        
+        // If user clicks outside the element, hide it!
+            // box.classList.add("js-is-hidden");
+            console.log("clicked");
+            // th.setState({showNOt: false});
+            th.props.hideModal();
+        });
+      }
 
     render() { 
-      
+        const {showNOt} = this.state;
+        const {condition} = this.props;
         return ( 
             <div>
-              
-            <div className="aboutCont App">
-            {/* <div className="closeBtnBox">
+ {condition && <div className="bg-modal" onClick={this.clickOn}>
+            <div className="modal-contents App">
+            <div className="closeBtnBox">
               <div className="close"  onClick={() => {this.props.hideModal()}}>+</div>
 
-            </div> */}
+            </div>
               <div className="d-flex justify-content-center align-items-center">
              <div className="cardArea ">
                 <div className="imgHead">
@@ -90,12 +110,13 @@ Master of Science in Orthodontics in from University of the Pacific, San Francis
                 
             </div><br />
                
-               {/* <button className="modalBtn2" onClick={() => {this.props.hideModal()}}>Close</button> */}
+               <button className="modalBtn2" onClick={() => {this.props.hideModal()}}>Close</button>
             </div>
-          </div> 
+          </div>}
+            </div>
            
          );
     }
 }
  
-export default About;
+export default Modal;

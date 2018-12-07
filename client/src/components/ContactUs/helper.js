@@ -78,22 +78,7 @@ function validateForm(check, data, field, err) {
         }
       ],
       elem: "contactNumber"
-    },
-    message: {
-        Validate: [
-          {
-            condition: message.length < 25,
-            message: "Your Message Should be more than 25 words."
-          },
-          {
-            condition:
-              /\d/.test(message) ||
-              /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(message),
-            message: " Name Can Not Contain Numbers Or Any Special Character . "
-          }
-        ],
-        elem: "message"
-      },
+    }
   };
   if (check === "all") {
     for (var i in Validation) {
