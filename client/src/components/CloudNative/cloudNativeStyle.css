@@ -1,0 +1,50 @@
+.cl-b{
+    background: #e1006a !important;
+
+}
+.cl-b .Artificial-Intelligence{
+    white-space: pre-wrap;
+    
+    font-size: 3vw;
+}
+.cl-b+.line2{
+    color: #e1006a;
+}
+.c1 .quarter{
+color: #e1006a;
+}
+.c1 .para{
+    color: #d6a6bd;
+}
+.c2 {
+    background:rgba(224, 0, 104,.5);
+    color: white;  
+}
+.c3 {
+    background:rgba(224, 0, 104,.75);
+    color: white;  
+}
+.c4 {
+    background:#e1006a;
+    color: white;  
+}
+
+.cl-1-t{
+    border:2px solid #e1006a !important;
+    color: #e1006a !important;
+}
+.cl-2-t{
+    background:  #EF7EB3 !important;
+}
+
+.cl-3-t{
+    background:  #E83F8F !important;
+}
+
+.pink{
+    height:85% !important;
+}
+.cl-cr{
+    background: #E83F8F !important;
+}
+
