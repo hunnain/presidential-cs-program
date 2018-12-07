@@ -34,12 +34,11 @@
   color: #017969;
 }
 
-.Rectangle-59 {
-  width: 553.8px;
-  height: 55px;
-  font-size: 15px !important;
-  border-radius: 5px;
-  background-color: #ffffff;
+.ContactClass {
+  width:100%;
+  background-image: linear-gradient(to bottom, #dfedf0, #e6dada);
+  display: flex;
+  justify-content: center;
 }
 
 .row2mail {
@@ -108,4 +107,19 @@
   color : #05a08b;
   font-size : 1.8em;
   text-align: center
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+}
+
+.beta{
+  width: 40vw;
+}
+
+@media(max-width:1024px){
+  .beta{
+    width: 100%;
+  }
 }

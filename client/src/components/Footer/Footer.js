@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo2 from '../../assets/assets/logo/pics-logo.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { withRouter } from "react-router";
+import { withRouter , Link } from "react-router";
 // import 'font-awesome/css/font-awesome.min.css';
 // import 'bootstrap-social/bootstrap-social.css';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -41,12 +41,11 @@ class Footer extends Component {
               <div className="col-lg-3 col-sm-6 mt-md-5 mt-5 mt-lg-0 foot-f2">
                 <p>Navigation</p>
                 <ul>
-
                   <li onClick={() => {this.props.history.push("artificial-inteligence")}} className="truncate">Artificial Intelligence</li>
                   <li onClick={() => {this.props.history.push("cloud-native")}}>Cloud Native</li>
                   <li onClick={() => {this.props.history.push("about")}}>About</li>
                   <li onClick={() => {this.props.history.push("managementcommittee")}}>Management Committee</li>
-                  
+                  {/* <li onClick={() => {this.props.history.push("apply")}}>Apply</li> */}
                   <li onClick={() => { this.props.history.push("subscribe") }}>Subscribe</li>
 
                 </ul>
@@ -57,9 +56,12 @@ class Footer extends Component {
                 <button className="submitBtn" >Submit</button> */}
                 <p className="mt-0 connnct-with-us">Connect with us</p>
                 <div className="footericons mb-5">
-                  <img src={youtubeIcon} />
-                  <img src={facebookIcon} />
-                  <img src={twiterIcon} />
+                  {/* <img src={youtubeIcon} /> */}
+                 <a target="_blank" href="https://www.facebook.com/piaic/">
+                   <img src={facebookIcon} />                
+                </a> 
+                   
+                  {/* <img src={twiterIcon} /> */}
                 </div>
               </div>
 
