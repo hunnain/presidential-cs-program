@@ -71,7 +71,7 @@ class AI extends Component {
               <hr />
               <div className="row">
                 <div className="col-sm-12">
-                <div className="circle-line"></div>
+                <div className="circle-line circle-line-2"></div>
 
                   <Blog 
                     left = {true}
