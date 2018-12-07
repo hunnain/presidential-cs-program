@@ -18,7 +18,7 @@ class ManagementCommittee extends Component {
 
      hideModal = () => {
        const {condition} = this.state;
-       this.setState({condition: !condition})
+       this.setState({condition: false})
      }
     
 
