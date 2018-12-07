@@ -104,7 +104,7 @@ class Form extends Component {
         formData.append("lastQualification", lastQualification);
         formData.append("studentCnic", studentCnic);
         formData.append("fatherCnic", fatherCnic);
-        var myForm = new FormData(this.refs.myForm);
+        //var myForm = new FormData(this.refs.myForm);
         //Nothing To Do Just Fetch And Post Data All Set
         //fetch('http://localhost:3001/form', {
         fetch(Path.REGISTRATION_FORM, {

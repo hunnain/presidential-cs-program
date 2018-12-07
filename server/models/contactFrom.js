@@ -26,9 +26,8 @@ exports = module.exports = function (app, mongoose) {
             type: String,
             required: true
         },
-        description: {
+        message: {
             type: String,
-            required: true
         },
         created: {
             type: Date,

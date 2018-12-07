@@ -23,9 +23,6 @@ exports = module.exports = function (app, mongoose) {
         if(!validator.isNumeric(body.phoneNumber)){
             return res.status(400).send({ message: "Please Provide a Valid Phone Number" });
         }
-        if (!body.description) {
-            return res.status(400).send({ message: "Please Provide the description" });
-        }
 
         const contact = new app.db.models.Contact(body);
 
