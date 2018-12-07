@@ -81,7 +81,7 @@ It is a long established fact that a reader will be distracted by the readable c
                 
             </div><br />
                
-               <button className="modalBtn2" onClick={() => {console.log("close")}}>Close</button>
+               <button className="modalBtn2" onClick={() => {this.props.hideModal()}}>Close</button>
             </div>
           </div>}
             </div>
