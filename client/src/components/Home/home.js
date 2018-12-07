@@ -1,31 +1,33 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import './home.css';
+import News from './News/News';
+import Programs from './Programs/Programs';
+import Footer from '../Footer/Footer';
+import HomeVideo from './HomeVideo/HomeVideo';
+import Countdown from './Countdown/Countdown';
+import SupportingPartners from './SupportingPartners/SupportingPartners';
 
 
 class Home extends Component {
   render() {
+    const currentDate = new Date();
+    const year = (currentDate.getMonth() === 11 && currentDate.getDate() > 23) ? currentDate.getFullYear() + 1 : currentDate.getFullYear();
     return (
-      <div>
-
-
-        <ul>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/about'>About</Link></li>
-          <li><Link to='/form'>Forms</Link></li>
-          <li><Link to='/ai'>Ai</Link></li>
-          <li><Link to='/cloudnative'>cloudNative</Link></li>
-        </ul>
-
-
-        <h1>This is home page</h1>
-      </div>
+      <div className="App">
+        <HomeVideo />
+        <SupportingPartners />
+        <Programs />
+        
+        {
+          /*
+          <News />
+          */
+        }
+        
+        <Footer />
+      </div >
     );
   }
 }
 
-
-
-// export default withStyles(styles)(DenseAppBar);
-
 export default Home;
-
