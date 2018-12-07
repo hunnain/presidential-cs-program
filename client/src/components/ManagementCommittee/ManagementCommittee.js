@@ -1,197 +1,298 @@
-import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { withRouter } from "react-router";
-import './ManagementCommittee.css';
-import StrategicPartners from './StrategicPartners/StrategicPartners';
-import Modal from './Modal/Modal';
+import "./ManagementCommittee.css";
+import StrategicPartners from "./StrategicPartners/StrategicPartners";
+import Modal from "./Modal/Modal";
 
-import youtubeIcon from '../../assets/ytIconColor.svg';
-import facebookIcon from '../../assets/fbIconColor.svg';
-import twiterIcon from '../../assets/tIconColor.svg';
-
+import youtubeIcon from "../../assets/ytIconColor.svg";
+import facebookIcon from "../../assets/fbIconColor.svg";
+import twiterIcon from "../../assets/tIconColor.svg";
+import KaziRahatAli from "../../assets/members-committee/1.png";
+import HunaidLakhani from "../../assets/members-committee/2.jpg";
+import ZiaKhan from "../../assets/members-committee/4.jpg";
+import SulaimanMehdi from "../../assets/members-committee/5.jpeg";
 
 class ManagementCommittee extends Component {
-    state = { 
-      condition:false
-     }
+  state = {
+    condition: false
+  };
 
+  hideModal = () => {
+    const { condition } = this.state;
+    this.setState({ condition: false });
+  };
 
-     hideModal = () => {
-       const {condition} = this.state;
-       this.setState({condition: false})
-     }
-    
-
-    render() { 
-      const {condition} = this.state;
-        return ( 
-        <div className="container App mcCont">
-        <Modal condition={condition} hideModal={this.hideModal}/>
-          <div className="row">
-            <div className="col-12  d-flex justify-content-center align-items-center">
-              <h1 className="mcHeading">MANAGEMENT COMMITTEE</h1>
-              
-            </div>
-            <div className="col-lg-4 col-sm-6 mt-5 d-flex justify-content-center align-items-center">
-             <div className="cardBody ">
-                <div className="imgHead">
-                {/* <center> */}
-                   <div className="greenCir"></div>
-                   <div className="whiteCir"></div>
-                   <div className="imgDiv"></div>
-
-                {/* </center> */}
-                </div>
-                <h1>Zia Ullah Khan</h1>
-                <p>Founder and CEO panacloud</p>
-                <div className="spans d-flex justify-content-center align-items-center">
-                <div>
-                <ul>
-                  <li> <img  className="span" src={facebookIcon} /></li>
-                  <li> <img  className="span" src={twiterIcon} /></li>
-                  <li> <img  className="span" src={youtubeIcon} /></li>
-                </ul>
-                </div>
-              
-                </div>
-                <br />
-               
-                <button onClick={() => {this.setState({condition: true})}}>Read more</button>
-                
-              </div>
-            
-            </div>
-            <div className="col-lg-4 col-sm-6 mt-5 d-flex justify-content-center align-items-center">
-             <div className="cardBody ">
-                <div className="imgHead">
-                {/* <center> */}
-                   <div className="greenCir"></div>
-                   <div className="whiteCir"></div>
-                   <div className="imgDiv"></div>
-
-                {/* </center> */}
-                </div>
-                <h1>Zia Ullah Khan</h1>
-                <p>Founder and CEO panacloud</p>
-                <div className="spans d-flex justify-content-center align-items-center">
-                <div>
-                <ul>
-                  <li> <img  className="span" src={facebookIcon} /></li>
-                  <li> <img  className="span" src={twiterIcon} /></li>
-                  <li> <img  className="span" src={youtubeIcon} /></li>
-                </ul>
-                </div>
-              
-                </div>
-                <br />
-               
-                <button onClick={() => {this.setState({condition: true})}}>Read more</button>
-                
-              </div>
-            
-            </div>
-            <div className="col-lg-4 col-sm-6 mt-5 d-flex justify-content-center align-items-center">
-             <div className="cardBody ">
-                <div className="imgHead">
-                {/* <center> */}
-                   <div className="greenCir"></div>
-                   <div className="whiteCir"></div>
-                   <div className="imgDiv"></div>
-
-                {/* </center> */}
-                </div>
-                <h1>Zia Ullah Khan</h1>
-                <p>Founder and CEO panacloud</p>
-                <div className="spans d-flex justify-content-center align-items-center">
-                <div>
-                <ul>
-                  <li> <img  className="span" src={facebookIcon} /></li>
-                  <li> <img  className="span" src={twiterIcon} /></li>
-                  <li> <img  className="span" src={youtubeIcon} /></li>
-                </ul>
-                </div>
-              
-                </div>
-                <br />
-               
-                <button onClick={() => {this.setState({condition: true})}}>Read more</button>
-                
-              </div>
-            
-            </div>
-            <div className="col-lg-4 col-sm-6 mt-5 d-flex justify-content-center align-items-center">
-             <div className="cardBody ">
-                <div className="imgHead">
-                {/* <center> */}
-                   <div className="greenCir"></div>
-                   <div className="whiteCir"></div>
-                   <div className="imgDiv"></div>
-
-                {/* </center> */}
-                </div>
-                <h1>Zia Ullah Khan</h1>
-                <p>Founder and CEO panacloud</p>
-                <div className="spans d-flex justify-content-center align-items-center">
-                <div>
-                <ul>
-                  <li> <img  className="span" src={facebookIcon} /></li>
-                  <li> <img  className="span" src={twiterIcon} /></li>
-                  <li> <img  className="span" src={youtubeIcon} /></li>
-                </ul>
-                </div>
-              
-                </div>
-                <br />
-               
-                <button onClick={() => {this.setState({condition: true})}}>Read more</button>
-                
-              </div>
-            
-            </div>
-            <div className="col-lg-4 col-sm-6 mt-5 d-flex justify-content-center align-items-center">
-             <div className="cardBody ">
-                <div className="imgHead">
-                {/* <center> */}
-                   <div className="greenCir"></div>
-                   <div className="whiteCir"></div>
-                   <div className="imgDiv"></div>
-
-                {/* </center> */}
-                </div>
-                <h1>Zia Ullah Khan</h1>
-                <p>Founder and CEO panacloud</p>
-                <div className="spans d-flex justify-content-center align-items-center">
-                <div>
-                <ul>
-                  <li> <img  className="span" src={facebookIcon} /></li>
-                  <li> <img  className="span" src={twiterIcon} /></li>
-                  <li> <img  className="span" src={youtubeIcon} /></li>
-                </ul>
-                </div>
-              
-                </div>
-                <br />
-               
-                <button onClick={() => {this.setState({condition: true})}}>Read more</button>
-                
-              </div>
-            
-            </div>
-            
+  render() {
+    const { condition } = this.state;
+    return (
+      <div className="container App mcCont">
+        <Modal condition={condition} hideModal={this.hideModal} />
+        <div className="row">
+          <div className="col-12  d-flex justify-content-center align-items-center">
+            <h1 className="mcHeading">Management Committee</h1>
           </div>
+          <div className="col-lg-4 col-sm-6 mt-5 d-flex justify-content-center align-items-center">
+            <div className="cardBody ">
+              <div className="imgHead">
+                {/* <center> */}
+                <div className="greenCir" />
+                <div
+                  className="whiteCir"
+                  style={{ backgroundImage: `url(${KaziRahatAli})` }}
+                />
+                <div className="imgDiv" />
+
+                {/* </center> */}
+              </div>
+              <h1>Kazi Rahat Ali</h1>
+              <p>General Secretary</p>
+              <div className="spans d-flex justify-content-center align-items-center">
+                <div>
+                  <ul>
+                  <li>
+                      {" "}
+                      {/* <a href="">
+                        <img className="span" src={facebookIcon} />
+                      </a> */}
+                    </li>
+                    <li>
+                      {" "}
+                      {/* <a href="">
+                        <img className="span" src={twiterIcon} />
+                      </a> */}
+                    </li>
+                    <li>
+                      {" "}
+                      {/* <a href="">
+                        <img className="span" src={youtubeIcon} />
+                      </a> */}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <br />
+
+              {/* <button
+                onClick={() => {
+                  this.setState({ condition: true });
+                }}
+              >
+                Read more
+              </button> */}
+            </div>
+          </div>
+          <div className="col-lg-4 col-sm-6 mt-5 d-flex justify-content-center align-items-center">
+            <div className="cardBody ">
+              <div className="imgHead">
+                {/* <center> */}
+                <div className="greenCir" />
+                <div
+                  className="whiteCir"
+                  style={{ backgroundImage: `url(${HunaidLakhani})` }}
+                />
+                <div className="imgDiv" />
+
+                {/* </center> */}
+              </div>
+              <h1>Hunaid Lakhani</h1>
+              <p>Chancellor - Iqra University</p>
+              <div className="spans d-flex justify-content-center align-items-center">
+                <div>
+                  <ul>
+                    <li>
+                      {" "}
+                      <a href="https://www.facebook.com/Hunaid.H.Lakhani/">
+                        <img className="span" src={facebookIcon} />
+                      </a>
+                    </li>
+                    <li>
+                      {" "}
+                      <a href="https://twitter.com/Hunaid_Lakhani">
+                        <img className="span" src={twiterIcon} />
+                      </a>
+                    </li>
+                    <li>
+                      {" "}
+                      <a href="https://www.linkedin.com/in/hunaid-lakhani-00728014/">
+                        <img className="span" src={youtubeIcon} />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <br />
+
+              {/* <button
+                onClick={() => {
+                  this.setState({ condition: true });
+                }}
+              >
+                Read more
+              </button> */}
+            </div>
+          </div>
+          <div className="col-lg-4 col-sm-6 mt-5 d-flex justify-content-center align-items-center">
+            <div className="cardBody ">
+              <div className="imgHead">
+                {/* <center> */}
+                <div className="greenCir" />
+                <div className="whiteCir" />
+                <div className="imgDiv" />
+
+                {/* </center> */}
+              </div>
+              <h1>Yusuf Lakhani</h1>
+              <p>President - Saylani Welfare Trust</p>
+              <div className="spans d-flex justify-content-center align-items-center">
+                <div>
+                  <ul>
+                    <li>
+                      {" "}
+                      <a href="https://www.facebook.com/yousuf.lakhani.3994">
+                        <img className="span" src={facebookIcon} />
+                      </a>
+                    </li>
+                    <li>
+                      {" "}
+                      {/* <a href="">
+                        <img className="span" src={twiterIcon} />
+                      </a> */}
+                    </li>
+                    <li>
+                      {" "}
+                      {/* <a href="">
+                        <img className="span" src={youtubeIcon} />
+                      </a> */}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <br />
+
+              {/* <button
+                onClick={() => {
+                  this.setState({ condition: true });
+                }}
+              >
+                Read more
+              </button> */}
+            </div>
+          </div>
+          <div className="col-lg-4 col-sm-6 mt-5 d-flex justify-content-center align-items-center">
+            <div className="cardBody ">
+              <div className="imgHead">
+                {/* <center> */}
+                <div className="greenCir" />
+                <div
+                  className="whiteCir"
+                  style={{ backgroundImage: `url(${ZiaKhan})` }}
+                />
+                <div className="imgDiv" />
+
+                {/* </center> */}
+              </div>
+              <h1>Zia Ullah Khan</h1>
+              <p>CEO - Panacloud Pvt. Ltd.</p>
+              <div className="spans d-flex justify-content-center align-items-center">
+                <div>
+                  <ul>
+                    <li>
+                      {" "}
+                      <a href="https://www.facebook.com/ziakhan">
+                        <img className="span" src={facebookIcon} />
+                      </a>
+                    </li>
+                    <li>
+                      {" "}
+                      <a href="https://twitter.com/ziakhan">
+                        <img className="span" src={twiterIcon} />
+                      </a>
+                    </li>
+                    <li>
+                      {" "}
+                      <a href="https://www.linkedin.com/in/ziaukhan/">
+                        <img className="span" src={youtubeIcon} />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <br />
+
+              {/* <button
+                onClick={() => {
+                  this.setState({ condition: true });
+                }}
+              >
+                Read more
+              </button> */}
+            </div>
+          </div>
+          <div className="col-lg-4 col-sm-6 mt-5 d-flex justify-content-center align-items-center">
+            <div className="cardBody ">
+              <div className="imgHead">
+                {/* <center> */}
+                <div className="greenCir" />
+                <div
+                  className="whiteCir"
+                  style={{ backgroundImage: `url(${SulaimanMehdi})` }}
+                />
+                <div className="imgDiv" />
+
+                {/* </center> */}
+              </div>
+              <h1>Sulaiman S. Mehdi</h1>
+              <p>Chairman Of The Board - Pakistan Stock Exchange</p>
+              <div className="spans d-flex justify-content-center align-items-center">
+                <div>
+                  <ul>
+                    <li>
+                      {" "}
+                      {/* <a href="">
+                        <img className="span" src={facebookIcon} />
+                      </a> */}
+                    </li>
+                    <li>
+                      {" "}
+                      {/* <a href="">
+                        <img className="span" src={twiterIcon} />
+                      </a> */}
+                    </li>
+                    <li>
+                      {" "}
+                      <a href="https://www.linkedin.com/in/sulaiman-s-mehdi-fcis-44275773/">
+                        <img className="span" src={youtubeIcon} />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <br />
+
+              {/* <button
+                onClick={() => {
+                  this.setState({ condition: true });
+                }}
+              >
+                Read more
+              </button> */}
+            </div>
+          </div>
+        </div>
         <br />
         <br />
         <br />
         <br />
         <hr />
-          <br />
-          <br />
-        
+        <br />
+        <br />
+
         <StrategicPartners />
-        </div>
-         );
-    }
+      </div>
+    );
+  }
 }
- 
+
 // export default withRouter(ManagementCommittee);
 export default ManagementCommittee;
