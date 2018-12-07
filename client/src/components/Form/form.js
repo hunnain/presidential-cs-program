@@ -36,7 +36,7 @@ class Form extends Component {
         }
         console.log(this.props);
         if(!this.props.authToken){
-            this.props.history.replace('/apply')
+            // this.props.history.replace('/apply')
         }
     }
 
@@ -116,7 +116,9 @@ class Form extends Component {
             return x.json();
         }).then(x => {
             console.log(x);
-            this.setState({ submited: false })
+            this.setState({ submited: false });
+            
+            this.props.history.replace('/idcard',x)
         }).catch((err) => {
             console.log(err);
         });
