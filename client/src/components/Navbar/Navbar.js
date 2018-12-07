@@ -16,7 +16,7 @@ class Navbar extends Component {
   
        hideModal = () => {
          const {condition} = this.state;
-         this.setState({condition: !condition})
+         this.setState({condition: false})
        }
       
 
@@ -54,8 +54,8 @@ class Navbar extends Component {
                     <Link to='/artificial-inteligence'> <li onClick={() => {console.log("Route changed")}}>Aftificial Inteligence</li></Link>
                         {/* <BrowserRouter></BrowserRouter> */}
                         <Link to='/cloud-native'>  <li>Cloud Native</li></Link>
-                         <li onClick={() => {this.setState({condition: true})}} className="about">About</li>
-                        {/* <Link to='/about'>  <li>About</li></Link> */}
+                         {/* <li onClick={() => {this.setState({condition: true})}} className="about">About</li> */}
+                        <Link to='/about'>  <li>About</li></Link>
                         <Link to='/managementcommittee'>  <li>Management Committee</li></Link>
                         {
                           /*
