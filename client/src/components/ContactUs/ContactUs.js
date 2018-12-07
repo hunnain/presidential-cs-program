@@ -5,7 +5,9 @@ import "./contact.css";
 import { validateForm, Loader } from "./helper.js";
 import axios from "axios";
 
-class Copyright extends Component {
+import Path from '../../config/path';
+
+class ContactUS extends Component {
   state = {
     data: {
       firstName: "",
@@ -42,7 +44,7 @@ class Copyright extends Component {
     }
     this.setState({showLoader:true});
     axios
-      .post("http://localhost:3001/contactform", {
+      .post(Path.CONTACT_US_FORM, {
         firstName,
         lastName,
         phoneNumber: contactNumber,
@@ -60,6 +62,9 @@ class Copyright extends Component {
             message: "",
             email: ""
           }
+        });
+        this.setState({
+            showLoader:false
         });
       })
       .catch(err => {
@@ -214,4 +219,4 @@ class Copyright extends Component {
   }
 }
 
-export default Copyright;
+export default ContactUS;
