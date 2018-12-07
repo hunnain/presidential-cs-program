@@ -5,7 +5,7 @@
     float: left;
 }
 .supporterIcons ul li img{
-    height: 2.7em;
+    height: 4.5vw;
     /* height: 60px; */
     padding: 1vw 2vw;
 }
@@ -35,7 +35,7 @@
 @media (max-width: 1000px) {
   
     .supporterIcons ul li img{
-        height: 8vw;
+        height: 7vw;
         /* height: 60px; */
     }
     .supportingCont{
@@ -48,7 +48,7 @@
   
 
     .supporterIcons ul li img{
-        height: 8vw;
+        height: 7vw;
         /* height: 60px; */
     } .supportingCont{
         font-size: 1em;
