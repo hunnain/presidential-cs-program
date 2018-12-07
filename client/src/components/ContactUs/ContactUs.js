@@ -8,15 +8,22 @@ import axios from "axios";
 import Path from '../../config/path';
 
 class ContactUS extends Component {
-  state = {
-    data: {
-      firstName: "",
-      lastName: "",
-      contactNumber: "",
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: {
+        firstName: "",
+        lastName: "",
+        contactNumber: "",
+        email: ""
+      },
       message: "",
-      email: ""
-    }
-  };
+      showLoader: false,
+      errors: null,
+      submitted: false
+    };
+  }
+
 
   handleChnage = e => {
     const { name, value } = e.target;
@@ -29,12 +36,11 @@ class ContactUS extends Component {
     });
   };
   onSubmit = () => {
-    let { data } = this.state;
+    let { data, message } = this.state;
     const {
       firstName,
       lastName,
       contactNumber,
-      message,
       email
     } = this.state.data;
     let validate = validateForm("all", data);
@@ -42,29 +48,27 @@ class ContactUS extends Component {
       this.setState({ errors: validate });
       return;
     }
-    this.setState({showLoader:true});
+    this.setState({ showLoader: true });
     axios
       .post(Path.CONTACT_US_FORM, {
         firstName,
         lastName,
         phoneNumber: contactNumber,
-        description: message,
+        message: message,
         email
       })
       .then(response => {
         console.log("response from server ", response);
         this.setState({
           data: {
-            showLoader:false,
             firstName: "",
             lastName: "",
             contactNumber: "",
-            message: "",
             email: ""
-          }
-        });
-        this.setState({
-            showLoader:false
+          },
+          showLoader: false,
+          submitted: true,
+          message: ""
         });
       })
       .catch(err => {
@@ -76,16 +80,19 @@ class ContactUS extends Component {
       firstName,
       lastName,
       contactNumber,
-      message,
       email,
+    } = this.state.data;
+    const {
+      message,
       errors,
-      showLoader
+      showLoader,
+      submitted
     } = this.state;
     return (
       <div>
         {showLoader ? <Loader /> : <div />}
         <div className="container" style={{ padding: 0 }}>
-          <div className="Rectangle-58 col-md-12">
+          {!submitted && <div className="Rectangle-58 col-md-12">
             <div id="myForm" style={{ width: "70vw" }}>
               <h1 className="APPLICATION-FORM">Contact Us</h1>
               <div className="row">
@@ -179,7 +186,7 @@ class ContactUS extends Component {
               <div className="row">
                 <div className="col-md-12 row2mail">
                   <label className="label">
-                    Your Message:
+                    Your Message:<span style={{fontSize:".7em"}} >(optional)</span>
                     {errors && errors.errorsObj.message && (
                       <span className="errorContact staric">*</span>
                     )}
@@ -188,7 +195,7 @@ class ContactUS extends Component {
                     type="text"
                     rows={8}
                     maxLength="250"
-                    onChange={this.handleChnage}
+                    onChange={(e) => this.setState({ message: e.target.value })}
                     className="form-control textArea"
                     placeholder="Message here"
                     value={message}
@@ -212,7 +219,14 @@ class ContactUS extends Component {
                 </div>
               </div>
             </div>
-          </div>
+          </div>}
+
+          {submitted &&
+            <div className="calculate-heigth">
+              <h1>Thank You</h1>
+              <h2>We Will Get Back To You Shortly</h2>
+            </div>
+          }
         </div>
       </div>
     );
