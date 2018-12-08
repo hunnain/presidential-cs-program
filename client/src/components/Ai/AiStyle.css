@@ -238,6 +238,21 @@
         .circle-line{
           height: 85% !important;
         }
+        .bc-circle-line{
+          height: 92% !important;
+        }
+      }
+      .bc-circle-line{
+        display: block;
+        position: absolute;
+        top:5vw;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 92%;
+        width: 4px;
+        /* opacity:0.05 !important; */
+        background: #fde182;
+        margin-top: -4%;
       }
       .ai-circle-line{
         display: block;
@@ -364,10 +379,10 @@
 
 
 
-
+      
       
    @media (max-width:1000px){
-     .circle-line,.verticle-circle,.ai-circle-line{
+     .circle-line,.verticle-circle,.ai-circle-line,.bc-circle-line{
        display: none;
      }
      .horizontal-circle{
