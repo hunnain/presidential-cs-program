@@ -37,21 +37,19 @@
     color: #252525;  
 }
 
-.cl-1-t{
-    border:2px solid #e1006a !important;
-    color: #e1006a !important;
+.b-1-t{
+    border:2px solid #fbc314 !important;
+    color: #252525 !important;
 }
-.cl-2-t{
-    background:  #EF7EB3 !important;
-}
-
-.cl-3-t{
-    background:  #E83F8F !important;
+.b-2-t{
+    background:  #FCE088  !important;
 }
 
-.pink{
-    height:85% !important;
+.b-3-t{
+    background:  #FCD24E !important;
 }
+
+
 .cl-cr{
     background: #E83F8F !important;
 }

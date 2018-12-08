@@ -8,7 +8,6 @@ const Blog = (props) => {
 
         <div className={`pack-container ${props.left ? "pack-left" : "pack-right"}`} >
             <div className="pack">
-
                 <div className="horizontal-circle">
                     <div className={`circle ${data.className}`}>
                         <span>
