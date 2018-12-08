@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { withRouter } from "react-router";
 
 import './ManagementCommittee.css';
 import StrategicPartners from './StrategicPartners/StrategicPartners';
@@ -21,7 +20,6 @@ class ManagementCommittee extends Component {
   };
 
   hideModal = () => {
-    const { condition } = this.state;
     this.setState({ condition: false });
   };
 
@@ -55,19 +53,19 @@ class ManagementCommittee extends Component {
                   <li>
                       {" "}
                       {/* <a href="">
-                        <img className="span" src={facebookIcon} />
+                        <img alt="fb-icon"  className="span" src={facebookIcon} />
                       </a> */}
                     </li>
                     <li>
                       {" "}
                       {/* <a href="">
-                        <img className="span" src={twiterIcon} />
+                        <img alt="twitter-icon" className="span" src={twiterIcon} />
                       </a> */}
                     </li>
                     <li>
                       {" "}
                       {/* <a href="">
-                        <img className="span" src={youtubeIcon} />
+                        <img alt="linkedin-icon" className="span" src={youtubeIcon} />
                       </a> */}
                     </li>
                   </ul>
@@ -105,67 +103,20 @@ class ManagementCommittee extends Component {
                     <li>
                       {" "}
                       <a href="https://www.facebook.com/Hunaid.H.Lakhani/">
-                        <img className="span" src={facebookIcon} />
+                        <img alt="fb-icon" className="span" src={facebookIcon} />
                       </a>
                     </li>
                     <li>
                       {" "}
                       <a href="https://twitter.com/Hunaid_Lakhani">
-                        <img className="span" src={twiterIcon} />
+                        <img alt="twitter-icon" className="span" src={twiterIcon} />
                       </a>
                     </li>
                     <li>
                       {" "}
                       <a href="https://www.linkedin.com/in/hunaid-lakhani-00728014/">
-                        <img className="span" src={youtubeIcon} />
+                        <img alt="linkedin-icon" className="span" src={youtubeIcon} />
                       </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <br />
-
-              {/* <button
-                onClick={() => {
-                  this.setState({ condition: true });
-                }}
-              >
-                Read more
-              </button> */}
-            </div>
-          </div>
-          <div className="col-lg-4 col-sm-6 mt-5 d-flex justify-content-center align-items-center">
-            <div className="cardBody ">
-              <div className="imgHead">
-                {/* <center> */}
-                <div className="greenCir" />
-                <div className="whiteCir" />
-                <div className="imgDiv" />
-
-                {/* </center> */}
-              </div>
-              <h1>Yusuf Lakhani</h1>
-              <p>President - Saylani Welfare Trust</p>
-              <div className="spans d-flex justify-content-center align-items-center">
-                <div>
-                  <ul>
-                    <li>
-                      {" "}
-                      <a href="https://www.facebook.com/yousuf.lakhani.3994">
-                        <img className="span" src={facebookIcon} />
-                      </a>
-                    </li>
-                    <li>
-                      {" "}
-                      {/* <a href="">
-                        <img className="span" src={twiterIcon} />
-                      </a> */}
-                    </li>
-                    <li>
-                      {" "}
-                      {/* <a href="">
-                        <img className="span" src={youtubeIcon} />
-                      </a> */}
                     </li>
                   </ul>
                 </div>
@@ -205,20 +156,67 @@ class ManagementCommittee extends Component {
                     <li>
                       {" "}
                       <a href="https://www.facebook.com/ziakhan">
-                        <img className="span" src={facebookIcon} />
+                        <img alt="fb-icon" className="span" src={facebookIcon} />
                       </a>
                     </li>
                     <li>
                       {" "}
                       <a href="https://twitter.com/ziakhan">
-                        <img className="span" src={twiterIcon} />
+                        <img alt="twitter-icon" className="span" src={twiterIcon} />
                       </a>
                     </li>
                     <li>
                       {" "}
                       <a href="https://www.linkedin.com/in/ziaukhan/">
-                        <img className="span" src={youtubeIcon} />
+                        <img alt="linkedin-icon" className="span" src={youtubeIcon} />
                       </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <br />
+
+              {/* <button
+                onClick={() => {
+                  this.setState({ condition: true });
+                }}
+              >
+                Read more
+              </button> */}
+            </div>
+          </div>
+          <div className="col-lg-4 col-sm-6 mt-5 d-flex justify-content-center align-items-center">
+            <div className="cardBody ">
+              <div className="imgHead">
+                {/* <center> */}
+                <div className="greenCir" />
+                <div className="whiteCir" />
+                <div className="imgDiv" />
+
+                {/* </center> */}
+              </div>
+              <h1>Yusuf Lakhani</h1>
+              <p>President - Saylani Welfare Trust</p>
+              <div className="spans d-flex justify-content-center align-items-center">
+                <div>
+                  <ul>
+                    <li>
+                      {" "}
+                      <a href="https://www.facebook.com/yousuf.lakhani.3994">
+                        <img alt="fb-icon"  className="span" src={facebookIcon} />
+                      </a>
+                    </li>
+                    <li>
+                      {" "}
+                      {/* <a href="">
+                        <img alt="twitter-icon" className="span" src={twiterIcon} />
+                      </a> */}
+                    </li>
+                    <li>
+                      {" "}
+                      {/* <a href="">
+                        <img alt="linkedin-icon" className="span" src={youtubeIcon} />
+                      </a> */}
                     </li>
                   </ul>
                 </div>
@@ -255,19 +253,19 @@ class ManagementCommittee extends Component {
                     <li>
                       {" "}
                       {/* <a href="">
-                        <img className="span" src={facebookIcon} />
+                        <img alt="fb-icon" className="span" src={facebookIcon} />
                       </a> */}
                     </li>
                     <li>
                       {" "}
                       {/* <a href="">
-                        <img className="span" src={twiterIcon} />
+                        <img alt="twitter-icon" className="span" src={twiterIcon} />
                       </a> */}
                     </li>
                     <li>
                       {" "}
                       <a href="https://www.linkedin.com/in/sulaiman-s-mehdi-fcis-44275773/">
-                        <img className="span" src={youtubeIcon} />
+                        <img alt="linkedin-icon" className="span" src={youtubeIcon} />
                       </a>
                     </li>
                   </ul>

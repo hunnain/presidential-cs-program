@@ -31,11 +31,13 @@ app.use(function (req, res, next) {
   */
   app.logLevel1("do >>> ",app.get("crosDomains"));
   var crosDomains = app.get("crosDomains").split(",");
-  app.logLevel1("domainList >>> ",crosDomains);
-  crosDomains.forEach(function (item){
-    app.logLevel1("domain > ",item);
-    res.setHeader('Access-Control-Allow-Origin', item);
-  });
+  var origin = req.headers.origin;
+  app.logLevel1("origin >>> ",origin);
+  if(crosDomains.indexOf(origin) > -1) {
+    app.logLevel1("origin found >>> ",origin);
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+ 
   
   //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   // Request methods you wish to allow
