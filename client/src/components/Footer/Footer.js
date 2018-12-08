@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import logo2 from '../../assets/assets/logo/pics-logo.svg'
+import logo2 from '../../assets/assets/logo/piaic-white.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { withRouter , Link } from "react-router";
-// import 'font-awesome/css/font-awesome.min.css';
-// import 'bootstrap-social/bootstrap-social.css';
+import 'font-awesome/css/font-awesome.min.css';
+import '../../../node_modules/bootstrap-social/bootstrap-social.css';
+// import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+
+
 import youtubeIcon from '../../assets/ytIcon.svg';
-import facebookIcon from '../../assets/fbIcon.svg';
+import facebookIcon from '../../assets/fb-logo.png';
 import twiterIcon from '../../assets/tIcon.svg';
 import './Footer.css';
 
@@ -23,7 +27,9 @@ class Footer extends Component {
             <h1 onClick={() => {
               this.props.history.push("/");
               console.log(this.props);
-            }}><img src={logo2} /><span className="foot-pics">PIAIC</span></h1>
+            }}> <img src={logo2} height="75px" onClick={() => {
+              this.props.history.push("/");
+            }} /></h1>
 
             <div className="row" style={{ marginTop: 50 }}>
 

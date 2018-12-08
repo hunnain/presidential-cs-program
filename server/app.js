@@ -25,8 +25,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(function (req, res, next) {
 
   // Website you wish to allow to connect
-  res.setHeader('Access-Control-Allow-Origin', '*');
-
+  //res.setHeader('Access-Control-Allow-Origin', '*');
+  /*
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  */
+  app.logLevel1("do >>> ",app.get("crosDomains"));
+  var crosDomains = app.get("crosDomains").split(",");
+  app.logLevel1("domainList >>> ",crosDomains);
+  crosDomains.forEach(function (item){
+    app.logLevel1("domain > ",item);
+    res.setHeader('Access-Control-Allow-Origin', item);
+  });
+  
+  //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 
@@ -46,6 +57,9 @@ require('./logs')(app);
 require('./db/repository')(app,mongoose);
 require('./models')(app,mongoose);
 require('./routes')(app,mongoose);
+
+
+
 
 //app.use('/', indexRouter);
 //app.use('/users', usersRouter);

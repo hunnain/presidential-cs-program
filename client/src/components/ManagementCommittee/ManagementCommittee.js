@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { withRouter } from "react-router";
-import "./ManagementCommittee.css";
-import StrategicPartners from "./StrategicPartners/StrategicPartners";
-import Modal from "./Modal/Modal";
 
-import youtubeIcon from "../../assets/ytIconColor.svg";
-import facebookIcon from "../../assets/fbIconColor.svg";
-import twiterIcon from "../../assets/tIconColor.svg";
+import './ManagementCommittee.css';
+import StrategicPartners from './StrategicPartners/StrategicPartners';
+import Modal from './Modal/Modal';
+
+import youtubeIcon from '../../assets/youtube-icon.png';
+import facebookIcon from '../../assets/fb-logo.png';
+import twiterIcon from '../../assets/twitter-icon.png';
+
 import KaziRahatAli from "../../assets/members-committee/KaziRahatAli.png";
 import HunaidLakhani from "../../assets/members-committee/HunaidLakhani.jpg";
 import ZiaKhan from "../../assets/members-committee/ZiaKhan.jpg";
@@ -193,7 +195,10 @@ class ManagementCommittee extends Component {
                 {/* </center> */}
               </div>
               <h1>Zia Ullah Khan</h1>
-              <p>CEO - Panacloud Pvt. Ltd.</p>
+              <p>CEO - Panacloud Pvt. Ltd.
+                <br/>
+                <br/>
+              </p>
               <div className="spans d-flex justify-content-center align-items-center">
                 <div>
                   <ul>
@@ -242,7 +247,7 @@ class ManagementCommittee extends Component {
 
                 {/* </center> */}
               </div>
-              <h1>Sulaiman S. Mehdi</h1>
+              <h1>Sulaiman Mehdi</h1>
               <p>Chairman Of The Board - Pakistan Stock Exchange</p>
               <div className="spans d-flex justify-content-center align-items-center">
                 <div>
