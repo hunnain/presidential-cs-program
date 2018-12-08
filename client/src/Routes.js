@@ -17,7 +17,7 @@ import Contact from '../src/components/ContactUs/ContactUs';
 
 import history from './History';
 import ManagementCommittee from './components/ManagementCommittee/ManagementCommittee';
-
+import Idcard from './components/idCard/idcard';
 
 class Routers extends Component {
     render() {
@@ -35,6 +35,7 @@ class Routers extends Component {
                     <Route exact path="/directors" component={Directors} />
                     <Route exact path="/subscribe" component={Contact} />
           			<Route exact path="/managementcommittee" component={ManagementCommittee} />
+                    <Route exact path="/idcard" component={Idcard} />
 
                     <Copyright />
 

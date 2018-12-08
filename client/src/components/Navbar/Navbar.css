@@ -72,6 +72,13 @@ a{
     list-style-type: none;
 }
 
+.active-color{
+    color : #00ce9f!important;
+}
+.nav-flex-3 ul li:hover{
+    color : #00ce9f
+}
+
 .nav-flex-3 p{
        /* flex: 1; */
         /* flex: 1 1; */
