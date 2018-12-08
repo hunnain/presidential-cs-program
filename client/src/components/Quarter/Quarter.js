@@ -9,7 +9,7 @@ const Quarters = (props) => {
                     <div className={Q1.className}>
                         <div>
                         <h4 className="quarter" >Quarter 1</h4>
-                        <p className="para">{Q2.para}</p>
+                        <p className="para">{Q1.para}</p>
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@ const Quarters = (props) => {
                         <div className="data">
                             <div>
                             <h4 className="quarter" >Quarter 3</h4>
-                            <p className="para">{Q2.para}</p>
+                            <p className="para">{Q3.para}</p>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@ const Quarters = (props) => {
                     <div className={Q4.className}>
                         <div>
                         <h4 className="quarter" >Quarter 4</h4>
-                        <p className="para">{Q2.para}</p>
+                        <p className="para">{Q4.para}</p>
                         </div>
                     </div>
                 </div>
