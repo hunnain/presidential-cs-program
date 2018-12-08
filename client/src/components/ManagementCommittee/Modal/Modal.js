@@ -12,7 +12,6 @@ class Modal extends Component {
   };
 
   clickOn = () => {
-    var box = document.querySelector(".bg-modal");
     const th = this;
     // Detect all clicks on the document
     document.addEventListener("click", function(event) {
@@ -29,7 +28,6 @@ class Modal extends Component {
   };
 
   render() {
-    const { showNOt } = this.state;
     const { condition } = this.props;
     return (
       <div>
@@ -63,15 +61,15 @@ class Modal extends Component {
                       <ul>
                         <li>
                           {" "}
-                          <img className="span" src={facebookIcon} />
+                          <img alt="fb-icon" className="span" src={facebookIcon} />
                         </li>
                         <li>
                           {" "}
-                          <img className="span" src={twiterIcon} />
+                          <img alt="twitter-icon" className="span" src={twiterIcon} />
                         </li>
                         <li>
                           {" "}
-                          <img className="span" src={youtubeIcon} />
+                          <img alt="linkedin-icon" className="span" src={youtubeIcon} />
                         </li>
                       </ul>
                     </div>
