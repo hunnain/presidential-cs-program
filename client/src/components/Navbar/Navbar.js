@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Navbar.css';
-import logo from '../../assets/assets/logo/pics-logo.svg';
+import logo from '../../assets/assets/logo/piaic-white.svg';
 import { Link } from 'react-router-dom';
 // import withRouter from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
@@ -45,7 +45,7 @@ class Navbar extends Component {
             
                 <div className="container">
                 <div className="navbar_cont">
-                    <div className="navbar-flex nav-flex-1" onClick={()=>{this.setState({ai : false , cn : false , manageCommitte : false , about : false , subs : false })}}><Link to='/'><p><img src={logo} />PIAIC</p></Link>
+                    <div className="navbar-flex nav-flex-1" onClick={()=>{this.setState({ai : false , cn : false , manageCommitte : false , about : false , subs : false })}}><Link to='/'><img src={logo} /></Link>
                   
 
                    <div className="hamb-btn" onClick={() => {this.catd()}}>
