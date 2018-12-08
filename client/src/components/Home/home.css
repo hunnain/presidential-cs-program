@@ -592,7 +592,7 @@ height: 45px;
     font-size: 2.5vw;
   }
 }
-@media screen and (max-width: 7670px){
+@media screen and (max-width: 767px){
 .boxTxt {
     font-size: 1.5em;
 }
@@ -664,9 +664,9 @@ height: 45px;
   /* background-color: white; */
 }
 .slider-doc-txt p{
-  max-height: 150px;
+  /* max-height: 150px; */
   font-size: 12px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .slider-doc-txt h1,.video-cont h1{
 

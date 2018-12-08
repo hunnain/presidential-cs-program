@@ -182,7 +182,12 @@ a{
     padding: 0px 20px 0px 20px;
 }
 @media screen and (max-width: 1149px){
-
+    .nav-flex-1 img{
+        height: 30px;
+    }
+    body{
+        padding-top: 50px;
+    }
 .navbar_cont{
     flex-direction: column;
 }
