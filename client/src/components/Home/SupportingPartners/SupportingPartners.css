@@ -5,7 +5,7 @@
     float: left;
 }
 .supporterIcons ul li img{
-    height: 5vw;
+    height: 5.5vw;
     /* height: 60px; */
     padding: 1vw 2vw;
 }
@@ -55,10 +55,18 @@
     }
     
 }
-
-@media (max-width: 400px) {
-  
-
-    
-}
+@media (min-width: 1400px) {
+    .supporterIcons ul li img{
+        height: 3em !important;
+        /* height: 60px; */
+        /* padding: 1vw 2vw; */
+    }
+  }
+@media (min-width: 1000px) {
+    .supporterIcons ul li img{
+        height: 2.9em !important;
+        /* height: 60px; */
+        /* padding: 1vw 2vw; */
+    }
+  }
   
