@@ -72,6 +72,13 @@ a{
     list-style-type: none;
 }
 
+.active-color{
+    color : #00ce9f!important;
+}
+.nav-flex-3 ul li:hover{
+    color : #00ce9f
+}
+
 .nav-flex-3 p{
        /* flex: 1; */
         /* flex: 1 1; */
@@ -153,7 +160,7 @@ a{
 .nav-flex-7{
     padding: 0px 20px 0px 20px;
 }
-@media screen and (max-width: 979px){
+@media screen and (max-width: 1149px){
 
 .navbar_cont{
     flex-direction: column;
@@ -194,7 +201,7 @@ a{
 
 
 }
-@media screen and (min-width: 980px){
+@media screen and (min-width: 1150px){
     /* .navbar_cont{
         flex-direction: row !important;
     } */
