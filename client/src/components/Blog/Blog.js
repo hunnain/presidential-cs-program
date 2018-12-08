@@ -8,7 +8,6 @@ const Blog = (props) => {
 
         <div className={`pack-container ${props.left ? "pack-left" : "pack-right"}`} >
             <div className="pack">
-
                 <div className="horizontal-circle">
                     <div className={`circle ${data.className}`}>
                         <span>
@@ -28,7 +27,7 @@ const Blog = (props) => {
                     <h4 className="heading">{data.heading}</h4>
                     <p className="para-data">
                         <img align="left" className="my-thumbnail" style={{ backgroundImage: `url(${data.image})` }} />
-                        {data.para}
+                        {data.para}<br/><br/>{data.para2}
                     </p>
                 </div>
                 {props.left && <div className="verticle-circle circle-left">

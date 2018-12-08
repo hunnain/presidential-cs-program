@@ -12,7 +12,7 @@ class Copyright extends Component {
     render() { 
         return ( 
           <div className="copyright">
-          <p>Copyright © 2018 PIAIC. All rights reserved</p>
+          <p>© 2018 PIAIC. All rights reserved.</p>
           <div><img src={panacloudlogo} height="60px" /></div>
         </div>
          );

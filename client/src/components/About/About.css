@@ -20,7 +20,17 @@
   position: relative;
   border-radius: 10px;
 }
-
+.whiteCir2{
+  width: 136px;
+  height: 136px;
+  margin: 7px;
+  border-radius: 50%;
+  position: absolute;
+  /* background-color: purple; */
+  background-image: url(https://gotest.pk/wp-content/uploads/2015/09/Imran-Khan-Bio.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
 .close {
     float: none;

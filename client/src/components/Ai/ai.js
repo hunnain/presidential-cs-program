@@ -37,14 +37,13 @@ class AI extends Component {
     return (
       <div className="Artificial-Intelligence-Page">
         <div className="container-fluid p-0">
-
           <Banner
           className="Rectangle-67"
-          heading="Artificial Intelligence"
-          tagline=" A ONE YEAR AI PROGRAM DESIGNED FOR ABSOLUTE BEGINNERS
-          GETTING PAKISTAN READY FOR THE NEW ERA OF COMPUTING ENABLED BY THE RISE OF AI"
-          courseLine = {`A Two-Semester AI Program in Data Science
-          Machine Learning, and Deep Learning`}
+          heading1="Artificial Intelligence"
+          heading2=""
+          tagline1="A ONE YEAR AI PROGRAM DESIGNED FOR ABSOLUTE BEGINNERS."
+          tagline2="GETTING PAKISTAN READY FOR THE NEW ERA OF COMPUTING ENABLED BY THE RISE OF AI."
+          courseLine = "A four-quarter AI program in Data Science, Machine Learning, and Deep Learning."
         />
           
 
@@ -72,6 +71,8 @@ class AI extends Component {
               <div className="row">
                 <div className="col-sm-12">
                 <div className="circle-line circle-line-2"></div>
+                  <h1 className="sec-head">Detailed Program Structure</h1>
+                    <div className="circle-line"></div>
 
                   <Blog 
                     left = {true}
@@ -81,7 +82,7 @@ class AI extends Component {
                         number:"1A",
                         className:"transparent",
                         heading:"Version  Control  with  Git",
-                        para:"Course  Outline:  Four  Quarters  of  AI  Course  workQuarter  1:  Artificial  Intelligence  (AI)  Foundations  Q1A:  Version  Control  with  Git"
+                        para:"You won't find a top programmer, web developer, or AI engineer who doesn't use version control. This is true because version control helps developers produce better results and makes collaboration easy. Around the world, in teams both large and small, Git is an essential part of the toolchain. This module covers Git and Github."
                       }
                     }
                   />
@@ -96,7 +97,7 @@ class AI extends Component {
                         number:"1B",
                         className:"transparent",
                         heading:" Object  Oriented  and  Functional  Programming using  Python",
-                        para:"In  the  secondmodule  of  the  course,  you’ll  learn  about  basic  programming  concepts,  such  as  lists,  dictionaries,  classes,  functions  and  loops,  and  practice  writing  clean  and  readable  code  with  exercises  for  each  topic.  You’ll  also  learn  how  to  make  your  programs  interactive  and  how  to  test  your  code  safely  before  adding  it  to  a  project.  It  is  a  fast-paced,  thorough  introduction  to  programming  with  Python  3.6  that  will  have  youwriting  programs,  solving  problems,  and  making  things  that  work  in  no  time.  In  this  module  we  will  also  learn  Git,  the  distributed  version  control  system.  We  will  also  review  Git  based  GitHub  and  BitBucket  services."
+                        para:"In the second module of the program, students will learn about basic programming concepts such as lists, dictionaries, classes, functions and loops, and practice writing clean and readable code with exercises for each topic. Students will also learn how to make programs interactive and how to test code safely before adding it to a project. It is a fast-paced, thorough introduction to programming with Python 3.6 that will have students writing programs, solving problems, and making things that work in no time."
                       }
                     }
                   />
@@ -109,7 +110,7 @@ class AI extends Component {
                         number:"1C",
                         className:"transparent",
                         heading:" Introduction  to  Linear  Algebra  and  Statistics",
-                        para:"In  this  part  of  the  course  we  will  introduce  the  basic  mathematical  and  statistical  concepts  that  are  needed  to  practice  data  science  and  understand  deep  learning.We  will  also  implement  these  concepts  in  Python  and  TensorFlow."
+                        para:"In this module, students will learn the basic mathematical and statistical concepts that are needed to practice data science and understand deep learning. Students will also implement these concepts in Python and TensorFlow."
                       }
                     }
                   />
@@ -121,7 +122,7 @@ class AI extends Component {
                         number:"2A",
                         className:"grey",
                         heading:" Advanced  Python  Libraries  with  Anaconda ",
-                        para:"n  this  module  we  will  also  introduce  you  to  Anaconda  which  is  the  leading  open  data  science  platform  powered  by  Python.  The  open  source  version  of  Anaconda  isa  high  performance  distribution  of  Python  and  R  and  includes  over  100  of  the  most  popular  Python,  and  R  packages  for  data  science,  such  as  NumPy,  and  Matplotlib,  etc."
+                        para:"In this module, students will be introduced to Anaconda, the leading open data science platform powered by Python. The open source version of Anaconda is a high performance distribution of Python and R and includes over 100 of the most popular Python and R packages for data science, such as NumPy, Matplotlib, etc."
                       }
                     }
                   />
@@ -133,7 +134,7 @@ class AI extends Component {
                         number:"2B",
                         className:"grey",
                         heading:"  Data  Science  Essentials",
-                        para:"Learn  key  concepts  and  techniques  used  to  perform  data  science;  including  statistical  analysis,  data  cleansing  and  transformation,and  data  visualization  with  Python"
+                        para:"In this module, students will learn key concepts and techniques used to perform data science; including statistical analysis, data cleansing and transformation, and data visualization with Python."
                       }
                     }
                   />
@@ -145,7 +146,7 @@ class AI extends Component {
                         number:"2C",
                         className:"grey",
                         heading:"The  Fundamentals  of  Deep  Learning  with  Keras with  TensorFlow  Backend",
-                        para:"Before  implementing  deep-learning  algorithms,  we  will  first  familiarize  ourselves  with  mathematical  blocks  of  neural  networks  theory.  We  going  to  start  by  geting  our  hands  dirty  writing  some  simple  Keras  code  right  away!  And  then  move  on  to  advanced  deep  learning  concepts.  This  module  will  also  cover  some  essential  advantages  of  Keras  to  convince  you  it’s  the  deep-learning  library  of  choice."
+                        para:"Before implementing deep-learning algorithms, students will first become familiar with the mathematical blocks of the neural networks theory. Students will get a chance to get their hands dirty writing some simple Keras code right away! Then they will move on to advanced deep learning concepts. This module will also cover some essential advantages of Keras to prove it’s the deep-learning library of choice."
                       }
                     }
                   />
@@ -159,7 +160,7 @@ class AI extends Component {
                         number:"3A",
                         className:"grey1",
                         heading:"  Introduction  to  Linux  and  Bash",
-                        para:"Linux  containers  are  poised  to  take  over  the  world;  we  will  start  our  course  with  an  introduction  of  Linux  and  the  command  line.  For  many  non-technical  people,  the  command  line  (also  referred  to  as  CLI,  Terminal,  bash,  or  shell)  is  a  place  of  mystery.  However,  you  only  have  to  know  a  handful  of  basic  commands  to  start  feeling  comfortable.  In  this  module  we  will  cover  the  basic  commands  to  get  you  started."
+                        para:"Linux containers are poised to take over the world. In this module, students will begin learning with an introduction of Linux and the command line interface. For many non-technical people, the command line (also referred to as CLI, Terminal, bash, or shell) is a place of mystery. However, knowledge of only a handful of basic commands is enough to start feeling comfortable. In this module, we will cover the basic commands to get you started."
                       }
                     }
                   />
@@ -171,7 +172,7 @@ class AI extends Component {
                         number:"3B",
                         className:"grey1",
                         heading:" Docker  Deep  Dive",
-                        para:"This  course  provides  a  soup-to-nuts  learning  experience  for  core  Docker  technologies,  including  the  Docker  Engine,  Images,  Containers,  Registries,  Networking,  Storage,  and  more.  All  of  the  behind  the  scenes  theory  is  explained,  and  all  concepts  are  clearly  demonstrated  on  the  command  line.  No  prior  knowledge  of  Docker  or  Linux  is  required."
+                        para:"This module provides a soup-to-nuts learning experience for core Docker technologies, including the Docker Engine, Images, Containers, Registries, Networking, Storage, and more. All of the behind the scenes theory is explained, and all concepts are clearly demonstrated on the command line. No prior knowledge of Docker or Linux is required."
                       }
                     }
                   />
@@ -183,7 +184,7 @@ class AI extends Component {
                         number:"3C",
                         className:"grey1",
                         heading:"   Python  Microservices  Development",
-                        para:"In  recent  years  REST  (REpresentational  State  Transfer)  has  emerged  as  the  standard  architectural  design  for  web  services  and  web  APIs.  In  this  module  I'm  going  to  show  you  how  easy  it  is  to  create  a  RESTfulweb  service  using  Python,  and  Flask."
+                        para:"In recent years, REST (REpresentational State Transfer) has emerged as the standard architectural design for web services and web APIs. In this module, students will learn how easy it is to create a RESTfulweb service using Python and Flask."
                       }
                     }
                   />
@@ -195,7 +196,7 @@ class AI extends Component {
                         number:"3D",
                         className:"grey1",
                         heading:"  Build  AI  Microservices  for  ContainerDeployments",
-                        para:"In  this  module  we  will  learn  touse  containersto  simplify  AI  solution  deploymentand  use  continues  integration  and  deployment  strategy. "
+                        para:"In this module, students will learn to use containers to simplify AI solution deployments and implement continuous integration and deployment strategies."
                       }
                     }
                   />
@@ -207,7 +208,7 @@ class AI extends Component {
                         number:"4",
                         className:"grey2",
                         heading:"Artificial  Intelligence  (AI)  in  Practice",
-                        para:"This  quarter  is  structured  around  a  series  of  practical  code  examples,  demonstrating  on  real  world  problems  every  the  notions  that  gets  introduced.  We  strongly  believe  in  the  value  of  teaching  using  concrete  examples,  anchoring  theoretical  ideas  into  actual  results  and  tangible  code  patterns.  These  examples  all  rely  on  Keras,  the  Python  deep  learning  library.  We  will  cover  Deep  Learning  for  computer  vision,  text  and  sequences,  finance,  and  advanced  neural  network  design."
+                        para:"This module is structured around a series of practical code examples, demonstrating on real world problems. PIAIC strongly believes in the value of teaching using concrete examples, anchoring theoretical ideas into actual results and tangible code patterns. These examples all rely on Keras, the Python deep learning library. Students will learn Deep Learning for computer vision, text and sequences, finance, and advanced neural network design. "
                       }
                     }
                   />

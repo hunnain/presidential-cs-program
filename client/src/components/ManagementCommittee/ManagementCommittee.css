@@ -17,6 +17,16 @@
   background-blend-mode: overlay;
   transition: .5s;
 }
+.whiteCir2{
+  width: 136px;
+  height: 136px;
+  margin: 7px;
+  border-radius: 50%;
+  position: absolute;
+  /* background-color: purple; */
+  background-size: cover;
+  background-position: center;
+}
 .whiteCir{
   width: 136px;
   height: 136px;
@@ -24,7 +34,6 @@
   border-radius: 50%;
   position: absolute;
   /* background-color: purple; */
-  background-image: url(https://gotest.pk/wp-content/uploads/2015/09/Imran-Khan-Bio.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -73,9 +82,9 @@
 }
 
 .span{
-  width: 20px;
-  height: 20px;
-  margin: 5px;
+  width: 25px;
+  height: 25px;
+  margin: 6px;
   border-radius: 50%;
 }
 .span1{
