@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import logo from "../../assets/piaic-logo.svg"
+import "./Cover.css"
 
 class Cover extends Component {
     render() {
         return (
-            <div class="container-fluid my-container">
-                <div class="container">
-                    <div class="main">
-                        <img src={logo} class="piaic-logo" alt="logo" />
-                        <p>Presidential Initiative for<br />
+            <div ref={(el) => this.props.parentThis.CoverPage = el} className="container-fluid my-container-2">
+                <div className="container">
+                    <div className="my-main">
+                        <img src={logo} className="piaic-logo" alt="logo" />
+                        <p className="my-text" >Presidential Initiative for<br />
                             Artificial Intelligence and Computing (PIAIC)</p>
-                        <a href="https://www.piaic.org" class="launch">Launch</a>
+                        <a onClick={this.props.cover} className="Rectangle-109">Launch</a>
                     </div>
                 </div>
             </div>
