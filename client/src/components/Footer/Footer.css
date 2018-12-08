@@ -2,9 +2,9 @@
   text-align: center;
 }
 
-p:hover,h1:hover,p:hover{
+/* p:hover,h1:hover,p:hover{
   cursor: pointer;
-}
+} */
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -282,12 +282,14 @@ width: 100%;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  line-height: 4;
+  line-height: 2;
   letter-spacing: normal;
   text-align: left;
   color: rgb(255, 255, 255);
 }
-
+.mt-1{
+  margin-top : 15px!important;
+}
 .foot-f2 p{
   max-width: 130px;
   height: 32px;

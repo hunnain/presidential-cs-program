@@ -1,5 +1,5 @@
 /*eslint-disabled */
-import React, { Component } from "react";
+import React from "react";
 
 function validateForm(check, data, field, err) {
     const {
@@ -11,9 +11,9 @@ function validateForm(check, data, field, err) {
         hasError: false,
         errorsObj: {}
     }
-    function hasNumber(myString) {
-        return;
-    }
+    // function hasNumber(myString) {
+    //     return;
+    // }
 
 
 
@@ -185,10 +185,10 @@ function validateForm(check, data, field, err) {
         return errors
     }
     if (check === "each") {
-        var conArray = Validation[field].Validate;
+        var conArray1 = Validation[field].Validate;
         errors.errorsObj[Validation[field].elem] = { message: [] }
-        for (var j = 0; j < conArray.length; j++) {
-            if (conArray[j].condition) {
+        for (var k = 0; k < conArray1.length; k++) {
+            if (conArray1[k].condition) {
                 errors.hasError = true
                 errors.errorsObj[Validation[field].elem].message.push(conArray[j].message)
             }

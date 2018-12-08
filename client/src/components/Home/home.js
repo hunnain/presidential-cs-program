@@ -34,8 +34,8 @@ class Home extends Component {
 
      
         <HomeVideo />
-        <SupportingPartners />
         <Programs />
+        <SupportingPartners />
 
         
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Countdown from '../Countdown/Countdown';
 import { withRouter } from 'react-router-dom';
-import president from '../../../assets/president.png';
+import president from '../../../assets/presidentPic.jpeg';
 
 import './HomeVideo.css';
 
@@ -14,7 +14,7 @@ class HomeVideo extends Component {
                 <div className="container ">
                     <div className="homeVideoCont">
                         <div className="row ">
-                            <div className="col-lg-9">
+                            <div className="col-lg-8">
                                 <div className="slider-doc-f1 d-flex justify-content-center align-items-center">
                                     <div className="slider-doc-txt">
 
@@ -23,13 +23,13 @@ class HomeVideo extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-3 d-flex justify-content-center align-items-center">
-                            <div className="cardArea ">
-                <div className="imgHead imgHead2">
+                            <div className="col-lg-4 d-flex justify-content-center align-items-center">
+                            <div className="cardArea2 cardArea ">
+                <div className="imgHead2">
                 {/* <center> */}
-                   <div className="greenCir"></div>
-                   <div className="whiteCir2" style={{backgroundImage: "url("+president+")",backgroundPosition: "top"}}></div>
-                   <div className="imgDiv"></div>
+                   <div className="greenCir greenCir2"></div>
+                   <div className="whiteCir2 whiteCir22" style={{backgroundImage: "url("+president+")",backgroundPosition: "top"}}></div>
+                   <div className="imgDiv imgDiv2"></div>
 
                 {/* </center> */}
                 </div>
@@ -42,8 +42,9 @@ class HomeVideo extends Component {
                             <div className="col-xl-12 mt-5 mt-xl-0 mb-5 mb-xl-0 d-flex justify-content-center align-items-center">
                             <div className="slider-doc-f2">
                     <div className="video-cont">
+                        <h1>Registration strats in</h1>
                         <Countdown date={`2018-12-11T00:00:00`} /> 
-                        <button onClick={() => {this.props.history.push("subscribe")}} className="subscribe mt-5">Subscribe</button>
+                        <button onClick={() => {this.props.history.push("subscribe")}} className="subscribe mt-4">Subscribe</button>
                         
                         </div>
                 </div>

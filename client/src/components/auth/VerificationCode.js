@@ -78,15 +78,15 @@ class ConfirmNumber extends Component {
                   this.setState({ code: e.target.value });
                 }}
               />
-              <a href="javascript:void(0)" 
+              {/* <a href="javascript:void(0)" 
                 // onClick={this.reSendCode}
-              >
+              > */}
                 <span className="Didnt-receive-code-Resend-now">
                   Didn’t receive code?
                   <br />
                   Resend now
                 </span>
-              </a>
+              {/* </a> */}
               <br />
               <p className="error">{isError ? errorMessage : ""}</p>
               <button onClick={this.onConfirm} className="Rectangle-606">

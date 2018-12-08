@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import logo from '../../assets/assets/logo/pics-logo.svg';
 import { Typography } from '@material-ui/core';
-import {Grid, Row, Col, Button} from 'react-bootstrap';
+import {Grid, Col, Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const styles = theme => ({
@@ -170,6 +168,9 @@ class Idcard extends Component{
                         case (id < 10000):
                             id = data.course + "0" + id;
                             break;
+                        default:
+                            id = data.course + "" + id;
+
                     }
             this.setState({
                 rollNo: id,
@@ -202,7 +203,7 @@ class Idcard extends Component{
                             <Typography variant="h7" className={classes.admitCardText}><b>Admit Card</b></Typography>
                             {/* Student Photo */}
                             <div className={classes.studentAdmitCardPhoto}>
-                            <img src={imageUrl} alt="Picture" style={{width:'100%',height:'100%'}} />
+                            <img src={imageUrl} alt="user-pic" style={{width:'100%',height:'100%'}} />
                             </div>
                             {/* Roll No */}
                             <div className={classes.studentAdmitCardRollNoDiv}>
@@ -244,7 +245,7 @@ class Idcard extends Component{
                             {/* Student Photo */}
                             <Typography variant="h7" className={classes.admitCardText}><b>Identity Card</b></Typography>
                             <div className={classes.studentAdmitCardPhoto}>
-                            <img src={imageUrl} alt="Picture" style={{width:'100%',height:'100%'}} />
+                            <img src={imageUrl} alt="user-pic" style={{width:'100%',height:'100%'}} />
                             </div>
                             {/* Roll No */}
                             <div className={classes.studentAdmitCardRollNoDiv}>
