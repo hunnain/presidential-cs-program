@@ -116,8 +116,9 @@ class Form extends Component {
         }).then(x => {
             console.log(x);
             this.setState({ submited: false });
-            
-            this.props.history.replace('/idcard',x)
+            if(x.fullName){
+                this.props.history.replace('/idcard',x)
+            }
         }).catch((err) => {
             console.log(err);
         });
