@@ -5,7 +5,7 @@
     float: left;
 }
 .supporterIcons ul li img{
-    height: 2.7em;
+    height: 4.5vw;
     /* height: 60px; */
     padding: 1vw 2vw;
 }
@@ -26,16 +26,20 @@
     margin-left: -35px;
 }
 
-@media (max-width: 610px) {
+@media (min-width: 1600px) {
   
-
-
-  }
+    .supporterIcons ul li img{
+        height: 2.5em;
+        /* height: 60px; */
+    }
+   
+    
+}
 
 @media (max-width: 1000px) {
   
     .supporterIcons ul li img{
-        height: 8vw;
+        height: 6vw;
         /* height: 60px; */
     }
     .supportingCont{
@@ -48,7 +52,7 @@
   
 
     .supporterIcons ul li img{
-        height: 8vw;
+        height: 7vw;
         /* height: 60px; */
     } .supportingCont{
         font-size: 1em;
