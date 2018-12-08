@@ -28,7 +28,7 @@ const Blog = (props) => {
                 <div className="box-container">
                     <h4 className="heading">{data.heading}</h4>
                     <p className="para-data">
-                        <img alt="course img" align="left" className="my-thumbnail" style={{ backgroundImage: `url(${data.image})` }} />
+                        <img alt="" align="left" className="my-thumbnail" style={{ backgroundImage: `url(${data.image})` }} />
                         {data.para}<br/><br/>{data.para2}
                     </p>
                 </div>
