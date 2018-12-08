@@ -12,50 +12,42 @@ import Copyright from "./components/Copyright/Copyright";
 import PhoneNumber from "./components/auth/PhoneNumber";
 import VerificationCode from "./components/auth/VerificationCode";
 
-import Directors from '../src/components/Directors/Directors';
-import Contact from '../src/components/ContactUs/ContactUs';
-import BlockChain from "./components/BlockChain/BlockChain"
-
+import Directors from "../src/components/Directors/Directors";
+import Contact from "../src/components/ContactUs/ContactUs";
+import BlockChain from "./components/BlockChain/BlockChain";
 
 import history from "./History";
 import ManagementCommittee from "./components/ManagementCommittee/ManagementCommittee";
 import Idcard from "./components/idCard/idcard";
-import LandingPage from "./components/LandingPage/LandingPage";
 
 class Routers extends Component {
-
   render() {
     return (
       <Router history={history}>
-        {history.location.pathname === "/landing-page" ? (
-          <Route exact path="/landing-page" component={LandingPage} />
-        ) : (
-          <div>
-            <Navbar />
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/verification" component={VerificationCode} />
-            <Route exact path="/form" component={Form} />
-            <Route exact path="/apply" component={PhoneNumber} />
-            <Route exact path="/block-chain" component={BlockChain} />
-            <Route exact path="/artificial-inteligence" component={AI} />
-            <Route exact path="/cloud-native" component={CloudNative} />
-            <Route exact path="/directors" component={Directors} />
-            <Route exact path="/subscribe" component={Contact} />
+        <div>
+          <Navbar />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/verification" component={VerificationCode} />
+          <Route exact path="/form" component={Form} />
+          <Route exact path="/apply" component={PhoneNumber} />
+          <Route exact path="/block-chain" component={BlockChain} />
+          <Route exact path="/artificial-inteligence" component={AI} />
+          <Route exact path="/cloud-native" component={CloudNative} />
+          <Route exact path="/directors" component={Directors} />
+          <Route exact path="/subscribe" component={Contact} />
 
-<Route
- exact
- path="/managementcommittee"
- component={ManagementCommittee}
- />
-            <Route exact path="/idcard" component={Idcard} />
-            <Copyright />
-          </div>
-        )}
+          <Route
+            exact
+            path="/managementcommittee"
+            component={ManagementCommittee}
+          />
+          <Route exact path="/idcard" component={Idcard} />
+          <Copyright />
+        </div>
       </Router>
     );
   }
-
 }
 
 export default Routers;
