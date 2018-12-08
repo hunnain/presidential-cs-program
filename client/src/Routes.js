@@ -19,6 +19,7 @@ import BlockChain from "./components/BlockChain/BlockChain";
 import history from "./History";
 import ManagementCommittee from "./components/ManagementCommittee/ManagementCommittee";
 import Idcard from "./components/idCard/idcard";
+import FacebookAuth from './components/FacebookAuth/facebookAuth';
 
 class Routers extends Component {
   render() {
@@ -43,6 +44,7 @@ class Routers extends Component {
             component={ManagementCommittee}
           />
           <Route exact path="/idcard" component={Idcard} />
+          <Route exact path="/facebookauth" component={FacebookAuth} />
           <Copyright />
         </div>
       </Router>
