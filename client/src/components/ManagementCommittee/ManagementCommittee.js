@@ -39,7 +39,7 @@ class ManagementCommittee extends Component {
                 <div className="greenCir" />
                 <div
                   className="whiteCir"
-                  style={{ backgroundImage: `url(${KaziRahatAli})` }}
+                  style={{ backgroundImage: `url(${KaziRahatAli})`,backgroundPosition:'top' }}
                 />
                 <div className="imgDiv" />
 
@@ -89,7 +89,7 @@ class ManagementCommittee extends Component {
                 <div className="greenCir" />
                 <div
                   className="whiteCir"
-                  style={{ backgroundImage: `url(${HunaidLakhani})` }}
+                  style={{ backgroundImage: `url(${HunaidLakhani})`,backgroundPosition:"top" }}
                 />
                 <div className="imgDiv" />
 
@@ -186,7 +186,7 @@ class ManagementCommittee extends Component {
                 <div className="greenCir" />
                 <div
                   className="whiteCir"
-                  style={{ backgroundImage: `url(${ZiaKhan})` }}
+                  style={{ backgroundImage: `url(${ZiaKhan})`,backgroundPosition:'top' }}
                 />
                 <div className="imgDiv" />
 
