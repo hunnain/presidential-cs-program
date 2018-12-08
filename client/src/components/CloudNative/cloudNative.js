@@ -63,8 +63,8 @@ class CloudNative extends Component {
               <hr />
               <div className="row">
                 <div className="col-sm-12">
-                <div className="circle-line"></div>
                 <h1 className="sec-head-2">Detailed Program Structure</h1>
+                <div className="circle-line"></div>
 
                   <Blog 
                     left = {true}
