@@ -91,7 +91,7 @@ class ContactUS extends Component {
     return (
       <div>
         {showLoader ? <Loader /> : <div />}
-        <div className="container" style={{ padding: 0 }}>
+        <div className="container-fluid" style={{ padding: 0 }}>
           {!submitted && <div className="ContactClass col-md-12">
             <div id="myForm" style={{ width: "70vw" }}>
               <div className="main">
