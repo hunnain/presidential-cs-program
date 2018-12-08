@@ -17,7 +17,7 @@ const Blog = (props) => {
                     </div>
                 </div>
                 {!props.left && <div className="verticle-circle circle-right">
-                    <div className={`circle ${data.number.split("").reverse().join("") , data.className} `}>
+                        <div className={`circle ${data.number.split("").reverse().join("") , data.className} `}>
                         <span>
                             {data.number}
                         </span>
