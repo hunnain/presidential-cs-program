@@ -58,7 +58,7 @@ class Navbar extends Component {
                     {/* <p>Aftificial Inteligence</p> */}
                     <ul id="nav-flex-ul">
 
-                    <Link to='/artificial-inteligence'> <li className={ai ? 'active-color' : ''} onClick={()=>{this.setState({ai : true , cn : false , manageCommitte : false , about : false , subs : false });this.catd()}}>Aftificial Inteligence</li></Link>
+                    <Link to='/artificial-inteligence'> <li className={ai ? 'active-color' : ''} onClick={()=>{this.setState({ai : true , cn : false , manageCommitte : false , about : false , subs : false });this.catd()}}>Artificial Intelligence</li></Link>
                         {/* <BrowserRouter></BrowserRouter> */}
                         <Link to='/cloud-native'>  <li className={cn ? 'active-color' : ''} onClick={()=>{this.setState({ai : false , cn : true , manageCommitte : false , about : false , subs : false });this.catd()}}>Cloud Native</li></Link>
                          {/* <li onClick={() => {this.setState({condition: true})}} className="about">About</li> */}
