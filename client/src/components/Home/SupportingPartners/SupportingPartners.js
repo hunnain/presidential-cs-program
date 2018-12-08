@@ -13,7 +13,7 @@ class SupportingPartners extends Component {
     render() {
         return (
             <div className="supportingBg">
-                <div className="container App supportingCont">
+                <div className="container App supportingCont" style={{paddingBottom: "380px",paddingTop: "50px"}}>
                     <div className="row">
                         <div className="col-12 mt-2 d-flex justify-content-center align-items-center">
                             <p>SUPPORTING PARTNERS</p>
