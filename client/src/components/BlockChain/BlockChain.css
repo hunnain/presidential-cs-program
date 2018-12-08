@@ -1,0 +1,58 @@
+.bc{
+    color: #252525;
+    background: #fbc314    ;
+}
+.bc line,.bc .heading{
+    color: #252525;
+
+}
+
+
+
+.bc .Artificial-Intelligence,.bc .line{
+    color: #252525;
+}
+.bc+.line2{
+    color: #252525;
+
+}
+.b1 .quarter{
+    color: #252525;     
+}
+.b1 .para{
+    color: #252525;  
+
+}
+.b2 {
+    background:rgba(251, 195, 20,0.5);
+    
+    color: #252525;   
+}
+.b3 {
+    background:rgba(251, 195, 20,0.75);
+    color: #252525;  
+}
+.b4 {
+    background:#fbc314;
+    color: #252525;  
+}
+
+.cl-1-t{
+    border:2px solid #e1006a !important;
+    color: #e1006a !important;
+}
+.cl-2-t{
+    background:  #EF7EB3 !important;
+}
+
+.cl-3-t{
+    background:  #E83F8F !important;
+}
+
+.pink{
+    height:85% !important;
+}
+.cl-cr{
+    background: #E83F8F !important;
+}
+

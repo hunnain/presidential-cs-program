@@ -11,8 +11,11 @@ import Navbar from "./components/Navbar/Navbar";
 import Copyright from "./components/Copyright/Copyright";
 import PhoneNumber from "./components/auth/PhoneNumber";
 import VerificationCode from "./components/auth/VerificationCode";
-import Directors from "../src/components/Directors/Directors";
-import Contact from "../src/components/ContactUs/ContactUs";
+
+import Directors from '../src/components/Directors/Directors';
+import Contact from '../src/components/ContactUs/ContactUs';
+import BlockChain from "./components/BlockChain/BlockChain"
+
 
 import history from "./History";
 import ManagementCommittee from "./components/ManagementCommittee/ManagementCommittee";
@@ -20,6 +23,7 @@ import Idcard from "./components/idCard/idcard";
 import LandingPage from "./components/LandingPage/LandingPage";
 
 class Routers extends Component {
+
   render() {
     return (
       <Router history={history}>
@@ -37,11 +41,12 @@ class Routers extends Component {
             <Route exact path="/cloud-native" component={CloudNative} />
             <Route exact path="/directors" component={Directors} />
             <Route exact path="/subscribe" component={Contact} />
-            <Route
-              exact
-              path="/managementcommittee"
-              component={ManagementCommittee}
-            />
+
+<Route
+ exact
+ path="/managementcommittee"
+ component={ManagementCommittee}
+ />
             <Route exact path="/idcard" component={Idcard} />
             <Copyright />
           </div>
@@ -49,6 +54,7 @@ class Routers extends Component {
       </Router>
     );
   }
+
 }
 
 export default Routers;

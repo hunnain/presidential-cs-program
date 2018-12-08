@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './About.css';
 import youtubeIcon from '../../assets/ytIconColor.svg';
-import facebookIcon from '../../assets/fbIconColor.svg';
-import twiterIcon from '../../assets/tIconColor.svg';
+import facebookIcon from '../../assets/fb-logo.png';
+import twiterIcon from '../../assets/twitter-icon.png';
 import president from '../../assets/president.png';
 
 

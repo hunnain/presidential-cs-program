@@ -33,13 +33,11 @@ class CloudNative extends Component {
         <div className="container-fluid p-0">
         <Banner
           className="Rectangle-67 cl-b"
-          heading="Cloud Native Computing & 
-          Amazon Web Services (AWS) Specialist"
-          tagline=" AONE  YEARCLOUD  COMPUTINGPROGRAM  DESIGNED  FORABSOLUTE  BEGINNERS
-          GETTING  PAKISTANREADY  FOR  THE  NEW  ERA  OF  MICROSERVICES  AND  MULTI-CLOUD  NATIVE  COMPUTING  
-          ON  AMAZON  AWS,  MICROSOFT  AZURE,  AND  GOOGLE  CLOUDPLATFORM"
-          courseLine = {`A Two-Semester AI Program in Data Science
-          Machine Learning, and Deep Learning`}
+          heading1="Cloud Native Computing & "
+          heading2="Amazon Web Services (AWS) Specialist" 
+          tagline1=" A ONE  YEAR CLOUD  COMPUTING PROGRAM  DESIGNED  FORABSOLUTE  BEGINNERS."
+          tagline2="GETTING PAKISTAN READY FOR THE NEW ERA OF MICROSERVICES AND MULTI-CLOUD NATIVE COMPUTING."
+          courseLine = "A four-quarter cloud computing program."
         />
 
 
@@ -65,7 +63,8 @@ class CloudNative extends Component {
               <hr />
               <div className="row">
                 <div className="col-sm-12">
-                <div className="circle-line pink"></div>
+                <div className="circle-line"></div>
+                <h1 className="sec-head-2">Detailed Program Structure</h1>
 
                   <Blog 
                     left = {true}
@@ -75,9 +74,8 @@ class CloudNative extends Component {
                         number:"1A",
                         className:"transparent cl-1-t",
                         heading:"Introduction to Cloud Native Computing",
-                        para:`Cloud  native  uses  open-source  software  stacks  to  deploy  an  application  as  microservices,  packaging  each  part  into  its  own  containers  and  dynamically  orchestrating  those  containers  to  optimize  resource  utilization.  In  the  last  15  years,  cloud  application  delivery  has  moved  from  being  bound  to  physical  servers  to  running  on  virtual  machines  with  a  full  operating  system  and  now  to  containers  with  Docker  where  developers  can  specify  every  aspect  of  deployment.
-
-                        The  move  has  also  been  a  shift  from  a  heavyweight  application  deployment  cloud  model  to  a  lightweight  cloud  native  model  that  takes  less  time  to  start  up  and  deploy  applications.  Additionally,  there  has  been  a  move  from  being  bound  to  a  single  closed-source  vendor  to  an  open-source  model  with  multiple  vendors,  less  risk  of  lock-in  and  more  choice.  All  the  major  cloud  providers  AWS,  Azure,  Google  Cloud  Platform,  etc.  have  adopted  this  cloud  native  approach.  In  this  module  we  will  learn  about  the  history,  current  status  and  future  of  cloud  native  computing.`
+                        para:"Cloud native computing uses open-source software stacks to deploy applications as microservices, packaging each part into its own container and dynamically orchestrating those containers to optimize resource utilization. In the last 15 years, cloud application delivery has moved from being bound to physical servers to running on virtual machines with a full operating system and now to containers with Docker, where developers can specify every aspect of deployment.",
+                        para2:"The move has also been a shift from a heavyweight application deployment cloud model to a lightweight cloud native model that takes less time to start up and deploy applications. Additionally, there has been a move from being bound to a single, closed-source vendor to an open-source model with multiple vendors, resulting in less risk of lock-in and more choice. All the major cloud providers such as AWS, Azure, Google Cloud Platform, etc. have adopted this cloud native approach. In this module we will learn about the history, current status and future of cloud native computing."
                       }
                     }
                   />
@@ -89,7 +87,8 @@ class CloudNative extends Component {
                         number:"1B",
                         className:"transparent cl-1-t",
                         heading:" Introduction to Linux and Bashusing Python",
-                        para:`Linux  containers  are  poised  to  take  over  theworld;  we  will  start  this  modulewith  an  introduction  of  Linux  and  the  command  line.  For  many  non-technical  people,  the  command  line  (also  referred  to  as  CLI,  Terminal,  bash,  or  shell)  is  a  place  of  mystery.  However,  you  only  have  to  know  a  handful  of  basic  commands  to  start  feeling  comfortable.  In  this  module  we  will  cover  the  basic  commands  to  get  you  started.` }
+                        para:"Linux containers are poised to take over the world; we will start our course with an introduction of Linux and the command line. For many non-technical people, the command line (also referred to as CLI, Terminal, bash, or shell) is a place of mystery. However, you only have to know a handful of basic commands to start feeling comfortable. In this module we will cover the basic commands to get you started."
+                      }
                     }
                   />
                   
@@ -101,7 +100,8 @@ class CloudNative extends Component {
                         number:"1C",
                         className:"transparent cl-1-t",
                         heading:"Docker Deep Dive",
-                        para:`In  this  part  of  the  course  we  will  introduce  the  basic  mathematical  and  statistical  concepts  that  are  needed  to  practice  data  science  and  understand  deep  learning.We  will  also  implement  these  concepts  in  Python  and  TensorFlow.`}
+                        para:"This course provides a soup-to-nuts learning experience for core Docker technologies, including the Docker Engine, Images, Containers, Registries, Networking, Storage, and more. All of the behind the scenes theory is explained, and all concepts are clearly demonstrated on the command line. No prior knowledge of Docker or Linux is required."
+                      }
                     }
                   />
                   <Blog 
@@ -112,8 +112,8 @@ class CloudNative extends Component {
                         number:"1D",
                         className:"transparent cl-1-t",
                         heading:"JavaScript/TypeScript Programming",
-                        para:`JavaScript  is  the  default  language  of  the  Web  and  the  first  universal  programming  language.  In  this  module  we  will  dig  through  all  the  genuinely  elegant  parts  of  JavaScript,  including:  Syntax,  Objects,  Functions,  Inheritance,  Arrays,  Methods,  etc.  We  will  start  the  quarterby  building  a  solid  foundation  in  Functional  and  Object-Oriented  Programming  using  JavaScript  (ES  2015)and  TypeScript  using Node.js.  Assuming  no  prior  programming  experience  on  the  part  of  the  student  this  module  starts  by  focusing  on  the  fundamentals  of  composing  code  with  JavaScript.  Introduction  to  only  server  based  JavaScript/TypeScript  is  covered  i.e.  Node.js.  You'll  learn  about  the  syntax  and  structure  of  the  language  including  operators  and  expressions,  control  structures,  methods,  and  arrays  using  Node.`}
-                    }
+                        para:"JavaScript is the default language of the web and the first universal programming language. In this module, students will dig through all the genuinely elegant parts of JavaScript, including syntax, objects, functions, inheritance, arrays, methods, etc. This module will build a solid foundation in functional and object-oriented programming using JavaScript (ES 2016) and TypeScript using Node.js. Assuming no prior programming experience on the part of the student, this module starts by focusing on the fundamentals of composing code with JavaScript. Introduction to only server based JavaScript/TypeScript is covered i.e. Node.js. Students will also learn about the syntax and structure of the language including operators and expressions, control structures, methods, and arrays using Node."
+                      } }
                   />
                   <Blog 
                     left = {true}
@@ -123,8 +123,8 @@ class CloudNative extends Component {
                         number:"2A",
                         className:"grey cl-2-t",
                         heading:" Developing Microservices using Node.js and Express",
-                        para:`This  moduleteaches  you  how  to  build  microservices  using Node.js.  It  starts  by  introducing  Node’s  powerful  traits  and  shows  you  how  they  map  to  the  features  of  microservices  using  JavaScript.  You’ll  explore  key  development  techniques,  meet  the  rich  ecosystem  of  companion  tools  and  libraries,  and  get  a  glimpse  into  its  inner  workings.  In  recent  years  REST  (REpresentational  State  Transfer)  hasemerged  as  the  standard  architectural  design  for  web  services  and  web  APIs.  In  this  module  we  are  going  to  show  you  how  easy  it  is  to  create  a  RESTful  web  service  using Node.js, TypeScript  and  the  Express  microframework.  We  will  also  learn  gRPC  and  GraphQLbased  microservices.  By  the  end  of  the  module,  you’ll  be  able  touse  JavaScript/Typescriptto  build  a  Node  microserviceand  know  how  to  test  it,  hook  it  up  to  a  database,  and  automate  the  developmentprocess.`}
-                    }
+                        para:"This module includes how to build microservices using Node.js. It starts by introducing Node’s powerful traits and shows students how they map to the features of microservices using JavaScript. Students will explore key development techniques, meet the rich ecosystem of companion tools and libraries, and get a glimpse into its inner workings. In recent years, REST (REpresentational State Transfer) has emerged as the standard architectural design for web services and web APIs. In this module, students will see how easy it is to create a RESTful web service using Node.js, TypeScript and the Express micro-framework. Students will also learn gRPC and GraphQL based microservices. By the end of the module, students will be able to use JavaScript/Typescript to build a Node microservice and know how to test it, hook it up to a database, and automate the development process."
+                      } }
                   />
                    <Blog 
                     left = {false}
@@ -134,8 +134,8 @@ class CloudNative extends Component {
                         number:"2B",
                         className:"grey cl-2-t",
                         heading:"Version Control with Git",
-                        para:`You  won’t  find  a  top  programmer,  clouddeveloper,  or  AI  engineer  who  doesn’t  use  version  control.  Because  it  helps  you  produce  better  results  and  makes  collaboration  easy.  Around  the  world,  in  teams  large  and  small,  Git  is  an  essential  part  of  the  tool  chain.  We  will  start  be  covering  Gitprotocoland  Githubservices.`}
-                    }
+                        para:"You won’t find a top programmer, cloud developer, or AI engineer who doesn’t use version control. This is true because version control helps developers produce better results and makes collaboration easy. Around the world, in teams both large and small, Git is an essential part of the toolchain. This module covers Git and Github."
+                      }}
                   />
                   
                   <Blog 
@@ -146,7 +146,7 @@ class CloudNative extends Component {
                         number:"2C",
                         className:"grey cl-2-t",
                         heading:" Cloud Automation using Ansible  ",
-                        para:`Ansibleis  an  open-source  IT  automation  engine  which  can  remove  drudgery  from  your  work  life,  and  will  also  dramatically  improve  the  scalability,  consistency,  and  reliability  of  your  IT  environment.  In  this  module,  we’ll  start  to  explore  how  to  automate  repetitive  cloudadministration  tasks  using  Ansible.`
+                        para:"Ansible is an open-source IT automation engine which can remove drudgery from work life and will also dramatically improve the scalability, consistency, and reliability of your IT environment. In this module, students will start to explore how to automate repetitive cloud administration tasks using Ansible."
                       }
                     }
                   />
@@ -158,8 +158,7 @@ class CloudNative extends Component {
                         number:"3A",
                         className:"grey cl-3-t",
                         heading:" Kubernetes in Practice",
-                        para:`The  Kubernetes  container  orchestration  system  safely  manages  the  structure  and  flow  of  a  distributed  application,  organizing  containers  and  services  for  maximum  efficiency.  Kubernetes  serves  as  an  operating  system  for  your  clusters,  eliminating  the  need  to  factor  the  underlying  network  and  server  infrastructure  into  your  designs.In  this  quarter  we  will  teachyou  to  use  Kubernetes  to  deploy  container-based  distributed  applications.We  willstart  with  an  overview  of  Docker  and  Kubernetes  before  building  your  first  Kubernetes  cluster.  We’ll  gradually  expand  your  initial  application,  adding  features  and  deepening  your  knowledge  of  Kubernetes  architecture  and  operation.  We’ll  explore  high-value  topics  like  monitoring,  tuning,  and  scaling.By  the  end  of  the  quarter  you  will  be  able  to  appear  in  the  Certified  Kubernetes  Application  Developer  (CKAD)exam.
-                        `
+                        para:"The Kubernetes container orchestration system safely manages the structure and flow of a distributed application, organizing containers and services for maximum efficiency. Kubernetes serves as an operating system for your clusters, eliminating the need to factor the underlying network and server infrastructure into your designs. In this quarter, students will learn to use Kubernetes to deploy container-based distributed applications. The module will start with an overview of Docker and Kubernetes before building the first Kubernetes cluster. We’ll gradually expand the student's initial application, adding features and deepening knowledge of Kubernetes architecture and operation. Students will explore high-value topics like monitoring, tuning, and scaling. By the end of the quarter, students will be able to appear in the Certified Kubernetes Application Developer (CKAD) exam."
                       }
                     }
                   />
@@ -171,7 +170,7 @@ class CloudNative extends Component {
                         number:"4A",
                         className:"grey cl-3-t",
                         heading:"Amazon Web Services Application Development",
-                        para:`In  this  quarter  we  will  develop  an  understanding  of  core  AWS  services,  uses,  and  basic  AWS  architecture  best  practices.We  will  developproficiency  in  developing,  deploying,  and  debugging  cloud-based  applications  using  AWS.We  will  develop  the  ability  to  use  the  AWS  service  APIs,  AWS  CLI,  and  SDKs  to  write  applicationsand  understanding  of  the  AWS  shared  responsibility  model.  We  will  also  focus  on  understanding  of  application  lifecycle  management,  ability  to  use  a  CI/CD  pipeline  to  deploy  applications  on  AWS,  and  ability  to  write  code  using  AWS  security  best  practices.  Proficiency  writing  code  for  serverless  applicationsand  understanding  of  the  use  of  containers  in  the  development  processwill  also  be  covered  in  detail.  By  the  end  of  the  quarter  you  will  be  able  to  appear  in  the  AWS  Certified  Developer  –Associateexam.`
+                        para:"In this quarter, students will develop an understanding of core AWS services, uses, and basic AWS architecture best practices. Students will develop proficiency in developing, deploying, and debugging cloud-based applications using AWS. Students will also develop the ability to use the AWS service APIs, AWS CLI, and SDKs to write applications and gain an understanding of the AWS shared responsibility model. Students will also focus on understanding of application lifecycle management, ability to use a CI/CD pipeline to deploy applications on AWS, and ability to write code using AWS security best practices. Proficiency, writing code for serverless applications, and understanding of the use of containers in the development process will also be covered in detail. By the end of the quarter students will be able to appear in the AWS Certified Developer – Associate exam."
                       }
                     }
                   />
