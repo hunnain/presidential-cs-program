@@ -14,7 +14,7 @@ class HomeVideo extends Component {
                 <div className="container ">
                     <div className="homeVideoCont">
                         <div className="row ">
-                            <div className="col-lg-9">
+                            <div className="col-lg-7">
                                 <div className="slider-doc-f1 d-flex justify-content-center align-items-center">
                                     <div className="slider-doc-txt">
 
@@ -27,9 +27,9 @@ class HomeVideo extends Component {
                             <div className="cardArea ">
                 <div className="imgHead imgHead2">
                 {/* <center> */}
-                   <div className="greenCir"></div>
-                   <div className="whiteCir2" style={{backgroundImage: "url("+president+")",backgroundPosition: "top"}}></div>
-                   <div className="imgDiv"></div>
+                   <div className="greenCir greenCir2"></div>
+                   <div className="whiteCir2 whiteCir22" style={{backgroundImage: "url("+president+")",backgroundPosition: "top"}}></div>
+                   <div className="imgDiv imgDiv2"></div>
 
                 {/* </center> */}
                 </div>

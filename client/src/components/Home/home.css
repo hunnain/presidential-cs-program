@@ -26,6 +26,14 @@ button:hover,.myDiv h1:hover{
   color: #61dafb;
 }
 
+*{
+  transition: 0.3s;
+}
+button:hover{
+  transform: scale(1.03)
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
