@@ -41,10 +41,10 @@ class PhoneNumber extends Component {
         <div className="container-fluid p-0">
           <div className="Rectangle-588">
             <div id="myForm">
-              <h1 className="APPLICATION-FORM ">APPLICATION FORM</h1>
-              <label className="label">Enter phone number to verify</label>
+              <h1 className="APPLICATION-FORM">APPLICATION FORM</h1>
+              <label className="label06">Enter phone number to verify</label>
               <input
-                className={`form-control Rectangle-59 ${
+                className={`form-control Rectangle-596 ${
                   isError ? "errorElem" : ""
                 }`}
                 type="number"
@@ -55,7 +55,7 @@ class PhoneNumber extends Component {
                 }}
               />
               <p className="error">{isError ? errorMessage : ""}</p>
-              <button onClick={this.onSubmit} className="Rectangle-60">
+              <button onClick={this.onSubmit} className="Rectangle-606">
                 SEND VERIFICATION CODE
               </button>
             </div>

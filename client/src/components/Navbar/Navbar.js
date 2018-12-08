@@ -57,19 +57,24 @@ class Navbar extends Component {
                     <div className="navbar-flex nav-flex-3">
                     {/* <p>Aftificial Inteligence</p> */}
                     <ul id="nav-flex-ul">
-                    <Link to='/artificial-inteligence'> <li className={ai ? 'active-color' : ''} onClick={()=>{this.setState({ai : true , cn : false , manageCommitte : false , about : false , subs : false })}}>Aftificial Inteligence</li></Link>
+
+                    <Link to='/artificial-inteligence'> <li className={ai ? 'active-color' : ''} onClick={()=>{this.setState({ai : true , cn : false , manageCommitte : false , about : false , subs : false });this.catd()}}>Aftificial Inteligence</li></Link>
                         {/* <BrowserRouter></BrowserRouter> */}
-                        <Link to='/cloud-native'>  <li className={cn ? 'active-color' : ''} onClick={()=>{this.setState({ai : false , cn : true , manageCommitte : false , about : false , subs : false })}}>Cloud Native</li></Link>
+                        <Link to='/cloud-native'>  <li className={cn ? 'active-color' : ''} onClick={()=>{this.setState({ai : false , cn : true , manageCommitte : false , about : false , subs : false });this.catd()}}>Cloud Native</li></Link>
                          {/* <li onClick={() => {this.setState({condition: true})}} className="about">About</li> */}
-                        <Link to='/about'>  <li className={about ? 'active-color' : ''} onClick={()=>{this.setState({ai : false , cn : false , manageCommitte : false , about : true , subs : false })}}>About</li></Link>
-                        <Link to='/managementcommittee'>  <li className={manageCommitte ? 'active-color' : ''} onClick={()=>{this.setState({ai : false , cn : false , manageCommitte : true , about : false , subs : false })}}>Management Committee</li></Link>
+                        <Link to='/about'>  <li className={about ? 'active-color' : ''} onClick={()=>{this.setState({ai : false , cn : false , manageCommitte : false , about : true , subs : false });this.catd()}}>About</li></Link>
+                        <Link to='/managementcommittee'>  <li className={manageCommitte ? 'active-color' : ''} onClick={()=>{this.setState({ai : false , cn : false , manageCommitte : true , about : false , subs : false });this.catd()}}>Management Committee</li></Link>
+
                         {
                           /*
                             <Link to='/apply'>  <li>Apply</li></Link>
                           */      
                         }
                         
-                        <Link to='/subscribe'>  <li className={subs ? 'active-color' : ''} onClick={()=>{this.setState({ai : false , cn : false , manageCommitte : false , about : false , subs : true })}}>Subscribe</li></Link>
+
+                        
+                        <Link to='/subscribe'>  <li className={subs ? 'active-color' : ''} onClick={()=>{this.setState({ai : false , cn : false , manageCommitte : false , about : false , subs : true });this.catd()}}>Subscribe</li></Link>
+
                     </ul>
                     
                     
