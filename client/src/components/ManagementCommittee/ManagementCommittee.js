@@ -195,7 +195,10 @@ class ManagementCommittee extends Component {
                 {/* </center> */}
               </div>
               <h1>Zia Ullah Khan</h1>
-              <p>CEO - Panacloud Pvt. Ltd.</p>
+              <p>CEO - Panacloud Pvt. Ltd.
+                <br/>
+                <br/>
+              </p>
               <div className="spans d-flex justify-content-center align-items-center">
                 <div>
                   <ul>
@@ -244,7 +247,7 @@ class ManagementCommittee extends Component {
 
                 {/* </center> */}
               </div>
-              <h1>Sulaiman S. Mehdi</h1>
+              <h1>Sulaiman Mehdi</h1>
               <p>Chairman Of The Board - Pakistan Stock Exchange</p>
               <div className="spans d-flex justify-content-center align-items-center">
                 <div>
