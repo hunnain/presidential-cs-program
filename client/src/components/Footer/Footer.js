@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo2 from '../../assets/assets/logo/pics-logo.svg'
+import logo2 from '../../assets/assets/logo/piaic-white.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { withRouter , Link } from "react-router";
 import 'font-awesome/css/font-awesome.min.css';
@@ -27,7 +27,9 @@ class Footer extends Component {
             <h1 onClick={() => {
               this.props.history.push("/");
               console.log(this.props);
-            }}><img src={logo2} /><span className="foot-pics">PIAIC</span></h1>
+            }}> <img src={logo2} height="75px" onClick={() => {
+              this.props.history.push("/");
+            }} /></h1>
 
             <div className="row" style={{ marginTop: 50 }}>
 
