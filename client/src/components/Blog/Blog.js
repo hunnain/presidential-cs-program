@@ -17,7 +17,9 @@ const Blog = (props) => {
                     </div>
                 </div>
                 {!props.left && <div className="verticle-circle circle-right">
-                    <div className={`circle ${data.number.split("").reverse().join("") , data.className} `}>
+
+                    <div className={`circle ${data.number.split("").reverse().join("")} ${data.className} `}>
+
                         <span>
                             {data.number}
                         </span>
@@ -26,12 +28,12 @@ const Blog = (props) => {
                 <div className="box-container">
                     <h4 className="heading">{data.heading}</h4>
                     <p className="para-data">
-                        <img align="left" className="my-thumbnail" style={{ backgroundImage: `url(${data.image})` }} />
+                        <img alt="" align="left" className="my-thumbnail" style={{ backgroundImage: `url(${data.image})` }} />
                         {data.para}<br/><br/>{data.para2}
                     </p>
                 </div>
                 {props.left && <div className="verticle-circle circle-left">
-                    <div className={`circle ${data.number.split("").reverse().join() , data.className } `}>
+                    <div className={`circle ${data.number.split("").reverse().join()} ${data.className } `}>
                         <span>
                             {data.number}
                         </span>

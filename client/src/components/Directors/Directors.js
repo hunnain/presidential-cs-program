@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import president from './img/president.jpg';
 import hunaidLakhani from './img/hunaidLakhani.jpg';
@@ -22,7 +21,7 @@ class About extends Component {
                 <div className="contianer" style={{ margin: "15%", marginTop: "10%" }}>
                     <div className="row">
                         <div className="col-md-4">
-                            <img src={president} align="right" style={{ height: "250px" }} />
+                            <img alt="President of Pakistan" src={president} align="right" style={{ height: "250px" }} />
                         </div>
                         <div className="col-md-8">
                             <h1>President Dr. Arfi Alvi </h1>
@@ -35,7 +34,7 @@ class About extends Component {
                     </div>
                     <div class="row">
                         <div className="col-md-4">
-                            <img src={hunaidLakhani} align="right" style={{ height: "300px", width: 259 }} />
+                            <img alt="Chancellor - Iqra University" src={hunaidLakhani} align="right" style={{ height: "300px", width: 259 }} />
                         </div>
                         <div className="col-md-8">
                             <h1>Hunaid Lakhani</h1>
@@ -50,7 +49,7 @@ class About extends Component {
                     </div>
                     <div class="row">
                         <div className="col-md-4">
-                            <img src={sulemanMehdi} align="right" style={{ height: "300px", width: 259 }} />
+                            <img alt="Chairman Of The Board - Pakistan Stock Exchange" src={sulemanMehdi} align="right" style={{ height: "300px", width: 259 }} />
                         </div>
                         <div className="col-md-8">
                             <h1>Suleman Mehdi</h1>
