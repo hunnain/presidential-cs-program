@@ -29,9 +29,9 @@ button:hover,.myDiv h1:hover{
 *{
   transition: 0.3s;
 }
-button:hover{
+/* button:hover{
   transform: scale(1.03)
-}
+} */
 
 
 @keyframes App-logo-spin {
