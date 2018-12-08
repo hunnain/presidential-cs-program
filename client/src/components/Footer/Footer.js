@@ -46,8 +46,16 @@ class Footer extends Component {
                 <p>Locations</p>
                 <ul>
 
-                  <li><span style={{fontWeight: '900'}}>Headquarter : </span><a  href="https://goo.gl/maps/y1G4vrtQPiL2"> Plot 245/2 M, Pakistan Employees Co-Operative Housing Society Block 6 PECHS, Karachi, Karachi City, Sindh</a></li>
-                  <li className="mt-1"><span style={{fontWeight: '900'}}>Karachi : </span><a  href="https://goo.gl/maps/y1G4vrtQPiL2">Road، Shaheed-e-Millat Expy, Defence view Phase 2 Phase 1 Defence View Housing Society, Karachi, Karachi City, Sindh 75500, Pakistan</a></li>
+                  <li><span style={{fontWeight: '900'}}>Headquarter : </span>
+                  {/* <a className="ancor" href="https://goo.gl/maps/y1G4vrtQPiL2">  */}
+                  Plot 245/2 M, Pakistan Employees Co-Operative Housing Society Block 6 PECHS, Karachi, Karachi City, Sindh
+                  {/* </a> */}
+                  </li>
+                  <li className="mt-1"><span style={{fontWeight: '900'}}>Karachi : </span>
+                  {/* <a className="ancor" href="https://goo.gl/maps/y1G4vrtQPiL2"> */}
+                  Road، Shaheed-e-Millat Expy, Defence view Phase 2 Phase 1 Defence View Housing Society, Karachi, Karachi City, Sindh 75500, Pakistan
+                  {/* </a> */}
+                  </li>
                   {/* <li className="text-truncate">Head office: <a  href="https://goo.gl/maps/y1G4vrtQPiL2">https://goo.gl/maps/y1G4vrtQPiL2</a></li> */}
                   {/* <li className="text-truncate">Islamabad: <a href="https://goo.gl/maps/rhhVXeVdc6q">https://goo.gl/maps/rhhVXeVdc6q</a></li> */}
 

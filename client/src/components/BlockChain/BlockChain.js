@@ -61,7 +61,7 @@ class BlockChain extends Component {
               <hr />
               <div className="row">
                 <div className="col-sm-12">
-                <div className="circle-line"></div>
+                <div className="bc-circle-line"></div>
 
                   <Blog 
                     left = {true}
