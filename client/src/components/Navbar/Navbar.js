@@ -45,7 +45,7 @@ class Navbar extends Component {
             
                 <div className="container">
                 <div className="navbar_cont">
-                    <div className="navbar-flex nav-flex-1"><Link to='/'><p><img src={logo} />PIAIC</p></Link>
+                    <div className="navbar-flex nav-flex-1" onClick={()=>{this.setState({ai : false , cn : false , manageCommitte : false , about : false , subs : false })}}><Link to='/'><p><img src={logo} />PIAIC</p></Link>
                   
 
                    <div className="hamb-btn" onClick={() => {this.catd()}}>
