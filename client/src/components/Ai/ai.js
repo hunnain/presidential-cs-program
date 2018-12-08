@@ -37,7 +37,6 @@ class AI extends Component {
     return (
       <div className="Artificial-Intelligence-Page">
         <div className="container-fluid p-0">
-
           <Banner
           className="Rectangle-67"
           heading1="Artificial Intelligence"
@@ -73,6 +72,8 @@ class AI extends Component {
                 <div className="col-sm-12">
                 <div className="circle-line circle-line-2"></div>
                   <h1 className="sec-head">Detailed Program Structure</h1>
+                    <div className="circle-line"></div>
+
                   <Blog 
                     left = {true}
                     data = {
