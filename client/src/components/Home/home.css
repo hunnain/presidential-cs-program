@@ -26,6 +26,14 @@ button:hover,.myDiv h1:hover{
   color: #61dafb;
 }
 
+*{
+  transition: 0.3s;
+}
+button:hover{
+  transform: scale(1.03)
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -73,6 +81,17 @@ padding-top: 50px;
   width: 100%;
   height: 100%; */
   /* background-color: white; */
+}
+
+.video-cont h1{
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.51;
+  letter-spacing: normal;
+  color: rgb(4, 86, 84);
 }
 .slider-doc-txt h1{
   /* max-width: 502px; */
@@ -310,6 +329,7 @@ width: 100%;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
+  font-weight: 400;
   /* line-height: 1.08; */
   /* letter-spacing: normal; */
   /* text-align: left; */
@@ -519,7 +539,7 @@ height: 45px;
   .box1-cont h1{
     font-size: 2em;
   }
-  .slider-doc-txt h1{
+  .slider-doc-txt h1,.video-cont h1{
     font-size: 30px;
   }
   .news-cont-flex2{
@@ -648,7 +668,7 @@ height: 45px;
   font-size: 12px;
   overflow: hidden;
 }
-.slider-doc-txt h1{
+.slider-doc-txt h1,.video-cont h1{
 
   max-height: 150px;
   font-size: 20px;
