@@ -2,9 +2,9 @@
   text-align: center;
 }
 
-p:hover,h1:hover,p:hover{
+/* p:hover,h1:hover,p:hover{
   cursor: pointer;
-}
+} */
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

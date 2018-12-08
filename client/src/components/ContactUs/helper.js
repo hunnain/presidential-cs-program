@@ -1,8 +1,8 @@
 /*eslint-disabled */
-import React, { Component } from "react";
+import React from "react";
 
 function validateForm(check, data, field, err) {
-  const { firstName, lastName, contactNumber, message, email } = data;
+  const { firstName, lastName, contactNumber, email } = data;
 
   var errors = err
     ? err
@@ -10,9 +10,9 @@ function validateForm(check, data, field, err) {
         hasError: false,
         errorsObj: {}
       };
-  function hasNumber(myString) {
-    return;
-  }
+  // function hasNumber(myString) {
+  //   return;
+  // }
 
   let Validation = {
     firstName: {
@@ -101,11 +101,11 @@ function validateForm(check, data, field, err) {
   if (check === "each") {
     let conArray = Validation[field].Validate;
     errors.errorsObj[Validation[field].elem] = { message: [] };
-    for (var j = 0; j < conArray.length; j++) {
-      if (conArray[j].condition) {
+    for (var k = 0; k < conArray.length; k++) {
+      if (conArray[k].condition) {
         errors.hasError = true;
         errors.errorsObj[Validation[field].elem].message.push(
-          conArray[j].message
+          conArray[k].message
         );
       }
     }

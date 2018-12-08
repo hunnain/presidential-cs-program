@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import logo from '../../assets/assets/logo/pics-logo.svg';
 import { Typography } from '@material-ui/core';
-import {Grid, Row, Col, Button} from 'react-bootstrap';
+import {Grid, Col, Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const styles = theme => ({
@@ -154,27 +152,33 @@ class Idcard extends Component{
         }
     }
     componentWillMount(){
-        console.log("componentwillmountprops",this.props.location.state)
-        let data = this.props.location.state
-        let id = data._id;
-                switch (true) {
-                    case (id < 10):
-                        id = data.course + "0000" + id;
-                        break;
-                    case (id < 100):
-                        id = data.course + "000" + id;
-                        break;
-                    case (id < 1000):
-                        id = data.course + "00" + id;
-                        break;
-                    case (id < 10000):
-                        id = data.course + "0" + id;
-                        break;
-                }
-        this.setState({
-            rollNo: id,
-            studentData: this.props.location.state            
-        })
+        if(this.props.location.state){
+            let data = this.props.location.state
+            let id = data._id;
+                    switch (true) {
+                        case (id < 10):
+                            id = data.course + "0000" + id;
+                            break;
+                        case (id < 100):
+                            id = data.course + "000" + id;
+                            break;
+                        case (id < 1000):
+                            id = data.course + "00" + id;
+                            break;
+                        case (id < 10000):
+                            id = data.course + "0" + id;
+                            break;
+                        default:
+                            id = data.course + "" + id;
+
+                    }
+            this.setState({
+                rollNo: id,
+                studentData: this.props.location.state            
+            })
+        }else{
+            this.props.history.replace('/apply')
+        }
     }
     render(){
         const { classes } = this.props;
@@ -199,7 +203,7 @@ class Idcard extends Component{
                             <Typography variant="h7" className={classes.admitCardText}><b>Admit Card</b></Typography>
                             {/* Student Photo */}
                             <div className={classes.studentAdmitCardPhoto}>
-                            <img src={imageUrl} alt="Picture" style={{width:'100%',height:'100%'}} />
+                            <img src={imageUrl} alt="user-pic" style={{width:'100%',height:'100%'}} />
                             </div>
                             {/* Roll No */}
                             <div className={classes.studentAdmitCardRollNoDiv}>
@@ -241,7 +245,7 @@ class Idcard extends Component{
                             {/* Student Photo */}
                             <Typography variant="h7" className={classes.admitCardText}><b>Identity Card</b></Typography>
                             <div className={classes.studentAdmitCardPhoto}>
-                            <img src={imageUrl} alt="Picture" style={{width:'100%',height:'100%'}} />
+                            <img src={imageUrl} alt="user-pic" style={{width:'100%',height:'100%'}} />
                             </div>
                             {/* Roll No */}
                             <div className={classes.studentAdmitCardRollNoDiv}>

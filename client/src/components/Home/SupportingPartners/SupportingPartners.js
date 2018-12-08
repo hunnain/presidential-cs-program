@@ -8,6 +8,7 @@ import saylaniLogo from '../../../assets/saylaniLogo.png';
 // import saylaniLogo from '../../../assets/';
 
 class SupportingPartners extends Component {
+
     state = {}
     render() {
         return (
@@ -28,6 +29,7 @@ class SupportingPartners extends Component {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         );
