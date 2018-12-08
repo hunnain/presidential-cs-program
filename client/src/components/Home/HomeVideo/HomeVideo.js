@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Countdown from '../Countdown/Countdown';
 import { withRouter } from 'react-router-dom';
-import president from '../../../assets/president.png';
+import president from '../../../assets/presidentPic.jpeg';
 
 import './HomeVideo.css';
 
@@ -42,8 +42,9 @@ class HomeVideo extends Component {
                             <div className="col-xl-12 mt-5 mt-xl-0 mb-5 mb-xl-0 d-flex justify-content-center align-items-center">
                             <div className="slider-doc-f2">
                     <div className="video-cont">
+                        <h1>Registration strats in</h1>
                         <Countdown date={`2018-12-11T00:00:00`} /> 
-                        <button onClick={() => {this.props.history.push("subscribe")}} className="subscribe mt-5">Subscribe</button>
+                        <button onClick={() => {this.props.history.push("subscribe")}} className="subscribe mt-4">Subscribe</button>
                         
                         </div>
                 </div>

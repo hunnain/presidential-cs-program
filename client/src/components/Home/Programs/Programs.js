@@ -12,7 +12,7 @@ class Programs extends Component {
 
           <div className="box1">
           
-            <div className="container pt-5 box1-cont" style={{paddingBottom: "320px"}}>
+            <div className="container pt-5 box1-cont">
               <div className="box1-cont-head">
               <h1 className="text-lg-left text-md-center">Available Programs</h1>
               </div>
