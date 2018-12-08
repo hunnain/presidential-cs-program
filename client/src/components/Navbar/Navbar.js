@@ -51,19 +51,19 @@ class Navbar extends Component {
                     <div className="navbar-flex nav-flex-3">
                     {/* <p>Aftificial Inteligence</p> */}
                     <ul id="nav-flex-ul">
-                    <Link to='/artificial-inteligence'> <li onClick={() => {console.log("Route changed")}}>Aftificial Inteligence</li></Link>
+                    <Link to='/artificial-inteligence'> <li onClick={() => {console.log("Route changed");this.catd()}}>Aftificial Inteligence</li></Link>
                         {/* <BrowserRouter></BrowserRouter> */}
-                        <Link to='/cloud-native'>  <li>Cloud Native</li></Link>
+                        <Link to='/cloud-native'>  <li onClick={() => {console.log("Route changed");this.catd()}}>Cloud Native</li></Link>
                          {/* <li onClick={() => {this.setState({condition: true})}} className="about">About</li> */}
-                        <Link to='/about'>  <li>About</li></Link>
-                        <Link to='/managementcommittee'>  <li>Management Committee</li></Link>
+                        <Link to='/about'>  <li onClick={() => {console.log("Route changed");this.catd()}}>About</li></Link>
+                        <Link to='/managementcommittee'>  <li onClick={() => {console.log("Route changed");this.catd()}}>Management Committee</li></Link>
                         {
                           /*
                             <Link to='/apply'>  <li>Apply</li></Link>
                           */      
                         }
                         
-                        <Link to='/subscribe'>  <li>Subscribe</li></Link>
+                        <Link to='/subscribe'>  <li onClick={() => {console.log("Route changed");this.catd()}}>Subscribe</li></Link>
                     </ul>
                     
                     
