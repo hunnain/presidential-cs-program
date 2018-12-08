@@ -137,53 +137,6 @@ class ManagementCommittee extends Component {
               <div className="imgHead">
                 {/* <center> */}
                 <div className="greenCir" />
-                <div className="whiteCir" />
-                <div className="imgDiv" />
-
-                {/* </center> */}
-              </div>
-              <h1>Yusuf Lakhani</h1>
-              <p>President - Saylani Welfare Trust</p>
-              <div className="spans d-flex justify-content-center align-items-center">
-                <div>
-                  <ul>
-                    <li>
-                      {" "}
-                      <a href="https://www.facebook.com/yousuf.lakhani.3994">
-                        <img alt="fb-icon"  className="span" src={facebookIcon} />
-                      </a>
-                    </li>
-                    <li>
-                      {" "}
-                      {/* <a href="">
-                        <img alt="twitter-icon" className="span" src={twiterIcon} />
-                      </a> */}
-                    </li>
-                    <li>
-                      {" "}
-                      {/* <a href="">
-                        <img alt="linkedin-icon" className="span" src={youtubeIcon} />
-                      </a> */}
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <br />
-
-              {/* <button
-                onClick={() => {
-                  this.setState({ condition: true });
-                }}
-              >
-                Read more
-              </button> */}
-            </div>
-          </div>
-          <div className="col-lg-4 col-sm-6 mt-5 d-flex justify-content-center align-items-center">
-            <div className="cardBody ">
-              <div className="imgHead">
-                {/* <center> */}
-                <div className="greenCir" />
                 <div
                   className="whiteCir"
                   style={{ backgroundImage: `url(${ZiaKhan})`,backgroundPosition:'top' }}
@@ -217,6 +170,53 @@ class ManagementCommittee extends Component {
                       <a href="https://www.linkedin.com/in/ziaukhan/">
                         <img alt="linkedin-icon" className="span" src={youtubeIcon} />
                       </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <br />
+
+              {/* <button
+                onClick={() => {
+                  this.setState({ condition: true });
+                }}
+              >
+                Read more
+              </button> */}
+            </div>
+          </div>
+          <div className="col-lg-4 col-sm-6 mt-5 d-flex justify-content-center align-items-center">
+            <div className="cardBody ">
+              <div className="imgHead">
+                {/* <center> */}
+                <div className="greenCir" />
+                <div className="whiteCir" />
+                <div className="imgDiv" />
+
+                {/* </center> */}
+              </div>
+              <h1>Yusuf Lakhani</h1>
+              <p>President - Saylani Welfare Trust</p>
+              <div className="spans d-flex justify-content-center align-items-center">
+                <div>
+                  <ul>
+                    <li>
+                      {" "}
+                      <a href="https://www.facebook.com/yousuf.lakhani.3994">
+                        <img alt="fb-icon"  className="span" src={facebookIcon} />
+                      </a>
+                    </li>
+                    <li>
+                      {" "}
+                      {/* <a href="">
+                        <img alt="twitter-icon" className="span" src={twiterIcon} />
+                      </a> */}
+                    </li>
+                    <li>
+                      {" "}
+                      {/* <a href="">
+                        <img alt="linkedin-icon" className="span" src={youtubeIcon} />
+                      </a> */}
                     </li>
                   </ul>
                 </div>
