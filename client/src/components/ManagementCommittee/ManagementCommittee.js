@@ -44,7 +44,39 @@ class ManagementCommittee extends Component {
                     backgroundImage: `url(${KaziRahatAli})`,
                     backgroundPosition: "top"
                   }}
-                />
+                >
+                
+                {/* <div className="checking">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Hunaid.H.Lakhani/">
+                        <img
+                          alt="fb-icon"
+                          className="span"
+                          src={facebookIcon}
+                        />
+                        </a>
+
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Hunaid.H.Lakhani/">
+                        <img
+                          alt="fb-icon"
+                          className="span"
+                          src={facebookIcon}
+                        />
+                        </a>
+
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Hunaid.H.Lakhani/">
+                        <img
+                          alt="fb-icon"
+                          className="span"
+                          src={facebookIcon}
+                        />
+                        </a>
+                </div> */}
+                
+
+
+                </div>
+
+
                 <div className="imgDiv" />
 
                 {/* </center> */}
@@ -338,6 +370,11 @@ class ManagementCommittee extends Component {
         <br />
 
         <StrategicPartners />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     );
   }
