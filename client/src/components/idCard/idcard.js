@@ -154,27 +154,30 @@ class Idcard extends Component{
         }
     }
     componentWillMount(){
-        console.log("componentwillmountprops",this.props.location.state)
-        let data = this.props.location.state
-        let id = data._id;
-                switch (true) {
-                    case (id < 10):
-                        id = data.course + "0000" + id;
-                        break;
-                    case (id < 100):
-                        id = data.course + "000" + id;
-                        break;
-                    case (id < 1000):
-                        id = data.course + "00" + id;
-                        break;
-                    case (id < 10000):
-                        id = data.course + "0" + id;
-                        break;
-                }
-        this.setState({
-            rollNo: id,
-            studentData: this.props.location.state            
-        })
+        if(this.props.location.state){
+            let data = this.props.location.state
+            let id = data._id;
+                    switch (true) {
+                        case (id < 10):
+                            id = data.course + "0000" + id;
+                            break;
+                        case (id < 100):
+                            id = data.course + "000" + id;
+                            break;
+                        case (id < 1000):
+                            id = data.course + "00" + id;
+                            break;
+                        case (id < 10000):
+                            id = data.course + "0" + id;
+                            break;
+                    }
+            this.setState({
+                rollNo: id,
+                studentData: this.props.location.state            
+            })
+        }else{
+            this.props.history.replace('/apply')
+        }
     }
     render(){
         const { classes } = this.props;

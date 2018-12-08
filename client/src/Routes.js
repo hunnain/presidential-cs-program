@@ -17,6 +17,7 @@ import Contact from '../src/components/ContactUs/ContactUs';
 import history from './History';
 import ManagementCommittee from './components/ManagementCommittee/ManagementCommittee';
 import Idcard from './components/idCard/idcard';
+import FacebookAuth from './components/FacebookAuth/facebookAuth';
 
 class Routers extends Component {
     render() {
@@ -35,7 +36,8 @@ class Routers extends Component {
                     <Route exact path="/subscribe" component={Contact} />
           			<Route exact path="/managementcommittee" component={ManagementCommittee} />
                     <Route exact path="/idcard" component={Idcard} />
-
+                    <Route exact path="/facebookauth" component={FacebookAuth} />
+                    
                     <Copyright />
 
                 </div>
