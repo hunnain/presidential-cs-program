@@ -252,7 +252,9 @@ a{
 }
 
 
-
+#about img{
+    height: 15px;
+}
 #about:hover .drop1ul{
     display: block;
 }

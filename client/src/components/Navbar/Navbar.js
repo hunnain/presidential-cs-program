@@ -7,6 +7,8 @@ import { withRouter } from 'react-router-dom';
 import {BrowserRouter} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Modal from './Modal/Modal';
+import dropMenu from '../../assets/drop-down-arrow.svg'
+
 
 class Navbar extends Component {
     state = { 
@@ -78,10 +80,11 @@ class Navbar extends Component {
                         
                         
                         <Link to='#'>  <li className={about ? 'active-color' : ''} id="about" onClick={()=>{this.setState({ai : false , cn : false , bc : false , about : true , subs : false })}}>About
+                        <img src={dropMenu} />
                         
                         {/* <div className="drop1 border"> */}
                         <ul className="drop1ul">
-                        <Link onClick={()=>{this.catd();this.scrollTop()}} to='about'><li>President</li></Link>
+                        <Link onClick={()=>{this.catd();this.scrollTop()}} to='about'><li>The President</li></Link>
                         <Link onClick={()=>{this.catd();this.scrollTop()}} to='managementcommittee'><li>Management Committee</li></Link>
                             
                         </ul>

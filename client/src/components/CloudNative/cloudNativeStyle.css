@@ -1,7 +1,12 @@
 .cl-b{
     background: #e1006a !important;
-
 }
+@media (min-width: 850px) {
+    .cl-b .Artificial-Intelligence {
+        font-size: 3em !important;
+    }
+  }
+
 .cl-b .Artificial-Intelligence{
     white-space: pre-wrap;
     text-shadow: none;

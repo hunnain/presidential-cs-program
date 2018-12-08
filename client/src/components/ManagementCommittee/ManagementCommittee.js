@@ -82,7 +82,7 @@ class ManagementCommittee extends Component {
                 {/* </center> */}
               </div>
               <h1>Kazi Rahat Ali</h1>
-              <p>General Secretary</p>
+              <p>General Secretary PIAIC</p>
               <div className="spans d-flex justify-content-center align-items-center">
                 <div>
                   <ul>
@@ -320,7 +320,7 @@ class ManagementCommittee extends Component {
                 {/* </center> */}
               </div>
               <h1>Sulaiman Mehdi</h1>
-              <p>Chairman Of The Board - Pakistan Stock Exchange</p>
+              <p>Chairman of The Board - Pakistan Stock Exchange</p>
               <div className="spans d-flex justify-content-center align-items-center">
                 <div>
                   <ul>
