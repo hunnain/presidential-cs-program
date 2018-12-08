@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo2 from '../../assets/assets/logo/piaic-white.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { withRouter , Link } from "react-router";
+import { withRouter } from "react-router";
 import 'font-awesome/css/font-awesome.min.css';
 import '../../../node_modules/bootstrap-social/bootstrap-social.css';
 // import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
@@ -9,9 +9,9 @@ import '../../../node_modules/bootstrap-social/bootstrap-social.css';
 
 
 
-import youtubeIcon from '../../assets/ytIcon.svg';
+// import youtubeIcon from '../../assets/ytIcon.svg';
 import facebookIcon from '../../assets/fb-logo.png';
-import twiterIcon from '../../assets/tIcon.svg';
+// import twiterIcon from '../../assets/tIcon.svg';
 import './Footer.css';
 
 
@@ -36,8 +36,10 @@ class Footer extends Component {
               <div className="col-lg-4 col-sm-6 mt-md-5 mt-5 mt-lg-0  foot-f1">
                 <p>Locations</p>
                 <ul>
-                  <li className="text-truncate">Head office: <a  href="https://goo.gl/maps/y1G4vrtQPiL2">https://goo.gl/maps/y1G4vrtQPiL2</a></li>
-                  <li className="text-truncate">Islamabad: <a href="https://goo.gl/maps/rhhVXeVdc6q">https://goo.gl/maps/rhhVXeVdc6q</a></li>
+                  <li><span style={{fontWeight: '900'}}>Headquarter : </span> Plot 245/2 M, Pakistan Employees Co-Operative Housing Society Block 6 PECHS, Karachi, Karachi City, Sindh</li>
+                  <li className="mt-1"><span style={{fontWeight: '900'}}>Karachi : </span>Road، Shaheed-e-Millat Expy, Defence view Phase 2 Phase 1 Defence View Housing Society, Karachi, Karachi City, Sindh 75500, Pakistan</li>
+                  {/* <li className="text-truncate">Head office: <a  href="https://goo.gl/maps/y1G4vrtQPiL2">https://goo.gl/maps/y1G4vrtQPiL2</a></li> */}
+                  {/* <li className="text-truncate">Islamabad: <a href="https://goo.gl/maps/rhhVXeVdc6q">https://goo.gl/maps/rhhVXeVdc6q</a></li> */}
                   {/* <li>Lahore: asdf asd</li>
                   <li>Peshawar: sdfsadf </li>
                   <li>Faisalabad: sdf sadf </li>
@@ -49,6 +51,7 @@ class Footer extends Component {
                 <ul>
                   <li onClick={() => {this.props.history.push("artificial-inteligence")}} className="truncate">Artificial Intelligence</li>
                   <li onClick={() => {this.props.history.push("cloud-native")}}>Cloud Native</li>
+                  <li onClick={() => {this.props.history.push("block-chain")}}>Blockchain</li>
                   <li onClick={() => {this.props.history.push("about")}}>About</li>
                   <li onClick={() => {this.props.history.push("managementcommittee")}}>Management Committee</li>
                   {/* <li onClick={() => {this.props.history.push("apply")}}>Apply</li> */}
