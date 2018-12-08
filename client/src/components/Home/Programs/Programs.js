@@ -6,6 +6,12 @@ import { withRouter } from "react-router";
 
 class Programs extends Component {
     state = {  }
+
+    changePage = (routeName) => {
+      this.props.history.push(routeName);
+      document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
     render() { 
         return ( <div>
           
@@ -18,18 +24,18 @@ class Programs extends Component {
               </div>
               <div className="row">
                 <div className="col-lg-4 col-md-6 col-xs-12 mt-5 d-flex justify-content-center">
-                <div onClick={() => {this.props.history.push("artificial-inteligence")}} className="box1-cont-flex-box " style={{backgroundColor: "rgb(25, 42, 86)"}}>
+                <div onClick={() => {this.changePage("artificial-inteligence")}} className="box1-cont-flex-box " style={{backgroundColor: "rgb(25, 42, 86)"}}>
                 
                 <p className="align-middle boxTxt text-truncate">Artificial Intelligence</p>
                 </div>
                 </div>
                 <div className="col-lg-4 col-md-6 col-xs-12 mt-5 d-flex justify-content-center">
-                <div onClick={() => {this.props.history.push("cloud-native")}} className="box1-cont-flex-box" style={{backgroundColor: "rgb(225, 0, 106)"}}>
+                <div onClick={() => {this.changePage("cloud-native")}} className="box1-cont-flex-box" style={{backgroundColor: "rgb(225, 0, 106)"}}>
                 <p className="align-middle boxTxt text-truncate">Cloud Native Computing</p></div>
                 </div>
                 <div className="col-lg-4 col-md-12 col-xs-12 mt-5 mt-md-5 d-flex justify-content-center">
-                <div onClick={() => {this.props.history.push("#")}} className="box1-cont-flex-box" style={{backgroundColor: "rgb(117, 123, 126)"}}>
-                <p className="align-middle boxTxt">Coming Soon</p></div>
+                <div onClick={() => {this.changePage("block-chain")}} className="box1-cont-flex-box" style={{backgroundColor: "#fbc314"}}>
+                <p className="align-middle boxTxt">Blockchain</p></div>
                 </div>
               </div>
             </div>

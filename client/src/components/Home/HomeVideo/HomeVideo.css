@@ -2,17 +2,20 @@
     padding-top: 80px;
     padding-bottom: 50px;
 }
-.greenCir2{
-    width: 174px;
-    height:  174px;
+.whiteCir2{
+    width: 186px !important;
+    height:  186px !important;
 }
 .greenCir2{
-    width: 174px;
-    height:  174px;
+    width: 194px !important;
+    height:  194px !important;
 }
 .imgDiv2{
-    width: 200px;
-    height: 200px;
+    width: 200px !important;
+    height: 200px !important;
+}
+.cardArea2{
+    width: 200px !important;
 }
 
 @media (max-width: 400px){
@@ -23,9 +26,13 @@
         margin-top: -50px;
     }
 }
+.imgHead2{
+    /* margin-left: 15% !important; */
+    margin-bottom: 25px;
+}
 @media (min-width: 992px) and (max-width: 1120px){
     .imgHead2{
-        margin-left: 15% !important;
+        /* margin-left: 15% !important; */
         margin-bottom: 18px !important;
     }
 }

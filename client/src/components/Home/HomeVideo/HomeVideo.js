@@ -24,8 +24,8 @@ class HomeVideo extends Component {
                                 </div>
                             </div>
                             <div className="col-lg-3 d-flex justify-content-center align-items-center">
-                            <div className="cardArea ">
-                <div className="imgHead imgHead2">
+                            <div className="cardArea2 cardArea ">
+                <div className="imgHead2">
                 {/* <center> */}
                    <div className="greenCir greenCir2"></div>
                    <div className="whiteCir2 whiteCir22" style={{backgroundImage: "url("+president+")",backgroundPosition: "top"}}></div>
