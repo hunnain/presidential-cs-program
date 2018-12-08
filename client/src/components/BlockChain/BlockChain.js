@@ -3,7 +3,6 @@ import "./BlockChain.css"
 import Banner from "../Banner/Banner"
 import Quarters from "../Quarter/Quarter"
 import Blog from "../Blog/Blog"
-import Footer from "../Footer/Footer"
 
 
 
