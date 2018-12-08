@@ -5,9 +5,9 @@ import './ManagementCommittee.css';
 import StrategicPartners from './StrategicPartners/StrategicPartners';
 import Modal from './Modal/Modal';
 
-import youtubeIcon from '../../assets/ytIconColor.svg';
-import facebookIcon from '../../assets/fbIconColor.svg';
-import twiterIcon from '../../assets/tIconColor.svg';
+import youtubeIcon from '../../assets/youtube-icon.png';
+import facebookIcon from '../../assets/fb-logo.png';
+import twiterIcon from '../../assets/twitter-icon.png';
 
 
 class ManagementCommittee extends Component {
