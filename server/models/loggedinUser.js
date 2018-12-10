@@ -2,7 +2,7 @@ exports = module.exports = function (app, mongoose) {
 
     'use strict';
     var Schema = mongoose.Schema;
-    const authTable = new Schema({
+    const loggedinUser = new Schema({
         databaseToken: {
             type: String,
             required: true,
@@ -26,6 +26,6 @@ exports = module.exports = function (app, mongoose) {
     });
 
 
-    app.db.model('loggedinUser', authTable);
+    app.db.model('loggedinUser', loggedinUser);
 
 }
