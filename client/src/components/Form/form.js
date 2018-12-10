@@ -29,14 +29,19 @@ class Form extends Component {
                 image: "",
                 course: ""
             },
+            userData:this.props.location.state,
             errors: {
                 hasError: false,
                 errorsObj: {}
             }
         }
-        console.log(this.props);
-        if (!this.props.authToken) {
-            // this.props.history.replace('/apply')
+        console.log(this.state.userData);
+
+        if (!this.state.userData) {
+            this.props.history.replace('/facebookauth')
+        }
+        else if (!this.state.userData.accessToken) {
+            this.props.history.replace('/facebookauth')
         }
     }
 
@@ -111,14 +116,14 @@ class Form extends Component {
 
             method: 'POST',
             body: formData,
-        }).then(x => {
-            console.log(x);
-            return x.json();
-        }).then(x => {
-            console.log(x);
+        }).then(userData => {
+            console.log(userData);
+            return userData.json();
+        }).then(userData => {
+            console.log(userData);
             this.setState({ submited: false });
-            if(x.fullName){
-                this.props.history.replace('/idcard',x)
+            if(userData.fullName){
+                this.props.history.replace('/idcard',userData)
             }
         }).catch((err) => {
             console.log(err);

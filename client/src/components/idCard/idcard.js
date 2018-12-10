@@ -152,6 +152,7 @@ class Idcard extends Component {
         }
     }
     componentWillMount() {
+        console.log("form data  ===>>",this.props.location.state)
         if (this.props.location.state) {
             let data = this.props.location.state
             let id = data._id;

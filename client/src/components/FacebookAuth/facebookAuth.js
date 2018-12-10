@@ -19,6 +19,7 @@ class FacebookAuth extends Component {
             return data.json();
         }).then(data => {
             console.log(data);
+            // this.props.history.replace('/form',data)
         }).catch(err => {
             console.log(err);
         })
