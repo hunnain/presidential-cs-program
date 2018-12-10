@@ -187,7 +187,7 @@ class Idcard extends Component{
         return(
             <div>
                 {
-                    (this.props.location.state)?
+                   (this.props.location.state)? 
                     <div >
 
                     <div className="container">
@@ -203,7 +203,9 @@ class Idcard extends Component{
                             <Typography variant="h7" className={classes.admitCardText}><b>Admit Card</b></Typography>
                             {/* Student Photo */}
                             <div className={classes.studentAdmitCardPhoto}>
-                            <img src={imageUrl} alt="user-pic" style={{width:'100%',height:'100%'}} />
+                            {/* <div style={{width: "100%",height: "100%",backgroundImage: `url(${imageUrl})`}} ></div> */}
+                            <div style={{width: "100%",height: "100%",backgroundImage: `url(${imageUrl})`,backgroundSize: "cover",backgroundPosition:"center"}} ></div>
+                            {/* <img src={imageUrl} alt="user-pic" style={{width:'100%',height:'100%'}} /> */}
                             </div>
                             {/* Roll No */}
                             <div className={classes.studentAdmitCardRollNoDiv}>
@@ -245,7 +247,8 @@ class Idcard extends Component{
                             {/* Student Photo */}
                             <Typography variant="h7" className={classes.admitCardText}><b>Identity Card</b></Typography>
                             <div className={classes.studentAdmitCardPhoto}>
-                            <img src={imageUrl} alt="user-pic" style={{width:'100%',height:'100%'}} />
+                            <div style={{width: "100%",height: "100%",backgroundImage: `url(${imageUrl})`,backgroundSize: "cover",backgroundPosition:"center"}} ></div>
+                            {/* <img src={imageUrl} alt="user-pic" style={{width:'100%',height:'100%'}} /> */}
                             </div>
                             {/* Roll No */}
                             <div className={classes.studentAdmitCardRollNoDiv}>
