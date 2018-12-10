@@ -64,6 +64,7 @@ class Form extends Component {
     }
 
     submitForm(ev) {
+        ev.preventDefault();
         let { data } = this.state;
         const {
             image,
@@ -137,7 +138,7 @@ class Form extends Component {
             <div className="container-fluid p-0">
                 {submited && <Loader />}
                 <div className="Rectangle-58">
-                    <form action="JavaScript:void(0)" id="myForm" ref="myForm" onSubmit={(ev) => this.submitForm(ev)}  >
+                    <form id="myForm" ref="myForm" onSubmit={(ev) => this.submitForm(ev)}  >
                         <h1 className="APPLICATION-FORM ">APPLICATION FORM</h1>
                         <MySelect
                             info={{

@@ -3,7 +3,6 @@ import "./cloudNativeStyle.css"
 import Banner from "../Banner/Banner"
 import Quarters from "../Quarter/Quarter"
 import Blog from "../Blog/Blog"
-import Footer from "../Footer/Footer"
 
 
 
@@ -16,14 +15,6 @@ import git from "../../assets/CloudNative/Git-Icon.png"
 import Ansible from "../../assets/CloudNative/Ansible.png"
 import kuber from "../../assets/CloudNative/Kubernetes.png"
 import aws from "../../assets/CloudNative/aws-logo.png"
-
-
-
-
-
-
-
-
 
 
 class CloudNative extends Component {
