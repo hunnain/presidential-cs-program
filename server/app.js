@@ -1,9 +1,11 @@
+require('sqreen');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+
 
 /*
 var indexRouter = require('./routes/index');
@@ -25,8 +27,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(function (req, res, next) {
 
   // Website you wish to allow to connect
-  res.setHeader('Access-Control-Allow-Origin', '*');
-
+  //res.setHeader('Access-Control-Allow-Origin', '*');
+  /*
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  */
+  app.logLevel1("do >>> ",app.get("crosDomains"));
+  var crosDomains = app.get("crosDomains").split(",");
+  var origin = req.headers.origin;
+  app.logLevel1("origin >>> ",origin);
+  if(crosDomains.indexOf(origin) > -1) {
+    app.logLevel1("origin found >>> ",origin);
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+ 
+  
+  //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
   // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 
@@ -46,6 +61,9 @@ require('./logs')(app);
 require('./db/repository')(app,mongoose);
 require('./models')(app,mongoose);
 require('./routes')(app,mongoose);
+
+
+
 
 //app.use('/', indexRouter);
 //app.use('/users', usersRouter);

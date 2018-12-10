@@ -8,6 +8,7 @@ exports = module.exports = function(app) {
     console.log("process.env.api_secret=== ",process.env.api_secret);
     console.log("process.env.authy_api_key === ",process.env.authy_api_key);
     console.log("process.env.showLogs === ",process.env.showLogs);
+    console.log("process.env.crosDomains === ",process.env.crosDomains);
     
     if(process.env.NODE_ENV=='production'){
         app.set("mongodb-url",process.env.mongodburl);
@@ -16,6 +17,7 @@ exports = module.exports = function(app) {
         app.set("api_secret",process.env.api_secret);
         app.set("authy_api_key",process.env.authy_api_key);
         app.set("showLogs",process.env.showLogs);
+        app.set("crosDomains",process.env.crosDomains);
     }
     else {
         //app.set("mongodb-url",'"mongodb://localhost:27017/PIAIC');
@@ -27,6 +29,7 @@ exports = module.exports = function(app) {
         app.set("api_secret",'lWY5FkcFfahA-oaU8KFwD2buQDY');
         app.set("authy_api_key",'7OY1Yp5wcEjkEQfHO1hsAg8nlzx8X3gi');
         app.set("showLogs",true);
+        app.set("crosDomains",'http://localhost:3000');
     }
 
 }

@@ -65,4 +65,10 @@
 
     
 }
-  
+@media (min-width: 1000px) {
+    .management ul li img{
+        height: 2.5em !important;
+        /* height: 60px; */
+        /* padding: 1vw 2vw; */
+    }
+  }
