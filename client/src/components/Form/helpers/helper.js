@@ -185,10 +185,10 @@ function validateForm(check, data, field, err) {
         return errors
     }
     if (check === "each") {
-        var conArray1 = Validation[field].Validate;
+        var conArray = Validation[field].Validate;
         errors.errorsObj[Validation[field].elem] = { message: [] }
-        for (var k = 0; k < conArray1.length; k++) {
-            if (conArray1[k].condition) {
+        for (var j = 0; j < conArray.length; j++) {
+            if (conArray[j].condition) {
                 errors.hasError = true
                 errors.errorsObj[Validation[field].elem].message.push(conArray[j].message)
             }

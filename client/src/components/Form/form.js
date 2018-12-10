@@ -36,7 +36,7 @@ class Form extends Component {
         }
         console.log(this.props);
         if (!this.props.authToken) {
-            this.props.history.replace('/apply')
+            // this.props.history.replace('/apply')
         }
     }
 
@@ -148,13 +148,13 @@ class Form extends Component {
                                 changeData: this.changeData,
                                 options: [
                                     {
-                                        DisplayName: "AI",
+                                        DisplayName: "Artificial Intelligence",
                                         value: "AI"
                                     }, {
                                         DisplayName: "Cloud Computing",
                                         value: "CC"
                                     }, {
-                                        DisplayName: "Block Chain",
+                                        DisplayName: "Blockchain",
                                         value: "BC"
                                     }
                                 ],
