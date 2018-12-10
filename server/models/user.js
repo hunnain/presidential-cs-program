@@ -9,12 +9,16 @@ exports = module.exports = function (app, mongoose) {
         },
         facebookId: {
             type: String,
-            required:true
+            required: true
         },
         email: {
             type: String,
             required: true,
             unique: true,
+        },
+        submitted: {
+            type: Boolean,
+            default: false
         }
     });
 

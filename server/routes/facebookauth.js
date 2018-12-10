@@ -8,68 +8,45 @@ exports = module.exports = function (app, mongoose) {
 
     router.post('/', async function (req, res, next) {
         let { id, accessToken } = req.body;
-        axios.get(`https://graph.facebook.com/${id}?fields=id,name,email&access_token=${accessToken}`)
+
+        let fbId = id;
+
+        axios.get(`https://graph.facebook.com/${fbId}?fields=id,name,email&access_token=${accessToken}`)
             .then(response => {
+
                 const data = response.data;
 
-                // console.log(data);
+                delete data['id'];
 
-                // data.accessToken = accessToken;
+                console.log("facebook ========", data);
 
                 const UserSchema = app.db.models.User;
 
-                UserSchema.findOne({ email: data.email }).then(response => {
+                UserSchema.findOne({ facebookId: fbId }).then(response => {
+
 
                     if (!response) {
 
-                        data.facebookId = id;
+                        data.facebookId = fbId;
 
-                        const User = new UserSchema(data);
+                        return createUser(req, res, data, UserSchema);
 
-                        return User.save()
-                            .then(userData => {
-
-                                console.log("new user ==>", userData);
-
-                                let data = JSON.parse(JSON.stringify(userData));
-
-                                data.accessToken = accessToken;
-
-                                data.databaseToken = jwt.sign({ id: data.facebookId }, "Salt");
-
-                                delete data['_id'];
-
-                                // console.log("newUSer==>>", data);
-
-
-                                const authTable = new app.db.models.authTable(data);
-
-                                return authTable.save()
-                                    .then(data => {
-
-                                        console.log(data);
-
-                                        return res.status(200).send(data);
-
-                                    }).catch(err => {
-
-                                        return console.log("token err ==>", err)
-                                    });
-
-                            }).catch(err => {
-                                // console.log(err);
-                                return res.status(400).send(err);
-
-                            })
                     }
 
                     let userData = JSON.parse(JSON.stringify(response));
 
-                    userData.accessToken = accessToken;
 
-                    console.log("old user ==>>", userData)
+                    if (!userData.submitted) {
 
-                    return res.status(200).send(userData);
+                        console.log("submited")
+
+                        return sendUserDataWithToken(req, res, userData);
+
+                    }
+                    else {
+                        return sendFormData(req, res, userData);
+                    }
+
                 })
 
             })
@@ -80,6 +57,109 @@ exports = module.exports = function (app, mongoose) {
             })
 
     });
+
+
+
+
+
+
+
+
+
+    //Helper Functions
+
+
+    function createUser(req, res, data, UserSchema) {
+
+        const User = new UserSchema(data);
+
+        return User.save()
+            .then(userData => {
+
+                console.log("new user  ==>", userData);
+
+                return genrateToken(req, res, userData);
+
+            }).catch(err => {
+                // console.log(err);
+                return res.status(400).send(err);
+
+            })
+
+
+    }
+
+
+
+    function sendUserDataWithToken(req, res, userData) {
+
+        console.log("Send User DAta with Token ==>", userData);
+
+        return genrateToken(req, res, userData);
+
+    }
+
+
+
+
+
+
+
+    function genrateToken(req, res, userData) {
+
+        let newUserData = JSON.parse(JSON.stringify(userData));
+
+        newUserData.userId = userData._id;
+
+        newUserData.databaseToken = jwt.sign({ facebookId: newUserData.facebookId, userId: newUserData.userId }, "somemagicalwords");
+
+        delete newUserData['_id'];
+
+        // console.log("newUSer==>>", data);
+
+
+        const loggedinUser = new app.db.models.loggedinUser(newUserData);
+
+        return loggedinUser.save()
+            .then(loggedinUserData => {
+
+                console.log(loggedinUserData);
+
+                let dataToSend = JSON.parse(JSON.stringify(loggedinUserData));
+
+                dataToSend.submitted = false;
+
+                return res.status(200).send(dataToSend);
+
+            }).catch(err => {
+
+                return res.status(400).send(err);
+
+            });
+    }
+
+
+    function sendFormData(req, res, userData) {
+
+        const Student = app.db.models.Student;
+
+        return Student.findOne({ userId: userData._id })
+
+            .then(sumittedForm => {
+
+                console.log('Submited Data ==>', sumittedForm);
+
+                let dataToSend = JSON.parse(JSON.stringify(sumittedForm));
+
+                dataToSend.submitted = true;
+
+                return res.status(200).send(dataToSend);
+
+            })
+            .catch(err => {
+                return res.status(500).send(err);
+            })
+    }
 
     app.use('/facebookauth', router);
 

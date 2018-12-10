@@ -7,7 +7,7 @@ exports = module.exports = function (app, mongoose) {
             type: String,
             required: true,
         },
-        accessToken: {
+        userId: {
             type: String,
             required: true,
         },
@@ -26,6 +26,6 @@ exports = module.exports = function (app, mongoose) {
     });
 
 
-    app.db.model('authTable', authTable);
+    app.db.model('loggedinUser', authTable);
 
 }

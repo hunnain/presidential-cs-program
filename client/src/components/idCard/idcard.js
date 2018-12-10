@@ -176,13 +176,13 @@ class Idcard extends Component {
             let studentData = this.props.location.state;
 
             switch (true) {
-                case (studentData.course === "AI"):
+                case (studentData.course === "AIC"):
                     studentData.course = "Artificial Intelligence"
                     break;
-                case (studentData.course === "BC"):
+                case (studentData.course === "BCC"):
                     studentData.course = "Block Chain"
                     break;
-                case (studentData.course === "CC"):
+                case (studentData.course === "CNC"):
                     studentData.course = "Cloud Computing"
                     break;
                 default:

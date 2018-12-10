@@ -29,7 +29,7 @@ class Form extends Component {
                 image: "",
                 course: ""
             },
-            userData:this.props.location.state,
+            userData: this.props.location.state,
             errors: {
                 hasError: false,
                 errorsObj: {}
@@ -38,10 +38,12 @@ class Form extends Component {
         console.log(this.state.userData);
 
         if (!this.state.userData) {
-            this.props.history.replace('/facebookauth')
+            this.props.history.replace('/apply')
         }
-        else if (!this.state.userData.accessToken) {
-            this.props.history.replace('/facebookauth')
+        else if (!this.state.userData.databaseToken) {
+            this.props.history.replace('/apply')
+        } else {
+            this.state.data.fullName = this.props.location.state.name;
         }
     }
 
@@ -71,6 +73,7 @@ class Form extends Component {
     submitForm(ev) {
         ev.preventDefault();
         let { data } = this.state;
+        let { userId, databaseToken } = this.state.userData;
         const {
             image,
             DOB,
@@ -109,11 +112,12 @@ class Form extends Component {
         formData.append("lastQualification", lastQualification);
         formData.append("studentCnic", studentCnic);
         formData.append("fatherCnic", fatherCnic);
+        formData.append('userId', userId);
+        formData.append('databaseToken',databaseToken)
         //var myForm = new FormData(this.refs.myForm);
         //Nothing To Do Just Fetch And Post Data All Set
         //fetch('http://localhost:3001/form', {
         fetch(Path.REGISTRATION_FORM, {
-
             method: 'POST',
             body: formData,
         }).then(userData => {
@@ -122,11 +126,13 @@ class Form extends Component {
         }).then(userData => {
             console.log(userData);
             this.setState({ submited: false });
-            if(userData.fullName){
-                this.props.history.replace('/idcard',userData)
+            if (userData.fullName) {
+                this.props.history.replace('/idcard', userData)
             }
         }).catch((err) => {
             console.log(err);
+            this.setState({ submited: false });
+
         });
 
     }
@@ -154,13 +160,13 @@ class Form extends Component {
                                 options: [
                                     {
                                         DisplayName: "Artificial Intelligence",
-                                        value: "AI"
+                                        value: "AIC"
                                     }, {
                                         DisplayName: "Cloud Computing",
-                                        value: "CC"
+                                        value: "CNC"
                                     }, {
                                         DisplayName: "Blockchain",
-                                        value: "BC"
+                                        value: "BCC"
                                     }
                                 ],
                                 errors
