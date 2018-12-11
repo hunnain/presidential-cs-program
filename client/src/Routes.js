@@ -29,10 +29,8 @@ class Routers extends Component {
 
   componentDidMount(){
     ReactGA.pageview(window.location.pathname);
-    console.log("Clled")
     history.listen((location=>{
       ReactGA.pageview(window.location.pathname)
-      console.log("I am listen")
     }))
   }
   render() {
