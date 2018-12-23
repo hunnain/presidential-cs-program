@@ -1,4 +1,4 @@
-Steps for forking this repo and then sync when required
+Steps for forking this repo and then sync when required.
 
 **Step 1: Open site**
 
